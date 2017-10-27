@@ -1,0 +1,191 @@
+body{
+  background-color: #6C373B;
+}
+header {
+  width: 100%;
+  height: 200px;
+  background-color: #F37C84;
+  color: inherit;
+  text-align: center;
+  position: relative;
+}
+
+#headerimg {
+  display: inline-block;
+  height: 80px;
+  width: auto;
+  padding-top: 5px;
+  padding-right: 60px;
+}
+
+#tituloBlog{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100px;
+  text-align: center;
+  font-weight: bold;
+  color: #34090C;
+}
+
+#bienvenida{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: #950E17;
+}
+
+#entradas{
+  padding-right: 700px;
+  padding-left: 16px;
+}
+
+#contenedor1{
+background-color: #FCDEE0;
+border-radius: 5px;
+}
+
+#contenedor2{
+background-color: #FCDEE0;
+border-radius: 5px;
+}
+
+#articuloTitulo{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  text-align: left;
+  font-weight: bold;
+  color: #950E17;
+  background-color: #FCDEE0;
+  padding-left: 25px;
+}
+
+#descripcionArt{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: left;
+  font-weight: bold;
+  color: #F37C84;
+  padding-left: 16px;
+}
+
+#parrafoArt{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: left;
+  color: black;
+  padding-left: 16px;
+}
+
+#btnLeerMas{
+font-family: Arial, Helvetica, sans-serif;
+background-color: #EA202C;
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 5px;
+}
+
+#botones{
+  padding-left: 300px;
+  background-color: #F37C84;
+  height: 100px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+#botonesArt{
+  padding-left: 200px;
+  border-radius: 5px;
+}
+
+#btnBajos{
+font-family: Arial, Helvetica, sans-serif;
+background-color: #34090C;
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 5px;
+
+}
+
+#comentarios{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: right;
+  color: #950E17;
+  padding-right: 16px;
+}
+
+#contenido{
+max-width:1400px;
+}
+
+#imgPrimera{
+width:100%;
+border-radius: 5px;
+}
+
+#imgSegunda{
+width:100%;
+border-radius: 5px;
+}
+
+#imgpop{
+padding-top:16px;
+width:200px;
+padding-left: 375px;
+border-radius: 5px;
+}
+
+#textoPop{
+padding-bottom: 25px;
+border-radius: 5px;
+}
+
+#contenido{
+padding-right: 16px;
+padding-left: 16px;
+border-radius: 5px;
+}
+
+#tituloPopulares{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: #FCDEE0;
+  background-color: #34090C;
+  border-radius: 5px;
+  height: 100px;
+  width: 600px;
+  padding-top: 25px;
+}
+
+#primerArt{
+  background-color: #FCDEE0;
+  border-radius: 5px;
+}
+
+#segundoArt{
+  background-color: #F37C84;
+  border-radius: 5px;
+}
+
+#descripcionPop{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  text-align: left;
+  font-weight: bold;
+  color: #34090C;
+  padding-left: 16px;
+}
