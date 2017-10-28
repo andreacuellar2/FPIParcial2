@@ -24,8 +24,6 @@ ul.topnav li a:hover:not(.active) {background-color: #111;}
 
 ul.topnav li a.active {background-color: #75A8BD;}
 
-ul.topnav li.right {float: right;}
-
 @media screen and (max-width: 600px){
     ul.topnav li.right,
     ul.topnav li {float: none;}
@@ -331,7 +329,7 @@ body {
 #footer {
   font-size: large;
   padding: 0.3em;
-  background: #75A8BD;
+  background: #173F4F;
 }
 
 .login{
