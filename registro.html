@@ -2,34 +2,38 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="cssPaginaPrincipal.css">
     <link rel=icon href=IMG/favicon.png type="image/png">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title></title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <title>¡Regístrate!</title>
+    <header id="header">
+      <h1 id="tituloBlog"><b>O W L Space</b></h1></hr>
+      <p class="subtema">Bienvenido al espacio para compartir tus ideas</p>
+    </header>
   </head>
-  <body>
-    <header></header>
-    <nav></nav>
-    <section>
-      <div id="registro">
+  <body >
+    <br><br><br><div id="containerLogin">
+      <div id="login" class="login">
         <form>
-        <p >Nueva Cuenta</p>
-        <label>Nombre: </label><input type="text" maxlength="50" placeholder="Nombre de Usuario" pattern="[a-zA-Z0-9]*" value="" required><br>
-        <label>Nickname: </label><input type="text" maxlength="10" placeholder="Nickname para el Blog" pattern="[a-zA-Z0-9-_.]*" value="" required><br>
-        <label>Acerca de ti:</label><textarea  placeholder="Pon una descripción sobre ti" cols="10" rows="6"></textarea><br>
-        <label>Sexo:</label>
+        <p class="loginLe">Nueva Cuenta</p><br>
+        <label class="loginLe">Nombre: </label><input class="loginLe" type="text" maxlength="50" placeholder="Nombre de Usuario" pattern="[a-zA-Z0-9]*" value="" required><br>
+        <label class="loginLe">Username: </label><input class="loginLe" type="text" maxlength="10" placeholder="Username" pattern="[a-zA-Z0-9-_.]*" value="" required><br>
+        <label class="loginLe">Acerca de ti:</label><textarea  class="loginLe" placeholder="Pon una descripción sobre ti" cols="20" rows="6"></textarea><br>
+        <label class="loginLe">Sexo:</label>
           <select>
-            <option>Mujer</option>
-            <option>Hombre</option>
+            <option class="loginLe">Mujer</option>
+            <option class="loginLe">Hombre</option>
           </select><br>
-        <label>Contraseña:</label><input type="password" placeholder="Contraseña" required maxlength="50"><br>
-        <input type="submit" name="btnRegistrarme" value="Registrarme" ><br>
+        <label class="loginLe" >Contraseña:</label><input class="loginLe" type="password" placeholder="Contraseña" required maxlength="50"><br>
+        <input class="btnLeerMas" type="submit" name="btnRegistrarme" value="Registrarme" ><br>
       </form>
       </div>
-      <p id="parrafoLogin">¿Ya tienes una cuenta? <a href="login.html">Inicia Sesión</a></p>
-    </section>
-    <aside></aside>
-    <footer></footer>
+      <br><h1><a  class="loginLe" href="nuevaPaginaPrincipal.html">Pagina Principal</a></h1>
+      <p id="parrafoLogin">¿Ya tienes una cuenta? <a class="loginLe" href="login.html">Inicia Sesión</a></p>
+    </div>
+  </div>
   </body>
 </html>
