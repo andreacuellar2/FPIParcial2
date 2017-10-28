@@ -2,19 +2,36 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="CSS/login.css">
+    <title>Iniciar Sesion</title>
   </head>
   <body>
-    <header></header>
-    <nav></nav>
-    <section>
-      <p>Inicia Sesión</p>
-      <label>Nickname: </label><input type="text" maxlength="10" placeholder="Nickname del usuario" pattern="[a-zA-Z0-9-_.]*" value="" required><br>
-      <label>Contraseña:</label><input type="password" placeholder="Contraseña" required maxlength="50"><br>
-      <input type="submit" name="btnIniciar" value="Iniciar" ><br>
+    <div id="login" class="login">
+  	<h1><a href="paginaPrincipal.html">Pagina Principal</a></h1>
+    <p class="textoInicio">Inicie sesion para poder publicar en el blog</p>
+		<p class="textoInicio">
+			<label for="user_login">Usuario</label>
+      <br>
+			<input type="text" id="user_login" class="input" value="" size="20"/>
+      <br>
+		</p>
+		<p class="textoInicio">
+			<label for="user_pass">Contraseña</label>
+      <br>
+			<input type="password" name="pwd" id="user_pass" class="input" value="" size="20" />
+      <br>
+		</p>
 
-    </section>
-    <aside></aside>
-    <footer></footer>
+		<p class="textoInicio">
+      <br>
+			<input type="button" class="botonIncioSesion" value="Iniciar Sesion" />
+		</p>
+  <p id="nav">
+  	<a href="registro.html">Registrarse</a>
+  </p>
+
+	</div>
+
+
   </body>
 </html>
