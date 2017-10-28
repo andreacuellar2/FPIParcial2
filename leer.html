@@ -1,179 +1,76 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Articulos</title>
-	<style type="text/css">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="cssPaginaPrincipal.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <title>LEER</title>
+    <header id="header">
+  <h1 id="tituloBlog"><b>O W L Space</b></h1></hr>
+      <p class="subtema">Bienvenido al espacio para compartir tus ideas</p>
+    </header>
 
-		/* Layout */
-		body {
-			min-width: 630px;
-		}
+  	<div id="container">
 
-		#container {
-			padding-left: 200px;
-			padding-right: 190px;
-		}
+  		<main id="center" class="column">
+  				<h1 id="articulosRecientes">ARTICULO 1</h1><hr>
+          <div id="entrada1"><br><br>
+            <img src="IMG/blog.jpg" id="imgPrimera" alt="blog">
+            <div id="contenedor1">
+              <h3 class="descripcionArt">Jueves 26 de Octubre 2017</h3><br>
+              <p class="parrafoArt">Si un día llega a tu jardín una jara –porque algún pájaro ha traído una semilla–, estás de enhorabuena. Son muchos los aficionados a la jardinería que tratan de disfrutar de su aroma y color, pero no es nada fácil. Hablamos de una especie silvestre o montana. Actualmente, se usa más en perfumería, donde se emplea como fijador de perfumes, pero la jara ha vuelto a recuperar cierto protagonismo medicinal para tratar las gastritis y las úlceras. Descubre una planta que, además, florece temprano y lo resiste todo, ¡también los incendios!</p><br>
+                  <p class="comentarios"><b>Comentarios 2</b></p>
+          </div>
+          </div>
+  		</main>
 
-		#container .column {
-			position: relative;
-			float: left;
-		}
+  		<nav id="left" class="column">
+        <img id="headerimg"src="IMG/owl.png" alt="buho">
+  			<h3 class="subtemaNav">CATEGORÍAS</h3><hr></hr><br>
+  			<ul>
+  				<li><a class="li" href="#">Categoría 1</a></li><br>
+  				<li><a class="li" href="#">Categoría 2</a></li><br>
+  				<li><a class="li" href="#">Categoría 3</a></li><br>
+  				<li><a class="li" href="#">Categoría 4</a></li><br>
+  				<li><a class="li" href="#">Categoría 5</a></li>
+  			</ul>
+  		</nav>
 
-		#center {
-			padding: 10px 20px;
-			width: 100%;
-		}
+  		<div id="right" class="column">
+  			<h3 class="subtemaNav">Más leídos:</h3><hr>
+        <ul id="listaArticulos">
+          <li class="primerArt">
+            <img src="IMG/pop1.jpg" class="imgpop" alt="flor">
+            <div class="textoPop">
+              <h3 class="descripcionPop">Flores</h3>
+              <h4 class="parrafoArt">Flores más bonitas de América</h4><br>
+              <div class="botonesArt">
+              <p><button class="btnNav"><b>LEER MAS »</b></button></p>
+              </div>
+            </div>
+          </li><br><br>
+          <li class="segundoArt">
+            <img src="IMG/animales.jpg" class="imgpop" alt="animales">
+            <div class="textoPop">
+            <h3 class="descripcionPop">Animales</h3>
+            <h4 class="parrafoArt">Animales más bonitos de América</h4><br>
+            <div class="botonesArt">
+            <p><button class="btnNav"><b>LEER MAS »</b></button></p>
+            </div>
+            </div>
+          </li>
+  		</div>
 
-		#left {
-			width: 180px;
-			padding: 0 10px;
-			right: 240px;
-			margin-left: -100%;
-		}
+  	</div>
 
-		#right {
-			width: 130px;
-			padding: 0 10px;
-			margin-right: -100%;
-		}
+  	<div id="footer">
+  		<footer id="footer"><h1><a  href="login.html">CREA TU PROPIO BLOG</a></h1></footer>
+  	</div>
+  </head>
+  <body>
 
-		#footer {
-			clear: both;
-		}
-
-		/* IE hack */
-		* html #left {
-			left: 150px;
-		}
-
-		/* Make the columns the same height as each other */
-		#container {
-			overflow: hidden;
-		}
-
-		#container .column {
-			padding-bottom: 1001em;
-			margin-bottom: -1000em;
-		}
-
-		/* Fix for the footer */
-		* html body {
-			overflow: hidden;
-		}
-
-		* html #footer-wrapper {
-			float: left;
-			position: relative;
-			width: 100%;
-			padding-bottom: 10010px;
-			margin-bottom: -10000px;
-			background: #fff;
-		}
-
-		/* Aesthetics */
-		body {
-			margin: 0;
-			padding: 0;
-			font-family:Sans-serif;
-			line-height: 1.5em;
-		}
-
-		p {
-			color: #555;
-		}
-
-		nav ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-		}
-
-		nav ul a {
-			color: darkgreen;
-			text-decoration: none;
-		}
-
-		#header, #footer {
-			font-size: large;
-			padding: 0.3em;
-			background: #BCCE98;
-		}
-
-		#left {
-			background: #DAE9BC;
-		}
-
-		#right {
-			background: #F7FDEB;
-		}
-
-		#center {
-			background: #fff;
-		}
-
-		#container .column {
-			padding-top: 1em;
-		}
-
-	</style>
-
-	<script type="text/javascript">
-		var bodyText=["The smaller your reality, the more convinced you are that you know everything.", "If the facts don't fit the theory, change the facts.", "The past has no power over the present moment.", "This, too, will pass.", "</p><p>You will not be punished for your anger, you will be punished by your anger.", "Peace comes from within. Do not seek it without.", "<h3>Heading</h3><p>The most important moment of your life is now. The most important person in your life is the one you are with now, and the most important activity in your life is the one you are involved with now."]
-		function generateText(sentenceCount){
-			for (var i=0; i<sentenceCount; i++)
-			document.write(bodyText[Math.floor(Math.random()*7)]+" ")
-		}
-	</script>
-</head>
-
-<body>
-
-	<header id="header"><p>Header...</p></header>
-
-	<div id="container">
-
-		<main id="center" class="column">
-			<article>
-
-				<h1>Heading</h1>
-				<p><script>generateText(50)</script></p>
-
-			</article>
-		</main>
-
-		<nav id="left" class="column">
-			<h3>Left heading</h3>
-			<ul>
-				<li><a href="#">Link 1</a></li>
-				<li><a href="#">Link 2</a></li>
-				<li><a href="#">Link 3</a></li>
-				<li><a href="#">Link 4</a></li>
-				<li><a href="#">Link 5</a></li>
-			</ul>
-			<h3>Left heading</h3>
-			<ul>
-				<li><a href="#">Link 1</a></li>
-				<li><a href="#">Link 2</a></li>
-				<li><a href="#">Link 3</a></li>
-				<li><a href="#">Link 4</a></li>
-				<li><a href="#">Link 5</a></li>
-			</ul>
-
-		</nav>
-
-		<div id="right" class="column">
-			<h3>Right heading</h3>
-			<p><script>generateText(1)</script></p>
-		</div>
-
-	</div>
-
-	<div id="footer-wrapper">
-		<footer id="footer"><p>Footer...</p></footer>
-	</div>
-
-</body>
-
+  </body>
 </html>
