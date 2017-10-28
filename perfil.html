@@ -3,17 +3,59 @@
   <head>
     <meta charset="utf-8">
     <link rel=icon href=IMG/favicon.png type="image/png">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="CSS/cssPaginaPrincipal.css">
+    <style>
+    .fondoPerfil{
+      background-color: powderblue;
+    }
+    .perfil{
+      border-radius: 10px;
+      position: fixed;
+      height: 100%;
+      width: 25%;
+      float:left;
+      margin: 1%;
+      background-color: #4682B4;
+      text-align: center;
+    }
+    .articulos{
+      width: 70%;
+      float: right;
+      height: 100%;
+      margin-right: 1%;
+    }
 
-    <title></title>
-
+    </style>
   </head>
-  <body>
-    <header>hola</header>
-    <nav>hola</nav>
-    <section>
-      <article>hola</article>
-    </section>
-    <aside>hola</aside>
-    <footer>hola</footer>
+  <body class="fondoPerfil">
+
+  <div class="perfil">
+    <img src="IMG/owl.png" alt="">
+    <p><strong>Nombre:</strong></p>
+    <p>John Pleitez</p>
+    <p><strong>Usuario:</strong></p>
+    <p>juanpc13</p>
+    <p><strong>Descripción:</strong></p>
+    <p>Muchas cosas wuuuu</p>
+  </div>
+
+  <div class="articulos">
+
+    <div id="entrada1"><br><br>
+      <img src="IMG/blog.jpg" id="imgPrimera" alt="blog">
+      <div class="contenedor">
+      <h2 class="articuloTitulo"><b>ARTÍCULO 1</b></h2><br>
+      <h3 class="descripcionArt">Jueves 26 de Octubre 2017</h3><br>
+      <p class="parrafoArt">Esta es una prueba de lo que estará escrito en el artículo 1</p><br>
+      <div class="botonesArt">
+        <p><button class="btnLeerMas"><b>LEER MAS »</b></button></p>
+      </div>
+      <p class="comentarios"><b>Comentarios 2</b></p>
+      </div>
+    </div>
+
+  </div>
+
   </body>
 </html>
