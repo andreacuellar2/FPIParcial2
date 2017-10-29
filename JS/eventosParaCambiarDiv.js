@@ -25,3 +25,13 @@ function MostrarCategorias() {
   document.getElementById('pagArticulo').style.display = 'block';
   document.getElementById('pagPublicar').style.display = 'block';
 }
+
+function MostrarLogin() {
+  document.getElementById('containerLogin').style.display = 'none';
+  document.getElementById('containerRegistro').style.display = 'block';
+}
+
+function MostrarRegistro() {
+  document.getElementById('containerLogin').style.display = 'block';
+  document.getElementById('containerRegistro').style.display = 'none';
+}
