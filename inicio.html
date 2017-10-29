@@ -9,13 +9,13 @@
     <title>Bienvenido al Blog</title>
   </head>
 
-  <body>
+  <body onload="MostrarInicio()">
 <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
     <ul class="topnav">
-      <li><a class="activo" href="inicio.html">Inicio</a></li>
-      <li><a href="categorias.html">Categorías</a></li>
-      <li><a href="registro.html" class="right">Registro</a></li>
-      <li><a href="login.html" class="right">Login</a></li>
+      <li><a id="navInicio" href="inicio.html">Inicio</a></li>
+      <li><a id="navCategorias" onclick="MostrarCategorias()">Categorías</a></li>
+      <li><a id="navLogin" href="login.html" class="right">Registro</a></li>
+      <li><a id="navRegistro" class="right">Login</a></li>
     </ul>
 <!-- ////////////////////////////////////////////////////////////////////////-->
 
@@ -39,7 +39,7 @@
                 <h3 class="descripcionArt">Jueves 26 de Octubre 2017</h3><br>
                 <p class="parrafoArt">Esta es una prueba de lo que estará escrito en el artículo 1</p><br>
                 <div class="botonesArt">
-                  <p><button class="btnLeerMas"><b>LEER MAS »</b></button></p>
+                  <p><button class="btnLeerMas" onclick="MostrarArticulo()"><b>LEER MAS »</b></button></p>
                 </div>
                 <p class="comentarios"><b>Comentarios 2</b></p>
               </div>
@@ -51,7 +51,7 @@
                 <h3 class="descripcionArt">Jueves 26 de Octubre 2017</h3><br>
                 <p class="parrafoArt">Esta es una prueba de lo que estará escrito en el artículo 2</p><br>
                 <div class="botonesArt">
-                  <p><button class="btnLeerMas"><b>LEER MAS »</b></button></p>
+                  <p><button class="btnLeerMas" onclick="MostrarArticulo()"><b>LEER MAS »</b></button></p>
                 </div>
                 <p class="comentarios"><b>Comentarios 0</b></p>
               </div>
@@ -156,7 +156,10 @@
 
 <!-- /////////////////////////// Menu Derecha ///////////////////////////////-->
   		<div id="right" class="column">
-
+        <div id="areaPerfil">
+          <a href="perfil.html">Ver mi perfil</a>
+          <input type="button" onclick="MostrarPublicar()" value="Publicar un articulo">
+        </div>
   			<h3 class="subtemaNav">Más leídos:</h3><hr>
         <ul id="listaArticulos">
 
@@ -191,6 +194,8 @@
   	<div id="footer">
   		<footer id="footer"><h1>Derechos Reservados</h1></footer>
   	</div>
+
+    <script type="text/javascript" src="JS/eventosParaCambiarDiv.js"></script>
 
   </body>
 </html>
