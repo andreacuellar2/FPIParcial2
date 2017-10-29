@@ -343,6 +343,7 @@ border-radius: 5px;
   margin-left: 35%;
   text-align: center;
   margin-bottom: 5%;
+  float:left;
 }
 #containerRegistro{
 background-color: #E4F1F6;
@@ -351,6 +352,11 @@ width: 30%;
 margin-left: 35%;
 text-align: center;
 margin-bottom: 5%;
+}
+#irRegistro{
+  float:left;
+  width:200px;
+  background:#fc0;
 }
 /*////////////////////////////////////////////////////////////////////////////*/
 
