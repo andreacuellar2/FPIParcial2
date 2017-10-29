@@ -438,6 +438,9 @@ ul.topnav li a.active {background-color: #75A8BD;}
     ul.topnav li.right,
     ul.topnav li {float: none;}
 }
+.bodyperfil{
+  background-image: url("../IMG/fondoPerfil.jpg");
+}
 
 .perfil{
   position: absolute;
