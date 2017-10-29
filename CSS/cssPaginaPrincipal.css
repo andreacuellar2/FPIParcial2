@@ -260,7 +260,6 @@ background-color: #67AFCB;
 border-radius: 5px;
 }
 
-
 #comentar{
 background-color: #173F4F;
 border-radius: 5px;
@@ -361,8 +360,8 @@ body {
   text-align: center;
 }
 
-body{
-  background-image: url(IMG/owl.png);
+.bodylogin{
+  background-image: url("../IMG/owl.png");
 }
 
 #containerLogin{
@@ -370,8 +369,19 @@ body{
   border-radius: 15px;
   width: 30%;
   margin-left: 35%;
-  text-align: left;
+  text-align: center;
+  margin-bottom: 5%;
 }
+
+#containerRegistro{
+background-color: #E4F1F6;
+border-radius: 15px;
+width: 30%;
+margin-left: 35%;
+text-align: center;
+margin-bottom: 5%;
+}
+
 
 .stars {
 	font-size: 0;
