@@ -22,8 +22,9 @@
   <main id="center" class="column">
     <div id="pagCategorias">
   <h1 id="articulosRecientes">CATEGORÍAS</h1><hr>
-  <div class="contenedorGeografia" id="contenedorGeografia">
-  <br><br> <h3 class="tituloBlog">GEOGRAFÍA</h3><br><br>
+
+  <div class="contenedorGeografia" id="contenedorGeografia" onmouseover="OpacityActGeo()" onmouseout="OpacityDesGeo()">
+  <br><br> <h3 class="tituloBlog" onclick="MostrarArtGeografia()">GEOGRAFÍA</h3><br><br>
   </div><br>
   <div class="contenedorArtGeografia" id="contenedorArtGeografía">
   <br><br> <h3 class="artCategoriaTituloOsc">Artículos</h3><br>
@@ -43,8 +44,8 @@
   </div>
   </div><br>
 
-  <div class="contenedorarte">
-  <br><br> <h3 class="categoriaArte">ARTE Y LITERATURA</h3><br><br>
+  <div class="contenedorarte" id="contenedorarte" onmouseover="OpacityActArt()" onmouseout="OpacityDesArt()">
+  <br><br> <h3 class="categoriaArte" onclick="MostrarArtArte()">ARTE Y LITERATURA</h3><br><br>
   </div><br>
   <div class="contenedorArtArte" id="contenedorArtArte">
   <br><br> <h3 class="artCategoriaTituloCla">Artículos</h3><br>
@@ -64,8 +65,8 @@
   </div>
   </div><br>
 
-  <div class="contenedorhistoria">
-  <br><br> <h3 class="tituloBlog">HISTORIA</h3><br><br>
+  <div class="contenedorhistoria" id="contenedorhistoria" onmouseover="OpacityActHis()" onmouseout="OpacityDesHis()">
+  <br><br> <h3 class="tituloBlog" onclick="MostrarArtHistoria()">HISTORIA</h3><br><br>
   </div><br>
   <div class="contenedorArtHistoria" id="contenedorArtHistoria">
   <br><br> <h3 class="artCategoriaTituloOsc">Artículos</h3><br>
@@ -85,8 +86,8 @@
   </div>
   </div><br>
 
-  <div class="contenedorentretenimiento">
-  <br><br> <h3 class="tituloBlog">ENTRETENIMIENTO</h3><br><br>
+  <div class="contenedorentretenimiento" id="contenedorentretenimiento" onmouseover="OpacityActEnt()" onmouseout="OpacityDesEnt()">
+  <br><br> <h3 class="tituloBlog" onclick="MostrarArtEntretenimiento()">ENTRETENIMIENTO</h3><br><br>
   </div><br>
   <div class="contenedorArtEntretenimiento" id="contenedorArtEntretenimiento">
   <br><br> <h3 class="artCategoriaTituloOsc">Artículos</h3><br>
@@ -106,8 +107,8 @@
   </div>
   </div><br>
 
-  <div class="contenedorciencia">
-  <br><br> <h3 class="categoriaCiencia">CIENCIA Y NATURALEZA</h3><br><br>
+  <div class="contenedorciencia" id="contenedorciencia" onmouseover="OpacityActCie()" onmouseout="OpacityDesCie()">
+  <br><br> <h3 class="categoriaCiencia" onclick="MostrarArtCiencia()">CIENCIA Y NATURALEZA</h3><br><br>
   </div><br>
   <div class="contenedorArtCiencia" id="contenedorArtCiencia">
   <br><br> <h3 class="artCategoriaTituloOsc">Artículos</h3><br>
@@ -127,8 +128,8 @@
   </div>
   </div><br>
 
-  <div class="contenedordeportes">
-  <br><br> <h3 class="categoriaDeportes">DEPORTES</h3><br><br>
+  <div class="contenedordeportes" id="contenedordeportes" onmouseover="OpacityActDep()" onmouseout="OpacityDesDep()">
+  <br><br> <h3 class="categoriaDeportes" onclick="MostrarArtDeportes()">DEPORTES</h3><br><br>
   </div><br>
   <div class="contenedorArtDeportes" id="contenedorArtDeportes">
   <br><br> <h3 class="artCategoriaTituloOsc">Artículos</h3><br>

@@ -56,10 +56,12 @@ ul.pagination li a.active {
 .contenedorGeografia{
   background-image: url(../IMG/Geografia.jpg);
   border-radius: 5px;
+  opacity: 0.5;
 }
 .contenedorArtGeografia{
   background-image: url(../IMG/GeografiaArt.jpg);
   border-radius: 5px;
+  display: none;
 }
 .contenedorarte{
   background-image: url(../IMG/arte.jpg);
@@ -68,6 +70,7 @@ ul.pagination li a.active {
 .contenedorArtArte{
   background-image: url(../IMG/arteArt.jpg);
   border-radius: 5px;
+  display: none;
 }
 .categoriaArte{
   font-family: "Raleway", sans-serif;
@@ -82,6 +85,7 @@ ul.pagination li a.active {
   border-radius: 5px;
 }
 .contenedorArtHistoria{
+  display: none;
   background-image: url(../IMG/historiaArt.jpg);
   border-radius: 5px;
 }
@@ -92,6 +96,7 @@ ul.pagination li a.active {
 .contenedorArtEntretenimiento{
   background-image: url(../IMG/entretenimientoArt.jpg);
   border-radius: 5px;
+  display: none;
 }
 .contenedorciencia{
   background-image: url(../IMG/ciencia.png);
@@ -100,6 +105,7 @@ ul.pagination li a.active {
 .contenedorArtCiencia{
   background-image: url(../IMG/cienciaArt.png);
   border-radius: 5px;
+  display: none;
 }
 .categoriaCiencia{
   font-family: "Raleway", sans-serif;
@@ -124,6 +130,7 @@ ul.pagination li a.active {
 .contenedorArtDeportes{
   background-image: url(../IMG/deportesArt.jpg);
   border-radius: 5px;
+  display: none;
 }
 /*////////////////////////////////////////////////////////////////////////////*/
 
