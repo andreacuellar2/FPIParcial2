@@ -29,10 +29,12 @@ function MostrarCategorias() {
 
 function MostrarLogin() {
   document.getElementById('containerLogin').style.display = 'block';
+  document.getElementById('irRegistro').style.display = 'block';
   document.getElementById('containerRegistro').style.display = 'none';
 }
 
 function MostrarRegistro() {
   document.getElementById('containerLogin').style.display = 'none';
+  document.getElementById('irRegistro').style.display = 'none';
   document.getElementById('containerRegistro').style.display = 'block';
 }
