@@ -21,38 +21,34 @@
       <h1 class="tituloBlog"><b>O W L Space</b></h1></hr>
         <p class="subtema">Bienvenido al espacio para compartir tus ideas</p>
     </header>
-<!-- //////////////////////////// Pagina Inicio //////////////////////////////-->
-<div id="contenedorPrincipal">
-  <main id="center" class="column">
-        <div id="pagInicio">
-      	   <h1 id="articulosRecientes">ARTÍCULOS RECIENTES</h1><hr>
-            <div id="entrada1"><br><br>
-              <img src="IMG/blog.jpg" id="imgPrimera" alt="blog">
-              <div class="contenedor">
-                <h2 class="articuloTitulo"><b>ARTÍCULO 1</b></h2><br>
-                <h3 class="descripcionArt">Jueves 26 de Octubre 2017</h3><br>
-                <p class="parrafoArt">Esta es una prueba de lo que estará escrito en el artículo 1</p><br>
-                <div class="botonesArt">
-                  <p><button class="btnLeerMas" onclick="MostrarArticulo()"><b>LEER MAS »</b></button></p>
-                </div>
-                <p class="comentarios"><b>Comentarios 2</b></p>
-              </div>
-            </div>
-            <div id="entrada2"><br><br>
-              <img src="IMG/blog2.jpg" id="imgSegunda" alt="blog">
-              <div class="contenedor">
-                <h2 class="articuloTitulo"><b>ARTÍCULO 2</b></h2><br>
-                <h3 class="descripcionArt">Jueves 26 de Octubre 2017</h3><br>
-                <p class="parrafoArt">Esta es una prueba de lo que estará escrito en el artículo 2</p><br>
-                <div class="botonesArt">
-                  <p><button class="btnLeerMas" onclick="MostrarArticulo()"><b>LEER MAS »</b></button></p>
-                </div>
-                <p class="comentarios"><b>Comentarios 0</b></p>
-              </div>
-            </div>
-        </div>
-</main>
-
+<!--********************Contenedor de toda la pagina*************************-->
+  	<div id="contenedorPrincipal">
+      <main id="center" class="column">
+        <div id="pagArticulo">
+  <h1 id="articulosRecientes">ARTICULO 1</h1><hr>
+  <div id="entrada1"><br><br>
+    <img src="IMG/blog.jpg" id="imgPrimera" alt="blog">
+    <div class="stars">
+      <h1 class="calificacion">Califica esta publicación:</h1>
+      <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
+      <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
+      <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
+      <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
+      <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+    </div>
+    <div class="contenedor"><br>
+      <h3 class="descripcionArt">Jueves 26 de Octubre 2017</h3><br>
+      <p class="parrafoArt">Si un día llega a tu jardín una jara –porque algún pájaro ha traído una semilla–, estás de enhorabuena. Son muchos los aficionados a la jardinería que tratan de disfrutar de su aroma y color, pero no es nada fácil. Hablamos de una especie silvestre o montana. Actualmente, se usa más en perfumería, donde se emplea como fijador de perfumes, pero la jara ha vuelto a recuperar cierto protagonismo medicinal para tratar las gastritis y las úlceras. Descubre una planta que, además, florece temprano y lo resiste todo, ¡también los incendios!</p><br>
+          <p class="comentarios"><b>Comentarios 2</b></p>
+  </div>
+  <br><div id="comentar">
+      <h3 class="comentarbar">Déjanos tu comentario:</h3>
+      <input type="text" class="inputComentario" id="comentario" placeholder="Escribe tu comentario..."><br>
+      <input type="button" class="btnComentar" value="Comentar">
+  </div><br>
+  </div>
+</div>
+      </main>
 <!-- ////////////////////////// Menu Izquierda //////////////////////////////-->
   		<nav id="left" class="column">
         <img id="headerimg"src="IMG/owl.png" alt="buho">
@@ -65,8 +61,6 @@
   				<li><a class="li" href="#">Categoría 5</a></li>
   			</ul>
   		</nav>
-<!-- ////////////////////////////////////////////////////////////////////////-->
-
 <!-- /////////////////////////// Menu Derecha ///////////////////////////////-->
   		<div id="right" class="column">
         <div id="areaPerfil">
@@ -100,10 +94,7 @@
 
   		</div>
   	</div>
-<!-- ////////////////////////////////////////////////////////////////////////-->
-
-<!--*************************************************************************-->
-
+<!-- /////////////////////////////////footer///////////////////////////////////////-->
   	<div id="footer">
   		<footer id="footer"><h1>Derechos Reservados</h1></footer>
   	</div>

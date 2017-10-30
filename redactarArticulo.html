@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/cssPaginaPrincipal.css">
+    <link rel=icon href="IMG/favicon.png" type="image/png">
+    <title>Bienvenido al Blog</title>
+  </head>
+
+  <body onload="MostrarInicio()">
+<!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
+    <ul class="topnav">
+      <li><a id="navInicio" href="inicio.html">Inicio</a></li>
+      <li><a id="navCategorias" href="categoria.html">Categorías</a></li>
+      <li><a id="navRegistro" href="login.html" class="right">Login</a></li>
+    </ul>
+<!-- //////////////////////////Header//////////////////////////////////////////////-->
+    <header id="header">
+      <h1 class="tituloBlog"><b>O W L Space</b></h1></hr>
+        <p class="subtema">Bienvenido al espacio para compartir tus ideas</p>
+    </header>
+<!--********************Contenedor de toda la pagina*************************-->
+  	<div id="contenedorPrincipal">
+      <main id="center" class="column">
+        <div class="containerLogin" id="pagPublicar">
+          <form id="formPost">
+  <div>
+    <div>
+      <h1 class="subtema">Escribe tu artículo</h1><br>
+      <label class="loginLe">Título: </label><input class="loginLe" type="text" placeholder="Título del artículo" required maxlength="25"><br><br>
+      <label class="loginLe">Cuerpo: </label>
+      <textarea class="loginLe" name="contenido" placeholder="Ingresa aquí el contenido" cols="50" rows="10" required></textarea><br><br>
+      <label class="loginLe">Categoría:</label>
+      <select class="loginLe">
+        <option>Geografía</option>
+        <option>Arte y Literatura</option>
+        <option>Historia</option>
+        <option>Entretenimiento</option>
+        <option>Ciencia y Naturaleza</option>
+        <option>Deportes</option>
+      </select>
+      <br><br>
+      <label class="loginLe">Agregar imagen: "\t"</label><input class="loginLe" type="file" name="imagen" accept="image/jpeg, image/png"/>
+      <div class="contenedorImagen">
+      </div>
+      <br>
+  </div>
+  <input class="btnLeerMas" type="submit" id="btnPublicar" value="Publicar">
+</div>
+          </form>
+        </div>
+      </main>
+  <!-- ////////////////////////// Menu Izquierda //////////////////////////////-->
+      <nav id="left" class="column">
+        <img id="headerimg"src="IMG/owl.png" alt="buho">
+        <h3 class="subtemaNav">CATEGORÍAS</h3><hr></hr><br>
+        <ul>
+          <li><a class="li" href="#">Categoría 1</a></li><br>
+          <li><a class="li" href="#">Categoría 2</a></li><br>
+          <li><a class="li" href="#">Categoría 3</a></li><br>
+          <li><a class="li" href="#">Categoría 4</a></li><br>
+          <li><a class="li" href="#">Categoría 5</a></li>
+        </ul>
+      </nav>
+<!-- /////////////////////////// Menu Derecha ///////////////////////////////-->
+      <div id="right" class="column">
+        <div id="areaPerfil">
+          <a href="perfil.html">Ver mi perfil</a>
+          <input type="button" onclick="MostrarPublicar()" value="Publicar un articulo">
+        </div>
+        <h3 class="subtemaNav">Más leídos:</h3><hr>
+        <ul id="listaArticulos">
+
+          <li class="primerArt">
+            <img src="IMG/pop1.jpg" class="imgpop" alt="flor">
+            <div class="textoPop">
+              <h3 class="descripcionPop">Flores</h3>
+              <h4 class="parrafoArt">Flores más bonitas de América</h4><br>
+              <div class="botonesArt">
+              <p><button class="btnNav"><b>LEER MAS »</b></button></p>
+              </div>
+            </div>
+          </li><br><br>
+
+          <li class="segundoArt">
+            <img src="IMG/animales.jpg" class="imgpop" alt="animales">
+            <div class="textoPop">
+            <h3 class="descripcionPop">Animales</h3>
+            <h4 class="parrafoArt">Animales más bonitos de América</h4><br>
+            <div class="botonesArt">
+            <p><button class="btnNav"><b>LEER MAS »</b></button></p>
+            </div>
+            </div>
+          </li>
+
+      </div>
+      </div>
+<!-- /////////////////////////////////footer///////////////////////////////////////-->
+      <div id="footer">
+      <footer id="footer"><h1>Derechos Reservados</h1></footer>
+      </div>
+
+      <script type="text/javascript" src="JS/eventosParaCambiarDiv.js"></script>
+
+      </body>
+      </html>
+<!--<span class="has-popup">Ver el contenido<span class="popup">Éste es el contenido</span></span>-->

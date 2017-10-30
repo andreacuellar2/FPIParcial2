@@ -1,10 +1,72 @@
 /*///////////////////////////////Categorias///////////////////////////////////*/
+.paginador{
+  text-align: center;
+}
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+ul.pagination li {
+  display: inline;
+}
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ul.pagination li a.active {
+    background-color: #E4F1F6;
+    color: black;
+}
+ul.pagination li a:hover:not(.active) {
+  background-color: #E4F1F6;
+}
+ul.pagination li a {
+    border-radius: 5px;
+}
+ul.pagination li a.active {
+    border-radius: 5px;
+}
+.artCategoriaTituloOsc{
+  font-family: "Raleway", sans-serif;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: #173F4F;
+  background-color: white;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.artCategoriaTituloCla{
+  font-family: "Raleway", sans-serif;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-color: #173F4F;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.categoriaArticulos{
+  padding-left: 2%;
+  padding-bottom: 2%;
+}
 .contenedorGeografia{
   background-image: url(../IMG/Geografia.jpg);
   border-radius: 5px;
 }
+.contenedorArtGeografia{
+  background-image: url(../IMG/GeografiaArt.jpg);
+  border-radius: 5px;
+}
 .contenedorarte{
   background-image: url(../IMG/arte.jpg);
+  border-radius: 5px;
+}
+.contenedorArtArte{
+  background-image: url(../IMG/arteArt.jpg);
   border-radius: 5px;
 }
 .categoriaArte{
@@ -19,12 +81,24 @@
   background-image: url(../IMG/historia.jpg);
   border-radius: 5px;
 }
+.contenedorArtHistoria{
+  background-image: url(../IMG/historiaArt.jpg);
+  border-radius: 5px;
+}
 .contenedorentretenimiento{
   background-image: url(../IMG/entretenimiento.jpg);
   border-radius: 5px;
 }
+.contenedorArtEntretenimiento{
+  background-image: url(../IMG/entretenimientoArt.jpg);
+  border-radius: 5px;
+}
 .contenedorciencia{
   background-image: url(../IMG/ciencia.png);
+  border-radius: 5px;
+}
+.contenedorArtCiencia{
+  background-image: url(../IMG/cienciaArt.png);
   border-radius: 5px;
 }
 .categoriaCiencia{
@@ -46,6 +120,10 @@
   font-weight: bold;
   color: black;
   padding-top: 50px;
+}
+.contenedorArtDeportes{
+  background-image: url(../IMG/deportesArt.jpg);
+  border-radius: 5px;
 }
 /*////////////////////////////////////////////////////////////////////////////*/
 
@@ -157,6 +235,13 @@ header {
   font-size: 20px;
   font-weight: bold;
   color: #092834;
+  border-radius: 5px;
+}
+.loginLeCla{
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #E4F1F6;
   border-radius: 5px;
 }
 .descripcionArt{
