@@ -11,7 +11,7 @@ if ($_POST) {
       'descripcion' => $_POST['descripcion'],
       'sexo' => $_POST['sexo'],
       'password' => $_POST['password'],
-      'imgProfile' => SubirImagen();
+      'imgProfile' => SubirImagen($_FILES['file'])
     );
     $allUserArray[] = $registro;
     $finalAllUserArray = json_encode($allUserArray);
@@ -20,8 +20,7 @@ if ($_POST) {
     header("Location: RegistrandoConPHP.php?NoExisteArchivo");
   }
 }
-function SubirImagen(){
-  $file = $_FILES['file'];
+function SubirImagen($file){
 	$fileName = $file['name'];
 	$fileTmpName = $file['tmp_name'];
 	$fileSize = $file['size'];
@@ -36,8 +35,8 @@ function SubirImagen(){
 	if (in_array($fileActualExt, $allowed)) {
 		if ($fileError === 0) {
 			if ($fileSize < 500000) {
-				$fileNameNew = $fileName.".".$fileActualExt;
-				$fileDestination = 'IMG/uploads/'.$fileNameNew;
+				$fileNameNew = uniqid('', true).".".$fileActualExt;
+				$fileDestination = 'uploads/'.$fileNameNew;
 				move_uploaded_file($fileTmpName, $fileDestination);
 				header("Location: index.php?uploadsuccess");
 			} else {
@@ -49,8 +48,9 @@ function SubirImagen(){
 	} else {
 		echo "You cannot upload files of this type!";
 	}
-  return $fileName;
+  return $fileNameNew;
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -60,7 +60,7 @@ function SubirImagen(){
   </head>
   <body>
 
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
       <h1>Crear Cuenta</h1>
       <label>Nombre: </label>
       <input type="text" name="nombre" value="" required>
@@ -72,7 +72,7 @@ function SubirImagen(){
       <textarea name="descripcion" rows="8" cols="80"></textarea>
       <br>
       <label>Imagen de Perfil</label>
-      <input type="file" name="file">
+      <input type="file" name="file" accept="image/jpeg, image/png">
       <label>Sexo: </label>
       <select name="sexo">
         <option value="H">Hombre</option>
