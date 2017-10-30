@@ -1,4 +1,12 @@
 //mostrar Artículos de categorias
+function OpacityCategorias(){
+document.getElementById('contenedorGeografia').style.opacity = '0.5';
+document.getElementById('contenedorarte').style.opacity = '0.5';
+document.getElementById('contenedorhistoria').style.opacity = '0.5';
+document.getElementById('contenedorentretenimiento').style.opacity = '0.5';
+document.getElementById('contenedorciencia').style.opacity = '0.5';
+document.getElementById('contenedordeportes').style.opacity = '0.5';
+}
 function MostrarArtGeografia(){
   document.getElementById('contenedorArtGeografía').style.display='block';
   document.getElementById('contenedorArtArte').style.display='none';
