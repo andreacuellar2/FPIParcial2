@@ -63,6 +63,16 @@ ul.pagination li a.active {
   border-radius: 5px;
   display: none;
 }
+.contenedorOtros{
+  background-image: url(../IMG/Otros.jpg);
+  border-radius: 5px;
+  opacity: 0.5;
+}
+.contenedorArtOtros{
+  background-image: url(../IMG/OtrosArt.jpg);
+  border-radius: 5px;
+  display: none;
+}
 .contenedorarte{
   background-image: url(../IMG/arte.jpg);
   border-radius: 5px;

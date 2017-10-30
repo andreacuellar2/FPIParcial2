@@ -5,6 +5,7 @@ document.getElementById('contenedorhistoria').style.opacity = '0.5';
 document.getElementById('contenedorentretenimiento').style.opacity = '0.5';
 document.getElementById('contenedorciencia').style.opacity = '0.5';
 document.getElementById('contenedordeportes').style.opacity = '0.5';
+document.getElementById('contenedorArtOtros').style.display='none';
 }
 function MostrarArtGeografia(){
   document.getElementById('contenedorArtGeografía').style.display='block';
@@ -13,6 +14,7 @@ function MostrarArtGeografia(){
   document.getElementById('contenedorArtEntretenimiento').style.display='none';
   document.getElementById('contenedorArtCiencia').style.display='none';
   document.getElementById('contenedorArtDeportes').style.display='none';
+  document.getElementById('contenedorArtOtros').style.display='none';
 }
 function MostrarArtArte(){
   document.getElementById('contenedorArtGeografía').style.display='none';
@@ -21,6 +23,7 @@ function MostrarArtArte(){
   document.getElementById('contenedorArtEntretenimiento').style.display='none';
   document.getElementById('contenedorArtCiencia').style.display='none';
   document.getElementById('contenedorArtDeportes').style.display='none';
+  document.getElementById('contenedorArtOtros').style.display='none';
 }
 function MostrarArtHistoria(){
   document.getElementById('contenedorArtGeografía').style.display='none';
@@ -29,6 +32,7 @@ function MostrarArtHistoria(){
   document.getElementById('contenedorArtEntretenimiento').style.display='none';
   document.getElementById('contenedorArtCiencia').style.display='none';
   document.getElementById('contenedorArtDeportes').style.display='none';
+  document.getElementById('contenedorArtOtros').style.display='none';
 }
 function MostrarArtEntretenimiento(){
   document.getElementById('contenedorArtGeografía').style.display='none';
@@ -37,6 +41,7 @@ function MostrarArtEntretenimiento(){
   document.getElementById('contenedorArtEntretenimiento').style.display='block';
   document.getElementById('contenedorArtCiencia').style.display='none';
   document.getElementById('contenedorArtDeportes').style.display='none';
+  document.getElementById('contenedorArtOtros').style.display='none';
 }
 function MostrarArtCiencia(){
   document.getElementById('contenedorArtGeografía').style.display='none';
@@ -45,6 +50,7 @@ function MostrarArtCiencia(){
   document.getElementById('contenedorArtEntretenimiento').style.display='none';
   document.getElementById('contenedorArtCiencia').style.display='block';
   document.getElementById('contenedorArtDeportes').style.display='none';
+  document.getElementById('contenedorArtOtros').style.display='none';
 }
 function MostrarArtDeportes(){
   document.getElementById('contenedorArtGeografía').style.display='none';
@@ -53,6 +59,22 @@ function MostrarArtDeportes(){
   document.getElementById('contenedorArtEntretenimiento').style.display='none';
   document.getElementById('contenedorArtCiencia').style.display='none';
   document.getElementById('contenedorArtDeportes').style.display='block';
+  document.getElementById('contenedorArtOtros').style.display='none';
+}
+function MostrarArtOtros(){
+  document.getElementById('contenedorArtGeografía').style.display='none';
+  document.getElementById('contenedorArtArte').style.display='none';
+  document.getElementById('contenedorArtHistoria').style.display='none';
+  document.getElementById('contenedorArtEntretenimiento').style.display='none';
+  document.getElementById('contenedorArtCiencia').style.display='none';
+  document.getElementById('contenedorArtDeportes').style.display='none';
+  document.getElementById('contenedorArtOtros').style.display='block';
+}
+function OpacityActOtro(){
+  document.getElementById('contenedorOtros').style.opacity = '1';
+}
+function OpacityDesOtro(){
+  document.getElementById('contenedorOtros').style.opacity = '0.5';
 }
 function OpacityActGeo(){
   document.getElementById('contenedorGeografia').style.opacity = '1';
