@@ -5,7 +5,7 @@ if ($_POST) {
     $allUserContent = file_get_contents('usuarios.json');
     $allUserArray = json_decode($allUserContent, true);
     $registro = array(
-      'id' => count($allUserArray+1),
+      'id' => count($allUserArray)+1,
       'nombre' => $_POST['nombre'],
       'nombreUsuario' => $_POST['nombreUsuario'],
       'descripcion' => $_POST['descripcion'],
