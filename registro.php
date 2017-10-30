@@ -19,6 +19,8 @@ if ($_POST) {
       $allUserArray[] = $registro;
       $finalAllUserArray = json_encode($allUserArray);
       file_put_contents('DATA/usuarios.json', $finalAllUserArray);
+      header( "Location: login.html" );
+      die();
     }
 
   }else {
@@ -43,7 +45,6 @@ function SubirImagen($file){
 				$fileNameNew = uniqid('', true).".".$fileActualExt;
 				$fileDestination = 'IMG/uploads/'.$fileNameNew;
 				move_uploaded_file($fileTmpName, $fileDestination);
-				header("Location: registro.php?uploadsuccess");
 			} else {
 				echo "Archivo muy grande";
 			}
