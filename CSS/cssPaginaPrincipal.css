@@ -13,7 +13,7 @@ ul.pagination li {
 ul.pagination li a {
     color: black;
     float: left;
-    padding: 8px 16px;
+    padding: 0.5vw 1vw;
     text-decoration: none;
 }
 ul.pagination li a.active {
@@ -24,39 +24,41 @@ ul.pagination li a:hover:not(.active) {
   background-color: #E4F1F6;
 }
 ul.pagination li a {
-    border-radius: 5px;
+    border-radius: 0.5vw;
 }
 ul.pagination li a.active {
-    border-radius: 5px;
+    border-radius: 0.5vw;
 }
 .artCategoriaTituloOsc{
   font-family: "Raleway", sans-serif;
-  font-size: 25px;
+  font-size: 3vw;
   text-align: center;
   font-weight: bold;
   color: #173F4F;
   background-color: white;
-  padding-top: 1%;
-  padding-bottom: 1%;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
 }
 .artCategoriaTituloCla{
   font-family: "Raleway", sans-serif;
-  font-size: 25px;
+  font-size: 3vw;
   text-align: center;
   font-weight: bold;
   color: white;
   background-color: #173F4F;
-  padding-top: 1%;
-  padding-bottom: 1%;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
 }
 .categoriaArticulos{
-  padding-left: 2%;
-  padding-bottom: 2%;
+  padding-left: 1vw;
+  padding-bottom: 1vw;
 }
 .contenedorGeografia{
   background-image: url(../IMG/Geografia.jpg);
-  border-radius: 5px;
+  border-radius: 0.5vw;
   opacity: 0.5;
+  padding-top: 0.5vw;
+  padding-bottom: 1.5vw;
 }
 .contenedorArtGeografia{
   background-image: url(../IMG/GeografiaArt.jpg);
@@ -205,11 +207,23 @@ header {
   border-radius: 1vw;
   text-align: center;
 }
+.articulos{
+  opacity: 0.5;
+}
+.articulos2{
+  opacity: 0.5;
+}
 #center {
   padding: 1vw 1.5vw;
   width: 100%;
   background: #E4F1F6;
   border-radius: 1vw;
+}
+@media screen and (max-width: 600px){
+  #center{
+    padding: 0.5vw 0.5vw;
+    width: 125%;
+  }
 }
 #right {
   width: 13vw;
@@ -217,59 +231,58 @@ header {
   margin-right:-100%;
   background: #347B98;
 }
-#articulosRecientes{
-  padding-top: 40px;
-  font-family: "Raleway", sans-serif;
-  font-size: 50px;
-  text-align: center;
-  font-weight: bold;
-  color: #347B98;
+@media screen and (max-width: 600px){
+  #right{
+    visibility: hidden;
+  }
 }
 .articuloTitulo{
-  padding-top: 20px;
+  padding-top: 2vw;
   font-family: "Raleway", sans-serif;
-  font-size: 50px;
+  font-size: 4vw;
   text-align: center;
   font-weight: bold;
   color: white;
-  padding-left: 10px;
-}
-.articuloTituloD{
-  font-family: "Raleway", sans-serif;
-  font-size: 25px;
-  font-weight: bold;
-  color: #173F4F;
-  background-color: white;
+  padding-left: 2vw;
 }
 .loginLe{
   font-family: "Raleway", sans-serif;
-  font-size: 20px;
+  font-size: 1.5vw;
   font-weight: bold;
   color: #092834;
-  border-radius: 5px;
+  border-radius: 0.5vw;
 }
 .loginLeCla{
   font-family: "Raleway", sans-serif;
-  font-size: 20px;
+  font-size: 1.5vw;
   font-weight: bold;
   color: #E4F1F6;
-  border-radius: 5px;
+  border-radius: 0.5vw;
 }
 .descripcionArt{
   font-family: "Raleway", sans-serif;
-  font-size: 25px;
+  font-size: 1.5vw;
   text-align: center;
   font-weight: bold;
   color: #092834;
-  padding-left: 16px;
+  padding-left: 2vw;
 }
 .parrafoArt{
   font-family: "Raleway", sans-serif;
-  font-size: 15px;
+  font-size: 2vw;
   text-align: justify;
   color: black;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  background-color: #67AFCB;
+}
+.parrafoArtDe{
+  font-family: "Raleway", sans-serif;
+  font-size: 1vw;
+  text-align: justify;
+  color: black;
+  padding-left: 2vw;
+  padding-right: 2vw;
   background-color: #67AFCB;
 }
 .btnLeerMas{
@@ -277,28 +290,31 @@ font-family: "Raleway", sans-serif;
 background-color: #092834;
 border: none;
 color: white;
-padding: 15px 40px;
+padding: 1vw 3vw;
 text-align: center;
 display: inline-block;
-font-size: 20px;
-margin: 4px 2px;
+font-size: 1.5vw;
+margin: 0.5vw 0.5vw;
 cursor: pointer;
-border-radius: 5px;
+border-radius: 1vw;
+box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+.btnLeerMas:hover:not(.active) {
+  background-color: darkgray;
 }
 .btnComentar{
 font-family: "Raleway", sans-serif;
 background-color: #E4F1F6;
-color: #092834;
-padding: 10px 25px;
+padding: 0.5vw 1vw;
 text-align: center;
-font-size: 15px;
-margin: 4px 2px;
+font-size: 1vw;
+margin: 0.5vw 0.5vw;
 cursor: pointer;
-border-radius: 10%;
-margin-left: 41%;
+border-radius: 0.5vw;
 font-weight: bold;
+box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
 }
-.btnLeerMas:hover:not(.active) {
+.btnComentar:hover:not(.active) {
   background-color: darkgray;
 }
 .btnNav{
@@ -306,13 +322,13 @@ font-family: "Raleway", sans-serif;
 background-color: #092834;
 border: none;
 color: white;
-padding: 5px 25px;
+padding: 0.5vw 1vw;
 text-align: center;
 display: inline-block;
-font-size: 12px;
-margin: 4px 2px;
+font-size: 1vw;
+margin: 0.5vw 0.5vw;
 cursor: pointer;
-border-radius: 5px;
+border-radius: 0.5vw;
 box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
 }
 .btnNav:hover:not(.active) {
@@ -320,89 +336,82 @@ box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
 }
 .botonesArt{
   text-align: center;
-  padding-right:10px;
+  padding-right:1vw;
+  padding-left: 1vw;
+  border-radius: 1vw;
 }
 .comentarios{
   font-family: "Raleway", sans-serif;
-  font-size: 15px;
+  font-size: 1.5vw;
   text-align: right;
   color: #E4F1F6;
-  padding-right: 16px;
+  padding-right: 3vw;
 }
 .calificacion{
   font-family: "Raleway", sans-serif;
-  font-size: 15px;
+  font-size: 1.5vw;
   text-align: right;
   color: #092834;
-  padding-right: 16px;
+  padding-right: 2vw;
 }
-#imgPrimera{
-width:100%;
-border-radius: 5px;
-}
-#imgSegunda{
-width:100%;
-border-radius: 5px;
-}
-.botonesArt{
-  padding-left: 20px;
-  border-radius: 5px;
-}
-.contenedor{
-background-color: #67AFCB;
-border-radius: 5px;
-padding: 1% 1% 1% 1%;
-}
-#comentar{
-background-color: #173F4F;
-border-radius: 5px;
-}
+  #imgPrimera{
+  width:100%;
+  border-radius: 1vw;
+  }
+  #imgSegunda{
+  width:100%;
+  border-radius: 1vw;
+  }
+  .contenedor{
+  background-color: #67AFCB;
+  border-radius: 1vw;
+  padding: 1vw 1vw 1vw 1vw;
+  }
+  #comentar{
+  background-color: #173F4F;
+  border-radius: 1vw;
+  padding: 0.5vw 0.5vw 0.5vw 0.5vw;
+  }
 .areaPerfil{
   text-align: center;
 }
-.imgpop{
-width:125px;
-border-radius: 5px;
-padding-top: 10px;
-padding-left: 2px;
-}
-.textoPop{
-padding-bottom: 25px;
-border-radius: 5px;
-text-align: center;
-font-size: 15px;
-color: white;
-}
+  .imgpop{
+  width:125px;
+  border-radius: 1vw;
+  padding-top: 1vw;
+  padding-left: 0.5vw;
+  }
+  .textoPop{
+  padding-bottom: 2vw;
+  text-align: center;
+  font-size: 1.5vw;
+  color: white;
+  }
 .comentarbar{
   text-align: center;
-  font-size: 15px;
+  font-size: 1.5vw;
   color: white;
 }
 .inputComentario{
   font-family: "Raleway", sans-serif;
-  font-size: 18px;
+  font-size: 1.1vw;
   color: #092834;
-  border-radius: 5px;
+  border-radius: 0.5vw;
   width: 55%;
   height: 40%;
   margin-left: 20%;
 }
-.contenido{
-padding-right: 16px;
-padding-left: 16px;
-border-radius: 5px;
-}
 .primerArt{
   background-color: #67AFCB;
-  border-radius: 5px;
+  border-radius: 1vw;
 }
 .segundoArt{
   background-color: #67AFCB;
-  border-radius: 5px;
+  border-radius: 1vw;
 }
 .pagPublicar{
   text-align: left;
-  margin-left: 20%;
+  margin-left: 10vw;
 }
 /*////////////////////////////////////////////////////////////////////////////*/
 
@@ -425,11 +434,6 @@ border-radius: 5px;
 /*////////////////////////////////////////////////////////////////////////////*/
 
 /*////////////////////////////Para login y registro///////////////////////////*/
-.login{
-  width: 30%;
-  padding-left: 30%;
-  text-align: center;
-}
 .bodylogin{
   background-image: url("../IMG/owl.png");
 }
@@ -437,10 +441,11 @@ border-radius: 5px;
   background-color: #E4F1F6;
   text-align: center;
   float:left;
-  width: 50%;
-  height: 100%;
+  width: 50vw;
+  height: 45vw;
   position: absolute;
 }
+/*////////////////////////////ARREGLAR///////////////////////////*/
 #containerRegistro{
 background-color: #E4F1F6;
 border-radius: 15px;
@@ -459,6 +464,7 @@ padding-top: 2%;
   position: absolute;
   left:50%;
 }
+/*////////////////////////////FINARREGLAR///////////////////////////*/
 #divLetra{
 background-color: #E4F1F6;
 font-family: "Raleway", sans-serif;
@@ -471,11 +477,11 @@ border-radius: 5px;
 .divLetra{
 background-color: #E4F1F6;
 font-family: "Raleway", sans-serif;
-margin: 5%;
-font-size: 50px;
+margin: 1vw 1vw 1vw 1vw;
+font-size: 2.5vw;
 font-weight: bold;
 color: #092834;
-border-radius: 5px;
+border-radius: 0.5vw;
 }
 /*////////////////////////////////////////////////////////////////////////////*/
 
@@ -487,7 +493,7 @@ border-radius: 5px;
 .stars a {
 	text-decoration: none;
 	display: inline-block;
-	font-size: 32px;
+	font-size: 1.5vw;
 	font-size: 2rem;
 	color: #888;
 }
@@ -512,7 +518,7 @@ ul.topnav li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1.5vw 3vw;
     text-decoration: none;
 }
 ul.topnav li a:hover:not(.active) {background-color: #111;}
@@ -529,64 +535,51 @@ ul.topnav li a.activo {background-color: #75A8BD;}
 }
 .perfil{
   position: absolute;
-  height: 600px;
-  width: 25%;
+  height: 48vw;
+  width: 27vw;
   float: left;
   background-color: #347B98;
   text-align: center;
-  margin-top: 2%;
-  border-radius: 5px;
-  margin-left: 2%;
-  padding-bottom: 2%;
-  margin-bottom: 2%;
+  margin-top: 2vw;
+  border-radius: 0.5vw;
+  margin-left: 1vw;
+  padding-bottom: 1.5vw;
+  margin-bottom: 1.5vw;
 }
 .publicaciones{
-  height: 100%;
-  width: 70%;
+  height: 45vw;
+  width: 68vw;
   float: right;
-  left: 30%;
-  margin-top: 1%;
+  left: 30vw;
+  margin-top: 2vw;
   position: absolute;
-
-}
-.articulos{
-  opacity: 0.5;
-}
-.articulos2{
-  opacity: 0.5;
 }
 .entrada{
-  margin: 1%;
   text-align: center;
   background-color: #B0C4DE;
-  border-radius: 5px;
-  padding-top: 1%;
-  padding-bottom: 2%;
+  border-radius: 1vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
 }
 .imagenEntrada{
-  width: 30%;
+  width: 20vw;
   height: auto;
-  margin-top: 2%;
+  margin-top: 1.5vw;
 }
 .imagenUsuario{
-  width: 80%;
+  width: 20vw;
   height: auto;
-  border:5px solid #B0C4DE;
-  border-radius: 5px;
+  border: 1vw solid #B0C4DE;
+  border-radius: 1vw;
 }
-#tituloPerfil{
-  font-size:1.5vw;
+.tituloPerfil{
+  font-size: 1.5vw;
   color: white;
   font-weight: bold;
 }
-#textoPerfil{
-  font-size:1.5vw;
-  color: white;
-  font-variant: small-caps;
-}
 /*////////////////////////////////////////////////////////////////////////////*/
 
-/*//////////////////////Para informacion del texto////////////////////////////*/
+/*//////////////////////Para informacion del texto/ REPARAR///////////////////////////*/
 .popup {
 	display: block;
 	position: absolute;
@@ -636,7 +629,7 @@ ul.topnav li a.activo {background-color: #75A8BD;}
 	opacity: 1;
 	bottom: 100%;
 }
-/*////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////REPARAR/////////////////////////////////////////*/
 
 /*////////////////////////////Fuentes de google///////////////////////////////*/
 /* latin-ext */

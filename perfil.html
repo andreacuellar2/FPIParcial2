@@ -21,28 +21,28 @@
     <!-- //////////////////////////// Perfil //////////////////////////////-->
   <div class="perfil" id="perfil">
     <br>
-    <h1 id="tituloPerfil">juanpc13</h1><br>
+    <h1 id="username" class="tituloPerfil">juanpc13</h1><br>
     <div id="imagenPerfil">
-      <img src="IMG/yo.jpg" alt="Imagen Usuario" class="imagenUsuario">
+      <img src="IMG/yo.jpg" alt="Imagen Usuario" class="imagenUsuario" id="fotoUsuario"><br>
     </div>
-    <p id="tituloPerfil" class="loginLe">Juan Carlos</p>
-    <p class="loginLe">Estudiante de ingieneria de sistemas informaticos.</p>
-    <p class="loginLe">Masculino</p>
+    <p class="tituloPerfil" id="nombreUsuario">Juan Carlos</p><br>
+    <p class="loginLe" id="descripcion">Estudiante de ingieneria de sistemas informaticos.</p><br>
+    <p class="loginLe" id="sexoUsuario">Masculino</p><br>
     <button class="btnLeerMas" onclick="editarPerfil()">Editar perfil</button>
   </div>
 
   <div class="perfil" id="editarPerfil">
     <form>
     <br><br>
-    <label id="tituloPerfil">Username:</label><input type="text">
+    <label class="tituloPerfil">Username:</label><input type="text">
     <br><br>
     <div id="imagenPerfil">
-    <label id="tituloPerfil">Imagen:</label><input type="file" name="file" accept="image/jpeg, image/png">
+    <label class="tituloPerfil">Imagen:</label><input type="file" name="file" accept="image/jpeg, image/png">
     </div>
     <br><br>
-    <label id="tituloPerfil">Nombre:</label><input type="text">
+    <label class="tituloPerfil">Nombre:</label><input type="text">
     <br><br>
-    <label id="tituloPerfil">Acerca De:</label><input type="text">
+    <label class="tituloPerfil">Acerca De:</label><input type="text">
     <br><br>
     <button class="btnLeerMas">Guardar</button>
   </form>
