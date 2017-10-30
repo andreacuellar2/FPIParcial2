@@ -512,30 +512,37 @@ ul.topnav li a.activo {background-color: #75A8BD;}
   float: left;
   background-color: #347B98;
   text-align: center;
-  margin-top: 1%;
+  margin-top: 2%;
   border-radius: 5px;
   margin-left: 2%;
 }
 .publicaciones{
   height: 100%;
-  width: 75%;
+  width: 70%;
   float: right;
-  left: 25%;
+  left: 30%;
+  margin-top: 1%;
   position: absolute;
+
 }
 .entrada{
   margin: 1%;
   text-align: center;
   background-color: #B0C4DE;
   border-radius: 5px;
+  padding-top: 1%;
+  padding-bottom: 2%;
 }
 .imagenEntrada{
   width: 30%;
   height: auto;
+  margin-top: 2%;
 }
 .imagenUsuario{
-  width: 100%;
+  width: 80%;
   height: auto;
+  border:5px solid #B0C4DE;
+  border-radius: 5px;
 }
 #tituloPerfil{
   font-size:1.5vw;
