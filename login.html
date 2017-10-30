@@ -7,23 +7,22 @@
     <link rel="stylesheet" href="CSS/cssPaginaPrincipal.css">
     <link rel=icon href="IMG/favicon.png" type="image/png">
     <title>Inicia Sesión</title>
+  </head>
+  <body class="bodylogin">
+    <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
+    <ul class="topnav">
+      <li><a id="navInicio" href="inicio.html">Inicio</a></li>
+      <li><a id="navCategorias" onclick="MostrarCategorias()">Categorías</a></li>
+      <li><a id="navRegistro" href="login.html" class="right">Login</a></li>
+    </ul>
+    <!-- ////////////////////////////////////////////////////////////////////////-->
+
     <header id="header">
       <h1 class="tituloBlog"><b>O W L Space</b></h1></hr>
       <p class="subtema">Bienvenido al espacio para compartir tus ideas</p>
     </header>
-  </head>
 
-  <body class="bodylogin" onload="MostrarLogin()">
-<!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
-  <ul class="topnav">
-    <li><a id="navInicio" href="inicio.html">Inicio</a></li>
-    <li><a id="navCategorias" onclick="MostrarCategorias()">Categorías</a></li>
-    <li><a id="navRegistro" href="login.html" class="right">Login</a></li>
-  </ul>
-<!-- ////////////////////////////////////////////////////////////////////////-->
-
-
-<!-- /////////////////////////////// Login //////////////////////////////////-->
+    <!-- /////////////////////////////// Login //////////////////////////////////-->
     <div id="containerLogin">
       <br>
       <p id="divLetra">Inicia Sesión</p>
@@ -41,29 +40,8 @@
     </div>
     <div id="irRegistro">
         <p id="divLetra">¿No tienes una cuenta?</p>
-        <input type="button" value="¡REGÍSTRATE!" class="btnLeerMas" onclick="MostrarRegistro()"/>
+        <input type="button" value="¡REGÍSTRATE!" class="btnLeerMas" onclick="registro.html"/>
     </div>
-<!-- ////////////////////////////////////////////////////////////////////////-->
-
-<!-- ////////////////////////////// Registro ////////////////////////////////-->
-  <div id="containerRegistro">
-      <form>
-        <p id="divLetra">Nueva Cuenta</p><br>
-        <label class="loginLe">Nombre:   </label><input class="loginLe" type="text" maxlength="50" placeholder="Nombre de Usuario" pattern="[a-zA-Z0-9]*" value="" required><br><br>
-      <label class="loginLe">Username: </label><input class="loginLe" type="text" maxlength="10" placeholder="Username" pattern="[a-zA-Z0-9-_.]*" value="" required><br><br>
-      <label class="loginLe">Acerca de ti:</label><textarea  class="loginLe" placeholder="Pon una descripción sobre ti" cols="20" rows="6"></textarea><br><br>
-      <label class="loginLe">Sexo:</label>
-        <select class="loginLe">
-          <option >Mujer</option>
-          <option >Hombre</option>
-        </select><br><br>
-        <label class="loginLe" >Contraseña:</label><input class="loginLe" type="password" placeholder="Contraseña" required maxlength="50"><br><br>
-        <input class="btnLeerMas" type="submit" name="btnRegistrarme" value="Registrarme" onclick="Inicio.html"><br>
-      </form>
-      <br>
-      <p id="parrafoLogin">¿Ya tienes una cuenta? <a class="loginLe" href="login.html">Inicia Sesión</a></p>
-  </div>
-<!-- ////////////////////////////////////////////////////////////////////////-->
-  <script src="JS/eventosParaCambiarDiv.js"></script>
+    <!-- ////////////////////////////////////////////////////////////////////////-->
   </body>
 </html>
