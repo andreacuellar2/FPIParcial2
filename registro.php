@@ -34,7 +34,7 @@ function SubirImagen($file){
 
 	if (in_array($fileActualExt, $allowed)) {
 		if ($fileError === 0) {
-			if ($fileSize < 500000) {
+			if ($fileSize < 2000000) {
 				$fileNameNew = uniqid('', true).".".$fileActualExt;
 				$fileDestination = 'IMG/uploads/'.$fileNameNew;
 				move_uploaded_file($fileTmpName, $fileDestination);
