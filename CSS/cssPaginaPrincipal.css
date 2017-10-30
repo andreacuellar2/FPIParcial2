@@ -451,14 +451,22 @@ box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
 /*////////////////////////////Para login y registro///////////////////////////*/
 .bodylogin{
   background-image: url("../IMG/owl.png");
+  width: 100vw;
 }
 #containerLogin{
   background-color: #E4F1F6;
   text-align: center;
   float:left;
   width: 50vw;
-  height: 45vw;
+  height: 25vw;
   position: absolute;
+}
+@media screen and (max-width: 600px){
+  #containerLogin{
+    width: 50vw;
+    height: 72vw;
+    position: relative;
+  }
 }
 /*////////////////////////////ARREGLAR///////////////////////////*/
 #containerRegistro{
@@ -473,11 +481,16 @@ padding-top: 2%;
 #irRegistro{
   float:right;
   text-align: center;
-  border-left: 15px solid black;
-  width: 49%;
-  height: 100%;
+  border-left: 2vw solid black;
+  width: 50vw;
+  height: 25vw;
   position: absolute;
-  left:50%;
+  left:50vw;
+}
+@media screen and (max-width: 600px){
+  #irRegistro{
+    border-left: 0vw;
+  }
 }
 /*////////////////////////////FINARREGLAR///////////////////////////*/
 .divLetra{
