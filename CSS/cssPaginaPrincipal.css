@@ -417,36 +417,45 @@ ul.topnav li a.activo {background-color: #75A8BD;}
 /*////////////////////////////////////////////////////////////////////////////*/
 
 /*///////////////////////Para el perfil del usuario///////////////////////////*/
-.bodyperfil{
-  background-image: url("../IMG/fondoPerfil.jpg");
-}
 .perfil{
   position: absolute;
-  height: 105%;
+  height: 600px%;
   width: 25%;
   float: left;
-  background-color: black;
+  background-color: #173F4F;
   text-align: center;
-  border-radius: 15px;
-  margin-bottom: 5%;
-  margin-top: 5%;
-  padding: 2% 2% 2% 2%;
-  margin-left: 2%;
+}
+.publicaciones{
+  height: 100%;
+  width: 75%;
+  float: right;
+  background-color: white;
+  left: 25%;
+  position: absolute;
+}
+.entrada{
+  margin: 1%;
+  text-align: center;
+  background-color: #B0C4DE;
+  border-radius: 5px;
+}
+.imagenEntrada{
+  width: 30%;
+  height: auto;
 }
 .imagenUsuario{
   width: 100%;
   height: auto;
-  border: 3px solid white;
 }
-.publicaciones{
-  height: 100%;
-  width: 60%;
-  text-align: center;
-  margin-left: 35%;
-  margin-right: 20%;
-  margin-top: 5%;
-  margin-bottom: 10%;
-  position: absolute;
+#tituloPerfil{
+  font-size:1.5vw;
+  color: white;
+  font-weight: bold;
+}
+#textoPerfil{
+  font-size:1.5vw;
+  color: white;
+  font-variant: small-caps;
 }
 /*////////////////////////////////////////////////////////////////////////////*/
 
