@@ -43,7 +43,8 @@ function SubirImagen($file){
 				$fileNameNew = uniqid('', true).".".$fileActualExt;
 				$fileDestination = 'IMG/uploads/'.$fileNameNew;
 				move_uploaded_file($fileTmpName, $fileDestination);
-				header("Location: registro.php?uploadsuccess");
+				header( "Location: login.html" );
+        die();
 			} else {
 				echo "Archivo muy grande";
 			}
