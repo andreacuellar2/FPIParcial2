@@ -188,9 +188,10 @@ header {
   color: #E4F1F6;
 }
 #contenedorPrincipal {
-  padding-left: 200px;
-  padding-right: 190px;
+  padding-left: 0px;
+  padding-right: 240px;
   overflow: hidden;
+  border-radius: 5px;
 }
 #contenedorPrincipal .column {
   display: inline-block;
@@ -199,11 +200,20 @@ header {
   padding-top: 1em;
   padding-bottom: 1001em;
   margin-bottom: -1000em;
+  border-radius: 5px;
+  text-align: center;
 }
 #center {
   padding: 10px 20px;
   width: 100%;
   background: #E4F1F6;
+  border-radius: 5px;
+}
+#right {
+  width: 180px;
+  padding: 0 10px;
+  margin-right:-100%;
+  background: #347B98;
 }
 #articulosRecientes{
   padding-top: 40px;
@@ -286,6 +296,9 @@ border-radius: 10%;
 margin-left: 41%;
 font-weight: bold;
 }
+.btnLeerMas:hover:not(.active) {
+  background-color: darkgray;
+}
 .btnNav{
 font-family: "Raleway", sans-serif;
 background-color: #092834;
@@ -299,6 +312,9 @@ margin: 4px 2px;
 cursor: pointer;
 border-radius: 5px;
 box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+.btnNav:hover:not(.active) {
+  background-color: darkgray;
 }
 .botonesArt{
   text-align: center;
@@ -333,26 +349,14 @@ border-radius: 5px;
 .contenedor{
 background-color: #67AFCB;
 border-radius: 5px;
+padding: 1% 1% 1% 1%;
 }
 #comentar{
 background-color: #173F4F;
 border-radius: 5px;
 }
-#left {
-  width: 180px;
-  padding: 0 10px;
-  right: 240px;
-  margin-left: -100%;
-  background: #347B98;
-}
-.listaCategorias{
+.areaPerfil{
   text-align: center;
-}
-#right {
-  width: 130px;
-  padding: 0 10px;
-  margin-right: -100%;
-  background: #347B98;
 }
 .imgpop{
 width:125px;
@@ -450,6 +454,15 @@ padding-top: 2%;
   left:50%;
 }
 #divLetra{
+background-color: #E4F1F6;
+font-family: "Raleway", sans-serif;
+margin: 5%;
+font-size: 50px;
+font-weight: bold;
+color: #092834;
+border-radius: 5px;
+}
+.divLetra{
 background-color: #E4F1F6;
 font-family: "Raleway", sans-serif;
 margin: 5%;

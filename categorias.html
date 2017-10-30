@@ -6,22 +6,27 @@
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/cssPaginaPrincipal.css">
     <link rel=icon href="IMG/favicon.png" type="image/png">
-    <title>Bienvenido al Blog</title>
+    <title>O W L S P A C E</title>
   </head>
+
   <body onload="OpacityCategorias()">
-<ul class="topnav">
-  <li><a id="navInicio" href="inicio.html">Inicio</a></li>
-  <li><a id="navCategorias" href="categorias.html">Categorías</a></li>
-  <li><a id="navRegistro" href="login.html" class="right">Login</a></li>
-</ul>
-<header id="header">
-  <h1 class="tituloBlog"><b>O W L Space</b></h1></hr>
-    <p class="subtema">Bienvenido al espacio para compartir tus ideas</p>
-</header>
+<!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
+    <ul class="topnav">
+      <li><a id="navInicio" href="inicio.html" class="activo">Inicio</a></li>
+      <li><a id="navCategorias" href="categorias.html">Categorías</a></li>
+      <li><a id="navRegistro" href="login.html" class="right">Login</a></li>
+      <li><a id="navRegistro" href="registro.html" class="right">Registro</a></li>
+    </ul>
+<!-- //////////////////////////Header//////////////////////////////////////////////-->
+    <header id="header">
+      <h1 class="tituloBlog"><b>O W L Space</b></h1></hr>
+        <p class="subtema">Bienvenido al espacio para compartir tus ideas</p>
+    </header>
+<!-- //////////////////////////// Pagina Inicio //////////////////////////////-->
 <div id="contenedorPrincipal">
   <main id="center" class="column">
     <div id="pagCategorias">
-  <h1 id="articulosRecientes">CATEGORÍAS</h1><hr>
+  <h1 class="divLetra">CATEGORÍAS</h1><hr>
 
   <div class="contenedorGeografia" id="contenedorGeografia" onmouseover="OpacityActGeo()" onmouseout="OpacityDesGeo()">
   <br><br> <h3 class="tituloBlog" onclick="MostrarArtGeografia()">GEOGRAFÍA</h3><br><br>
@@ -152,52 +157,46 @@
   </div>
   </main>
 
-<nav id="left" class="column">
-  <img id="headerimg"src="IMG/owl.png" alt="buho">
-  <h3 class="subtemaNav">CATEGORÍAS</h3><hr></hr><br>
-  <ul>
-    <li><a class="li" href="#">Categoría 1</a></li><br>
-    <li><a class="li" href="#">Categoría 2</a></li><br>
-    <li><a class="li" href="#">Categoría 3</a></li><br>
-    <li><a class="li" href="#">Categoría 4</a></li><br>
-    <li><a class="li" href="#">Categoría 5</a></li>
-  </ul>
-</nav>
-
-<div id="right" class="column">
-  <div id="areaPerfil">
-    <a href="perfil.html">Ver mi perfil</a>
-    <input type="button" onclick="MostrarPublicar()" value="Publicar un articulo">
-  </div>
-  <h3 class="subtemaNav">Más leídos:</h3><hr>
-  <ul id="listaArticulos">
-
-    <li class="primerArt">
-      <img src="IMG/pop1.jpg" class="imgpop" alt="flor">
-      <div class="textoPop">
-        <h3 class="descripcionPop">Flores</h3>
-        <h4 class="parrafoArt">Flores más bonitas de América</h4><br>
-        <div class="botonesArt">
-        <p><button class="btnNav"><b>LEER MAS »</b></button></p>
+  <!-- ////////////////////////// Menu Derecha //////////////////////////////-->
+    		<nav id="right" class="column">
+          <img id="headerimg" src="IMG/owl.png" alt="buho"><hr></hr>
+          <div id="areaPerfil" class="areaPerfil">
+            <a href="perfil.html"><input class="btnLeerMas" type="button" value="Mi perfil"></a>
+            <a href="publicar.html"><input class="btnLeerMas" type="button" value="Publicar"></a><hr></hr>
+          </div>
+          <div id="masleidos">
+          <br><h3 class="subtemaNav">Más leídos:</h3><br>
+          <ul id="listaArticulos">
+            <li class="primerArt">
+              <img src="IMG/pop1.jpg" class="imgpop" alt="flor">
+              <div class="textoPop">
+                <h3 class="descripcionPop">Flores</h3>
+                <h4 class="parrafoArt">Flores más bonitas de América</h4><br>
+                <div class="botonesArt">
+                <p><button class="btnNav"><b>LEER MAS »</b></button></p>
+                </div>
+              </div>
+            </li><br><br>
+            <li class="segundoArt">
+              <img src="IMG/animales.jpg" class="imgpop" alt="animales">
+              <div class="textoPop">
+              <h3 class="descripcionPop">Animales</h3>
+              <h4 class="parrafoArt">Animales más bonitos de América</h4><br>
+              <div class="botonesArt">
+              <p><button class="btnNav"><b>LEER MAS »</b></button></p>
+              </div>
+              </div>
+            </li>
+          </ul>
+            </div>
         </div>
-      </div>
-    </li><br><br>
+    		</nav>
+</div>
+<!-- ///////////////////////////////footer/////////////////////////////////////////-->
 
-    <li class="segundoArt">
-      <img src="IMG/animales.jpg" class="imgpop" alt="animales">
-      <div class="textoPop">
-      <h3 class="descripcionPop">Animales</h3>
-      <h4 class="parrafoArt">Animales más bonitos de América</h4><br>
-      <div class="botonesArt">
-      <p><button class="btnNav"><b>LEER MAS »</b></button></p>
-      </div>
-      </div>
-    </li>
-</div>
-</div>
-<div id="footer">
-  <footer id="footer"><h1>Derechos Reservados</h1></footer>
-</div>
-<script type="text/javascript" src="JS/eventosParaCambiarDiv.js"></script>
-</body>
+  	<div id="footer">
+  		<footer id="footer"><h1>Derechos Reservados</h1></footer>
+  	</div>
+    <script type="text/javascript" src="JS/eventosParaCambiarDiv.js"></script>
+  </body>
 </html>
