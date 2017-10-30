@@ -507,11 +507,14 @@ ul.topnav li a.activo {background-color: #75A8BD;}
 /*///////////////////////Para el perfil del usuario///////////////////////////*/
 .perfil{
   position: absolute;
-  height: 600px%;
+  height: 600px;
   width: 25%;
   float: left;
-  background-color: #173F4F;
+  background-color: #347B98;
   text-align: center;
+  margin-top: 1%;
+  border-radius: 5px;
+  margin-left: 2%;
 }
 .publicaciones{
   height: 100%;
