@@ -6,15 +6,16 @@
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/cssPaginaPrincipal.css">
     <link rel=icon href="IMG/favicon.png" type="image/png">
-    <title>Bienvenido al Blog</title>
+    <title>O W L S P A C E</title>
   </head>
 
-  <body onload="MostrarInicio()">
+  <body>
 <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
     <ul class="topnav">
-      <li><a id="navInicio" href="inicio.html">Inicio</a></li>
+      <li><a id="navInicio" href="inicio.html" class="activo">Inicio</a></li>
       <li><a id="navCategorias" href="categorias.html">Categorías</a></li>
       <li><a id="navRegistro" href="login.html" class="right">Login</a></li>
+      <li><a id="navRegistro" href="registro.html" class="right">Registro</a></li>
     </ul>
 <!-- //////////////////////////Header//////////////////////////////////////////////-->
     <header id="header">
@@ -33,7 +34,7 @@
                 <h3 class="descripcionArt">Jueves 26 de Octubre 2017</h3><br>
                 <p class="parrafoArt">Esta es una prueba de lo que estará escrito en el artículo 1</p><br>
                 <div class="botonesArt">
-                  <p><button class="btnLeerMas" onclick="MostrarArticulo()"><b>LEER MAS »</b></button></p>
+                  <a href="leer.html"><input type="button" class="btnLeerMas" value="LEER MAS"></a>
                 </div>
                 <p class="comentarios"><b>Comentarios 2</b></p>
               </div>
@@ -45,13 +46,14 @@
                 <h3 class="descripcionArt">Jueves 26 de Octubre 2017</h3><br>
                 <p class="parrafoArt">Esta es una prueba de lo que estará escrito en el artículo 2</p><br>
                 <div class="botonesArt">
-                  <p><button class="btnLeerMas" onclick="MostrarArticulo()"><b>LEER MAS »</b></button></p>
+                  <a href="leer.html"><input type="button" class="btnLeerMas" value="LEER MAS"></a>
                 </div>
                 <p class="comentarios"><b>Comentarios 0</b></p>
               </div>
             </div>
         </div>
 </main>
+<!-- ////////////////////////////////////////////////////////////////////////-->
 
 <!-- ////////////////////////// Menu Izquierda //////////////////////////////-->
   		<nav id="left" class="column">
@@ -70,12 +72,13 @@
 <!-- /////////////////////////// Menu Derecha ///////////////////////////////-->
   		<div id="right" class="column">
         <div id="areaPerfil">
-          <a href="perfil.html">Ver mi perfil</a>
-          <input type="button" onclick="MostrarPublicar()" value="Publicar un articulo">
+          <a href="perfil.html" class="loginLe">Ver mi perfil</a>
+          <a href="publicar.html"><input class="btnLeerMas" type="button" value="Publicar"></a>
         </div>
+        <br>
+        
   			<h3 class="subtemaNav">Más leídos:</h3><hr>
         <ul id="listaArticulos">
-
           <li class="primerArt">
             <img src="IMG/pop1.jpg" class="imgpop" alt="flor">
             <div class="textoPop">
@@ -102,14 +105,9 @@
   	</div>
 <!-- ////////////////////////////////////////////////////////////////////////-->
 
-<!--*************************************************************************-->
-
   	<div id="footer">
   		<footer id="footer"><h1>Derechos Reservados</h1></footer>
   	</div>
 
-    <script type="text/javascript" src="JS/eventosParaCambiarDiv.js"></script>
-
   </body>
 </html>
-<!--<span class="has-popup">Ver el contenido<span class="popup">Éste es el contenido</span></span>-->
