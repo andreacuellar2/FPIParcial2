@@ -14,7 +14,6 @@
       <li><a id="navInicio" href="inicio.html" class="activo">Inicio</a></li>
       <li><a id="navCategorias" href="categorias.html">Categorías</a></li>
       <li><a id="navRegistro" href="login.html" class="right">Login</a></li>
-      <li><a id="navRegistro" href="registro.html" class="right">Registro</a></li>
     </ul>
     <!-- //////////////////////////// Perfil //////////////////////////////-->
   <div class="perfil" id="perfil">
@@ -50,26 +49,14 @@
     <div class="entrada">
       <img src="IMG/ardu.png" alt="Imagen de la entrada" class="imagenEntrada">
       <div class="publicacion">
-        <h1 class="articuloTitulo">Arduino</h1>
+        <h1 class="articuloTitulo">Arduino</h1><br>
         <h3 class="articuloFecha">Jueves 26 de Octubre 2017</h3>
         <p class="articuloParrafo">Arduino es una plataforma de prototipos electrónica de código abierto (open-source) basada en hardware y software flexibles y fáciles de usar. Está pensado para artistas, diseñadores, como hobby y para cualquiera interesado en crear objetos o entornos interactivos.</p>
-        <div class="">
-          <p class="comentarios"><b>Comentarios 2</b></p>
-          <button class="btnLeerMas"><b>LEER MAS »</b></button>
+        <button class="btnLeerMas"><b>LEER MAS »</b></button>
+        <p class="comentarios"><b>Comentarios 2</b></p>
         </div>
       </div>
     </div>
-  </div>
-
-  <script type="text/javascript">
-  function mostrarPerfil() {
-    document.getElementById('perfil').style.display='block';
-    document.getElementById('editarPerfil').style.display='none';
-  }
-  function editarPerfil() {
-    document.getElementById('perfil').style.display='none';
-    document.getElementById('editarPerfil').style.display='block';
-  }
-  </script>
+<script type="text/javascript" src="JS/perfil.js"></script>
   </body>
 </html>

@@ -25,10 +25,9 @@
 <!-- //////////////////////////// Publicar //////////////////////////////-->
   	<div id="contenedorPrincipal">
       <main id="center" class="column">
+        <h1 class="subtema">Escribe tu artículo</h1><br><br>
         <div class="pagPublicar" id="pagPublicar">
           <form id="formPost">
-              <div>
-                <h1 class="subtema">Escribe tu artículo</h1><br>
                 <label class="loginLe">Título: </label><input class="loginLe" type="text" placeholder="Título del artículo" required maxlength="25"><br><br>
                 <label class="loginLe">Cuerpo: </label>
                 <textarea class="loginLe" name="contenido" placeholder="Ingresa aquí el contenido" cols="50" rows="10" required></textarea><br><br>
@@ -45,29 +44,47 @@
                 <label class="loginLe">Agregar imagen:</label><input class="loginLe" type="file" name="imagen" accept="image/jpeg, image/png"/>
                 <div class="contenedorImagen">
                 </div><br>
-              <div>
-              <input class="btnLeerMas" type="submit" id="btnPublicar" value="Publicar">
-            </div>
-          </form>
-        </div>
+                  <input class="btnLeerMas" type="submit" id="btnPublicar" value="Publicar">
+        </form>
       </main>
 <!-- ////////////////////////// Menu Derecha //////////////////////////////-->
-  		<nav id="right" class="column">
-        <img id="headerimg" src="IMG/owl.png" alt="buho"><hr></hr>
-        <div id="areaPerfil" class="areaPerfil">
-          <a href="perfil.html"><input class="btnLeerMas" type="button" value="Mi perfil"></a>
-          <a href="publicar.html"><input class="btnLeerMas" type="button" value="Publicar"></a><hr></hr>
-        </div>
-        <div id="masleidos">
-        <br><h3 class="subtemaNav">Más leídos:</h3><br>
+<nav id="right" class="column">
+  <img id="headerimg" src="IMG/owl.png" alt="buho"><hr></hr>
+  <div id="areaPerfil" class="areaPerfil">
+    <a href="perfil.html"><input class="btnLeerMas" type="button" value="Mi perfil"></a>
+    <a href="publicar.html"><input class="btnLeerMas" type="button" value="Publicar"></a><hr></hr>
+  </div>
+  <div id="masleidos">
+  <br><h3 class="subtemaNav">Más leídos:</h3><br>
+  <ul id="listaArticulos">
+    <li class="primerArt">
+      <img src="IMG/pop1.jpg" class="imgpop" alt="flor">
+      <div class="textoPop">
+        <h3 class="descripcionPop">Flores</h3>
+        <h4 class="parrafoArt">Flores más bonitas de América</h4><br>
+        <div class="botonesArt">
+        <p><button class="btnNav"><b>LEER MAS »</b></button></p>
         </div>
       </div>
+    </li><br><br>
+    <li class="segundoArt">
+      <img src="IMG/animales.jpg" class="imgpop" alt="animales">
+      <div class="textoPop">
+      <h3 class="descripcionPop">Animales</h3>
+      <h4 class="parrafoArt">Animales más bonitos de América</h4><br>
+      <div class="botonesArt">
+      <p><button class="btnNav"><b>LEER MAS »</b></button></p>
+      </div>
+      </div>
+    </li>
+  </ul>
     </div>
+</div>
+</nav>
 <!-- /////////////////////////////////footer///////////////////////////////////////-->
       <div id="footer">
       <footer id="footer"><h1>Derechos Reservados</h1></footer>
       </div>
-      <script type="text/javascript" src="JS/eventosParaCambiarDiv.js"></script>
       </body>
       </html>
 <!--<span class="has-popup">Ver el contenido<span class="popup">Éste es el contenido</span></span>-->

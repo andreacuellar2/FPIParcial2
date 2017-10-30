@@ -1,4 +1,3 @@
-//mostrar Artículos de categorias
 function OpacityCategorias(){
 document.getElementById('contenedorGeografia').style.opacity = '0.5';
 document.getElementById('contenedorarte').style.opacity = '0.5';

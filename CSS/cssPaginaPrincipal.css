@@ -400,6 +400,7 @@ border-radius: 5px;
 }
 .pagPublicar{
   text-align: left;
+  margin-left: 20%;
 }
 /*////////////////////////////////////////////////////////////////////////////*/
 
@@ -534,6 +535,8 @@ ul.topnav li a.activo {background-color: #75A8BD;}
   margin-top: 2%;
   border-radius: 5px;
   margin-left: 2%;
+  padding-bottom: 2%;
+  margin-bottom: 2%;
 }
 .publicaciones{
   height: 100%;
