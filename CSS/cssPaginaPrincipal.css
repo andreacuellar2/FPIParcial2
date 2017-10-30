@@ -557,6 +557,12 @@ ul.topnav li a.activo {background-color: #75A8BD;}
   position: absolute;
 
 }
+.articulos{
+  opacity: 0.5;
+}
+.articulos2{
+  opacity: 0.5;
+}
 .entrada{
   margin: 1%;
   text-align: center;

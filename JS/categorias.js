@@ -5,7 +5,7 @@ document.getElementById('contenedorhistoria').style.opacity = '0.5';
 document.getElementById('contenedorentretenimiento').style.opacity = '0.5';
 document.getElementById('contenedorciencia').style.opacity = '0.5';
 document.getElementById('contenedordeportes').style.opacity = '0.5';
-document.getElementById('contenedorArtOtros').style.display='none';
+document.getElementById('contenedorArtOtros').style.opacity='o.5';
 }
 function MostrarArtGeografia(){
   document.getElementById('contenedorArtGeografía').style.display='block';

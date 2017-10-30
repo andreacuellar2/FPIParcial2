@@ -13,7 +13,10 @@
     <ul class="topnav">
       <li><a id="navInicio" href="inicio.html" class="activo">Inicio</a></li>
       <li><a id="navCategorias" href="categorias.html">Categorías</a></li>
-      <li><a id="navRegistro" href="login.html" class="right">Login</a></li>
+      <li><a id="navRegistro" href="login.html">Login</a></li>
+      <li><a id="navRegistro" href="perfil.html">Mi Perfil</a></li>
+      <li><a id="navCategorias" href="publicar.html">Publicar</a></li>
+      <li><a id="navCategorias" href="#">Logout</a></li>
     </ul>
 <!-- //////////////////////////Header//////////////////////////////////////////////-->
     <header id="header">
@@ -25,7 +28,7 @@
   <main id="center" class="column">
         <div id="pagInicio">
       	   <h1 class="divLetra">ARTÍCULOS RECIENTES</h1><hr>
-            <div id="entrada1"><br><br>
+            <div id="articulos" class="articulos" onmouseover="OpacityArticuloOsc()" onmouseout="OpacityArticuloCla()"><br><br>
               <img src="IMG/blog.jpg" id="imgPrimera" alt="blog">
               <div class="contenedor">
                 <h2 class="articuloTitulo"><b>ARTÍCULO 1</b></h2><br>
@@ -37,7 +40,7 @@
                 <p class="comentarios"><b>Comentarios 2</b></p>
               </div>
             </div>
-            <div id="entrada2"><br><br>
+            <div id="articulos2" class="articulos2" onmouseover="OpacityArticuloOsc2()" onmouseout="OpacityArticuloCla2()"><br><br>
               <img src="IMG/blog2.jpg" id="imgSegunda" alt="blog">
               <div class="contenedor">
                 <h2 class="articuloTitulo"><b>ARTÍCULO 2</b></h2><br>
@@ -89,5 +92,6 @@
   	<div id="footer">
   		<footer id="footer"><h1>Derechos Reservados</h1></footer>
   	</div>
+    <script type="text/javascript" src="JS/inicio.js"></script>
   </body>
 </html>
