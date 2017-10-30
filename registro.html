@@ -15,20 +15,29 @@
         <li><a id="navInicio" href="inicio.html">Inicio</a></li>
         <li><a id="navCategorias" href="categorias.html">Categorías</a></li>
         <li><a id="navRegistro" href="login.html" class="right">Login</a></li>
-      </ul>      
+      </ul>
     <!-- ////////////////////////////////////////////////////////////////////////-->
     <header id="header">
       <h1 class="tituloBlog"><b>O W L Space</b></h1></hr>
       <p class="subtema">Bienvenido al espacio para compartir tus ideas</p>
     </header>
     <!-- ////////////////////////////// Registro ////////////////////////////////-->
-      <div id="containerRegistro">
-          <form>
-            <p id="divLetra">Nueva Cuenta</p><br>
-            <label class="loginLe">Nombre:   </label><input class="loginLe" type="text" maxlength="50" placeholder="Nombre de Usuario" pattern="[a-zA-Z0-9]*" value="" required><br><br>
-          <label class="loginLe">Username: </label><input class="loginLe" type="text" maxlength="10" placeholder="Username" pattern="[a-zA-Z0-9-_.]*" value="" required><br><br>
-          <label class="loginLe">Acerca de ti:</label><textarea  class="loginLe" placeholder="Pon una descripción sobre ti" cols="20" rows="6"></textarea><br><br>
-          <label class="loginLe">Sexo:</label>
+    <div id="containerRegistro">
+      <form method="POST" enctype="multipart/form-data">
+        <p id="divLetra">Nueva Cuenta</p><br>
+        <label class="loginLe">Nombre:   </label>
+        <input type="text" class="loginLe" name="nombre" maxlength="50" placeholder="Nombre de Usuario" pattern="[a-zA-Z]*" title="Por favor no ingrese caracteres no pemitidos (*?¡@¿!|#..)" value="" required>
+        <br><br>
+        <label class="loginLe">Username: </label>
+        <input type="text" class="loginLe" name="nombreUsuario" maxlength="10" placeholder="Username" pattern="[a-zA-Z0-9-_.]*" value="" required>
+        <br><br>
+        <label class="loginLe">Acerca de ti:</label>
+        <textarea  class="loginLe" name="descripcion" placeholder="Pon una descripción sobre ti" cols="20" rows="6"></textarea>
+        <br><br>
+        <label class="loginLe">Imagen:</label>
+        <input type="file" name="file" accept="image/jpeg, image/png">
+        <br><br>
+        <label class="loginLe">Sexo:</label>
             <select class="loginLe">
               <option >Mujer</option>
               <option >Hombre</option>
