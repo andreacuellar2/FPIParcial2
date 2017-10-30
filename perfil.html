@@ -3,113 +3,22 @@
   <head>
     <meta charset="utf-8">
     <link rel=icon href=IMG/favicon.png type="image/png">
-    <title>Perfil</title>
-
-    <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family:"Raleway", sans-serif;
-      line-height: 1.5em;
-    }
-    ul.topnav {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #173F4F;
-    }
-
-    ul.topnav li {float: left;}
-
-    ul.topnav li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-    ul.topnav li a:hover:not(.active) {background-color: #111;}
-
-    ul.topnav li a.active {background-color: #75A8BD;}
-
-    @media screen and (max-width: 600px){
-        ul.topnav li.right,
-        ul.topnav li {float: none;}
-    }
-
-
-    .perfil{
-      position: absolute;
-      height: 100%;
-      width: 25%;
-      float: left;
-      background-color: #008080;
-      text-align: center;
-    }
-    .publicaciones{
-      height: 100%;
-      width: 75%;
-      float: right;
-      background-color: white;
-      left: 25%;
-      position: absolute;
-    }
-    .entrada{
-      margin: 1%;
-      text-align: center;
-      background-color: #B0C4DE;
-      border-radius: 5px;
-    }
-    .imagenEntrada{
-      width: 30%;
-      height: auto;
-    }
-    .imagenUsuario{
-      width: 100%;
-      height: auto;
-    }
-    .tituloPerfil{
-      font-size:1.5vw;
-      color: white;
-      font-weight: bold;
-    }
-    .textoPerfil{
-      font-size:1.5vw;
-      color: white;
-      font-variant: small-caps;
-    }
-    .btnLeerMas{
-    font-family: "Raleway", sans-serif;
-    background-color: #092834;
-    border: none;
-    color: white;
-    padding: 15px 40px;
-    text-align: right;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-    }
+    <link rel="stylesheet" href="CSS/cssPaginaPrincipal.css">
     </style>
   </head>
   <body>
     <ul class="topnav">
       <li><a href="inicio.html">Inicio</a></li>
-      <li><a href="categorias.html">Categorías</a></li>
-      <li><a href="registro.html">Registro</a></li>
+      <li><a href="inicio.html">Categorías</a></li>
       <li><a href="login.html">Login</a></li>
     </ul>
 
   <div class="perfil">
-    <h1 class="tituloPerfil">juanpc13</h1>
+    <h1 id="tituloPerfil">juanpc13</h1>
     <img src="IMG/yo.jpg" alt="Imagen Usuario" class="imagenUsuario">
-    <p class="tituloPerfil">Juan Carlos</p>
-    <p class="textoPerfil">Estudiante de ingieneria de sistemas informaticos.</p>
-    <p class="textoPerfil">Masculino</p>
-
+    <p id="tituloPerfil" class="loginLe">Juan Carlos</p>
+    <p id="textoPerfil" class="loginLe">Estudiante de ingieneria de sistemas informaticos.</p>
+    <p id="textoPerfil" class="loginLe">Masculino</p>
   </div>
 
   <div class="publicaciones">
@@ -132,14 +41,6 @@
 
 
   </div>
-
-
-
-
-
-
-
-
 
   </body>
 </html>

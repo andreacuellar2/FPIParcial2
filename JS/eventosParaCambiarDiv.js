@@ -38,3 +38,6 @@ function MostrarRegistro() {
   document.getElementById('irRegistro').style.display = 'none';
   document.getElementById('containerRegistro').style.display = 'block';
 }
+function MostrarArtGeografia(){
+  document.getElementById('contenedorGeografia').style.display= 'block';
+}
