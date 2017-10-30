@@ -10,12 +10,46 @@ if ($_POST) {
       'nombreUsuario' => $_POST['nombreUsuario'],
       'descripcion' => $_POST['descripcion'],
       'sexo' => $_POST['sexo'],
-      'password' => $_POST['password']
+      'password' => $_POST['password'],
+      'imgProfile' => SubirImagen();
     );
     $allUserArray[] = $registro;
     $finalAllUserArray = json_encode($allUserArray);
     file_put_contents('usuarios.json', $finalAllUserArray);
+  }else {
+    header("Location: RegistrandoConPHP.php?NoExisteArchivo");
   }
+}
+function SubirImagen(){
+  $file = $_FILES['file'];
+	$fileName = $file['name'];
+	$fileTmpName = $file['tmp_name'];
+	$fileSize = $file['size'];
+	$fileError = $file['error'];
+	$fileType = $file['type'];
+
+	$fileExt = explode('.', $fileName);
+	$fileActualExt = strtolower(end($fileExt));
+
+	$allowed = array('jpg', 'jpeg', 'png');
+
+	if (in_array($fileActualExt, $allowed)) {
+		if ($fileError === 0) {
+			if ($fileSize < 500000) {
+				$fileNameNew = $fileName.".".$fileActualExt;
+				$fileDestination = 'IMG/uploads/'.$fileNameNew;
+				move_uploaded_file($fileTmpName, $fileDestination);
+				header("Location: index.php?uploadsuccess");
+			} else {
+				echo "Your file is too big!";
+			}
+		} else {
+			echo "There was an error uploading your file!";
+		}
+	} else {
+		echo "You cannot upload files of this type!";
+	}
+  return $fileName;
 }
 ?>
 <!DOCTYPE html>
@@ -37,6 +71,8 @@ if ($_POST) {
       <label>Descripcion: </label>
       <textarea name="descripcion" rows="8" cols="80"></textarea>
       <br>
+      <label>Imagen de Perfil</label>
+      <input type="file" name="file">
       <label>Sexo: </label>
       <select name="sexo">
         <option value="H">Hombre</option>
