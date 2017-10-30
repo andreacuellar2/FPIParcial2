@@ -111,28 +111,30 @@
 <!-- ////////////////////////////////////////////////////////////////////////-->
 
 <!-- ////////////////////////// Pagina Publicar /////////////////////////////-->
-        <div id="pagPublicar">
+        <div class="containerLogin" id="pagPublicar">
         <form id="formPost">
           <div>
             <div>
-              <h1>Escribe tu artículo</h1><br>
-              <label>Título:</label><input type="text" placeholder="Título del artículo" required maxlength="25"><br><br>
-              <label>Cuerpo:</label>
-              <textarea name="contenido" placeholder="Ingresa aquí el contenido" cols="50" rows="10" required></textarea><br><br>
-              <label>Categoría:</label>
-              <select>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+              <h1 class="subtema">Escribe tu artículo</h1><br>
+              <label class="loginLe">Título: </label><input class="loginLe" type="text" placeholder="Título del artículo" required maxlength="25"><br><br>
+              <label class="loginLe">Cuerpo: </label>
+              <textarea class="loginLe" name="contenido" placeholder="Ingresa aquí el contenido" cols="50" rows="10" required></textarea><br><br>
+              <label class="loginLe">Categoría:</label>
+              <select class="loginLe">
+                <option>Geografía</option>
+                <option>Arte y Literatura</option>
+                <option>Historia</option>
+                <option>Entretenimiento</option>
+                <option>Ciencia y Naturaleza</option>
+                <option>Deportes</option>
               </select>
               <br><br>
-              <label>Agregar imagen:</label><input type="file" name="imagen" accept="image/jpeg, image/png"/>
-              <div class="contenedorImagen"></div>
+              <label class="loginLe">Agregar imagen: "\t"</label><input class="loginLe" type="file" name="imagen" accept="image/jpeg, image/png"/>
+              <div class="contenedorImagen">
+              </div>
               <br>
           </div>
-          <input type="submit" id="btnPublicar" value="Publicar">
+          <input class="btnLeerMas" type="submit" id="btnPublicar" value="Publicar">
         </div>
       </form>
       </div>
