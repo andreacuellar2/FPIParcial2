@@ -16,23 +16,6 @@
       <li><a id="navRegistro" href="login.html" class="right">Login</a></li>
       <li><a id="navRegistro" href="registro.html" class="right">Registro</a></li>
     </ul>
-<!-- ////////////////////////// perfil con foto/////////////////////////////-->
-  <div class="perfil">
-    <h1 id="tituloPerfil">juanpc13</h1>
-    <img src="IMG/yo.jpg" alt="Imagen Usuario" class="imagenUsuario">
-  <body class="bodylogin" onload="mostrarPerfil()">
-    <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
-    <ul class="topnav">
-      <li><a id="navInicio" href="inicio.html">Inicio</a></li>
-      <li><a id="navCategorias" href="categorias.html">Categorías</a></li>
-      <li><a id="navRegistro" href="perfil.html" class="activo">Perfil</a></li>
-      <li><a id="navRegistro" href="#">Logout</a></li>
-    </ul>
-    <!-- //////////////////////////Header//////////////////////////////////////////////-->
-    <header id="header">
-      <h1 class="tituloBlog"><b>O W L Space</b></h1></hr>
-        <p class="subtema">Bienvenido al espacio para compartir tus ideas</p>
-    </header>
     <!-- //////////////////////////// Perfil //////////////////////////////-->
   <div class="perfil" id="perfil">
     <br>
@@ -45,6 +28,7 @@
     <p class="loginLe">Masculino</p>
     <button class="btnLeerMas" onclick="editarPerfil()">Editar perfil</button>
   </div>
+
   <div class="perfil" id="editarPerfil">
     <form>
     <br><br>
@@ -61,6 +45,7 @@
     <button class="btnLeerMas">Guardar</button>
   </form>
   </div>
+
   <div class="publicaciones">
     <div class="entrada">
       <img src="IMG/ardu.png" alt="Imagen de la entrada" class="imagenEntrada">
@@ -75,6 +60,7 @@
       </div>
     </div>
   </div>
+
   <script type="text/javascript">
   function mostrarPerfil() {
     document.getElementById('perfil').style.display='block';
