@@ -2,27 +2,60 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel=icon href=IMG/favicon.png type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/cssPaginaPrincipal.css">
-    </style>
+    <link rel=icon href="IMG/favicon.png" type="image/png">
+    <title>O W L S P A C E</title>
   </head>
-  <body>
-    <ul class="topnav">
-      <li><a href="inicio.html">Inicio</a></li>
-      <li><a href="inicio.html">Categorías</a></li>
-      <li><a href="login.html">Login</a></li>
-    </ul>
 
-  <div class="perfil">
-    <h1 id="tituloPerfil">juanpc13</h1>
-    <img src="IMG/yo.jpg" alt="Imagen Usuario" class="imagenUsuario">
+  <body class="bodylogin" onload="mostrarPerfil()">
+
+    <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
+    <ul class="topnav">
+      <li><a id="navInicio" href="inicio.html">Inicio</a></li>
+      <li><a id="navCategorias" href="categorias.html">Categorías</a></li>
+      <li><a id="navRegistro" href="perfil.html" class="activo">Perfil</a></li>
+      <li><a id="navRegistro" href="#">Logout</a></li>
+    </ul>
+    <!-- //////////////////////////Header//////////////////////////////////////////////-->
+    <header id="header">
+      <h1 class="tituloBlog"><b>O W L Space</b></h1></hr>
+        <p class="subtema">Bienvenido al espacio para compartir tus ideas</p>
+    </header>
+
+    <!-- //////////////////////////// Perfil //////////////////////////////-->
+
+  <div class="perfil" id="perfil">
+    <br>
+    <h1 id="tituloPerfil">juanpc13</h1><br>
+    <div id="imagenPerfil">
+      <img src="IMG/yo.jpg" alt="Imagen Usuario" class="imagenUsuario">
+    </div>
     <p id="tituloPerfil" class="loginLe">Juan Carlos</p>
-    <p id="textoPerfil" class="loginLe">Estudiante de ingieneria de sistemas informaticos.</p>
-    <p id="textoPerfil" class="loginLe">Masculino</p>
+    <p class="loginLe">Estudiante de ingieneria de sistemas informaticos.</p>
+    <p class="loginLe">Masculino</p>
+    <button class="btnLeerMas" onclick="editarPerfil()">Editar perfil</button>
+  </div>
+
+  <div class="perfil" id="editarPerfil">
+    <form>
+    <br><br>
+    <label id="tituloPerfil">Username:</label><input type="text">
+    <br><br>
+    <div id="imagenPerfil">
+    <label id="tituloPerfil">Imagen:</label><input type="file" name="file" accept="image/jpeg, image/png">
+    </div>
+    <br><br>
+    <label id="tituloPerfil">Nombre:</label><input type="text">
+    <br><br>
+    <label id="tituloPerfil">Acerca De:</label><input type="text">
+    <br><br>
+    <button class="btnLeerMas">Guardar</button>
+  </form>
   </div>
 
   <div class="publicaciones">
-
     <div class="entrada">
       <img src="IMG/ardu.png" alt="Imagen de la entrada" class="imagenEntrada">
       <div class="publicacion">
@@ -35,12 +68,19 @@
         </div>
       </div>
     </div>
-
-
-
-
-
   </div>
+<!-- ////////////////////////////////////////////////////////////////////////-->
+  <script type="text/javascript">
+  function mostrarPerfil() {
+    document.getElementById('perfil').style.display='block';
+    document.getElementById('editarPerfil').style.display='none';
+  }
 
+  function editarPerfil() {
+    document.getElementById('perfil').style.display='none';
+    document.getElementById('editarPerfil').style.display='block';
+  }
+
+  </script>
   </body>
 </html>
