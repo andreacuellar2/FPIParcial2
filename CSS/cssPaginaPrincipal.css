@@ -345,6 +345,9 @@ border-radius: 5px;
   margin-left: -100%;
   background: #347B98;
 }
+.listaCategorias{
+  text-align: center;
+}
 #right {
   width: 130px;
   padding: 0 10px;
@@ -514,7 +517,6 @@ ul.topnav li a.activo {background-color: #75A8BD;}
   height: 100%;
   width: 75%;
   float: right;
-  background-color: white;
   left: 25%;
   position: absolute;
 }
