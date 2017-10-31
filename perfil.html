@@ -23,30 +23,30 @@
           <p class="subtema">Bienvenido al espacio para compartir tus ideas</p>
       </header>
     <!-- //////////////////////////// Perfil //////////////////////////////-->
-  <div class="perfil" id="perfil">
+<div class="perfil" id="perfil">
     <br>
     <h1 id="username" class="tituloPerfil">Usuario</h1><br>
     <div id="imagenPerfil">
       <img src="IMG/uploads/profiledefault.jpg" alt="Imagen Usuario" class="imagenUsuario" id="fotoUsuario"><br>
-    </div>
+    </div><br><br>
     <p class="tituloPerfil" id="nombreUsuario">Nombre Usuario</p><br>
     <p class="loginLe" id="descripcion">Informacion usuario</p><br>
     <p class="loginLe" id="sexoUsuario">Sexo usuario</p><br>
     <button class="btnLeerMas" onclick="editarPerfil()">Editar perfil</button>
   </div>
 
-  <div class="perfil" id="editarPerfil">
+  <div class="perfil" id="editarPerfil" class="articulos">
     <form>
     <br><br>
-    <label class="tituloPerfil">Username:</label><input type="text">
+    <label class="loginLe">Username:</label><input type="text" class="loginLe">
     <br><br>
     <div id="imagenPerfil">
-    <label class="tituloPerfil">Imagen:</label><input type="file" name="file" accept="image/jpeg, image/png">
+    <label class="loginLe">Imagen:</label><input type="file" name="file" accept="image/jpeg, image/png" class="inputComentario">
     </div>
     <br><br>
-    <label class="tituloPerfil">Nombre:</label><input type="text">
+    <label class="loginLe">Nombre:</label><input type="text" class="loginLe">
     <br><br>
-    <label class="tituloPerfil">Acerca De:</label><input type="text">
+    <label class="loginLe">Acerca de mi:</label><input type="text" class="loginLe">
     <br><br>
     <button class="btnLeerMas">Guardar</button>
   </form>
@@ -55,12 +55,19 @@
   <div class="publicaciones">
     <div class="entrada">
       <img src="IMG/ardu.png" alt="Imagen de la entrada" class="imagenEntrada">
-      <div class="publicacion">
         <h1 class="articuloTitulo">Arduino</h1><br>
-        <h3 class="articuloFecha">Jueves 26 de Octubre 2017</h3>
-        <p class="articuloParrafo">Arduino es una plataforma de prototipos electrónica de código abierto (open-source) basada en hardware y software flexibles y fáciles de usar. Está pensado para artistas, diseñadores, como hobby y para cualquiera interesado en crear objetos o entornos interactivos.</p>
+        <h3 class="descripcionArt">Jueves 26 de Octubre 2017</h3>
+        <p class="loginPerfil">Arduino es una plataforma de prototipos electrónica de código abierto (open-source) basada en hardware y software flexibles y fáciles de usar. Está pensado para artistas, diseñadores, como hobby y para cualquiera interesado en crear objetos o entornos interactivos.</p>
         <button class="btnLeerMas"><b>LEER MAS »</b></button>
         <p class="comentarios"><b>Comentarios 2</b></p>
+        <div class="paginador">
+        <ul class="pagination">
+          <li><a href="#">«</a></li>
+          <li><a href="#">1</a></li>
+          <li><a class="active" href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">»</a></li>
+        </ul>
         </div>
       </div>
     </div>
