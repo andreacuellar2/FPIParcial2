@@ -69,9 +69,9 @@ function SubirImagen($file){
   <ul class="topnav">
     <li><a id="navInicio" href="index.html">Inicio</a></li>
     <li><a id="navCategorias" href="categorias.html">Categorías</a></li>
-    <li><a id="navRegistro" href="perfil.html">Mi Perfil</a></li>
-    <li><a id="navCategorias" href="publicar.html" class="activo">Publicar</a></li>
-    <li><a id="navCategorias" href="#">Logout</a></li>
+    <li><a id="navPerfil" href="perfil.html">Mi Perfil</a></li>
+    <li><a id="navPublicar" href="publicar.php" class="activo">Publicar</a></li>
+    <li  id="navLogout"><a onclick="LogOut()">Logout</a></li>
   </ul>
 <!-- //////////////////////////Header//////////////////////////////////////////////-->
     <header id="header">

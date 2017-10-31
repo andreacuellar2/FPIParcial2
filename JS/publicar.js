@@ -30,6 +30,11 @@ function ValidarSesion() {
   if(sessionLog == "null" || sessionLog == null){
     window.location.replace("login.html");
   }else {
-    document.getElementById('idUserLogIn').value = sessionLog;    
+    document.getElementById('idUserLogIn').value = sessionLog;
   }
+}
+function LogOut() {
+  alert("Se cerró la sesión");
+  localStorage.setItem("idUserLogged", null);
+  window.location.replace("index.html");
 }
