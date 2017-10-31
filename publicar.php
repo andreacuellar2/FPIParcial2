@@ -85,7 +85,7 @@ function SubirImagen($file){
       <main id="center" class="column">
         <h1 class="subtema">Escribe tu artículo</h1><br><br>
         <div class="pagPublicar" id="pagPublicar">
-          <form id="formPost">
+          <form id="formPost" method="POST" enctype="multipart/form-data">
             <label class="loginLe">Título: </label>
             <input name="titulo" class="loginLe" type="text" placeholder="Título del artículo" maxlength="25" required>
             <br><br>
