@@ -8,7 +8,7 @@
     <link rel=icon href="IMG/favicon.png" type="image/png">
     <title>O W L S P A C E</title>
   </head>
-  <body class="bodylogin" onload="UserRequestJSON();pubRequestJSON();TopNavSesion();">
+  <body class="bodylogin" onload="UserRequestJSON();TopNavSesion();">
 <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
   <ul class="topnav">
     <li id="navInicio"><a href="index.html">Inicio</a></li>
@@ -53,13 +53,18 @@
   </div>
 
   <div class="publicaciones">
-    <div class="entrada">
+    <div id="noEntradas" class="entrada">
+      <h3 class="descripcionArt">No hay artículos publicados de este usuario</h3>
+    </div>
+    <div id="entrada" class="entrada">
+      <h1 class="loginLe">Artículos del autor</h1><hr>
       <img id="imgEntrada" src="" alt="Imagen de la entrada" class="imagenEntrada">
         <h1 id="tituloEntrada" class="articuloTitulo">Titulo Articulo</h1><br>
-        <h3 id="fechaEntrada" class="descripcionArt">Fecha del articulo</h3>
+        <h3 id="fechaEntrada" class="descripcionArt">Fecha del articulo</h3><br>
         <p id="resumenEntrada" class="loginPerfil">Resumen del articulo</p>
-        <button class="btnLeerMas" onclick="">LEER MAS »</button>
+        <button class="btnLeerMas" onclick="btnLeerMas()">LEER MAS »</button>
         <p id="comentariosEntrada" class="comentarios"><b>Comentarios de la entrada</b></p>
+        <hr>
         <div class="paginador">
         <ul class="pagination">
           <li><a href="#">«</a></li>
@@ -71,8 +76,9 @@
         </div>
       </div>
     </div>
-
+<script type="text/javascript" src="JS/publicacion.js"></script>
 <script type="text/javascript" src="JS/perfil.js"></script>
 <script type="text/javascript" src="JS/usuario.js"></script>
+
   </body>
 </html>
