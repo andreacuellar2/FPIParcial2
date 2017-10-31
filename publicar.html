@@ -8,7 +8,7 @@
     <link rel=icon href="IMG/favicon.png" type="image/png">
     <title>O W L S P A C E</title>
   </head>
-  <body>
+  <body onload="CargarCategorias()">
 <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
   <ul class="topnav">
     <li><a id="navInicio" href="index.html">Inicio</a></li>
@@ -34,14 +34,8 @@
                 <label class="loginLe">Cuerpo: </label>
                 <textarea class="loginLe" name="contenido" placeholder="Ingresa aquí el contenido" cols="50" rows="10" required></textarea><br><br>
                 <label class="loginLe">Categoría:</label>
-                <select class="loginLe">
-                  <option>Geografía</option>
-                  <option>Arte y Literatura</option>
-                  <option>Historia</option>
-                  <option>Entretenimiento</option>
-                  <option>Ciencia y Naturaleza</option>
-                  <option>Deportes</option>
-                  <option>Otros</option>
+                <select class="loginLe" id="selectorCategorias" name="idCategoria">
+                  <!--Generar las categorias con appendChild-->
                 </select><br><br>
                 <label class="loginLe">Agregar imagen:</label><input class="loginLe" type="file" name="imagen" accept="image/jpeg, image/png"/>
                 <div class="contenedorImagen">
@@ -86,11 +80,10 @@
 </div>
 
 <!-- /////////////////////////////////footer///////////////////////////////////////-->
-      <div id="footer">
-      <footer id="footer"><h1>Derechos Reservados</h1></footer>
-      </div>
-      </body>
-      </html>
+  <div id="footer">
+  <footer id="footer"><h1>Derechos Reservados</h1></footer>
+  </div>
 <!--<span class="has-popup">Ver el contenido<span class="popup">Éste es el contenido</span></span>-->
+<script type="text/javascript" src="JS/publicar.js"></script>
   </body>
 </html>

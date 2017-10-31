@@ -1,1 +1,4 @@
-[]
+[{"id":1,"idUsuario":1,"titulo":"Segunda Guerra Mundial",
+  "contenido":" Segunda Guerra Mundial fue un conflicto militar global que se desarrollo entre 1939 y 1945.",
+  "idCategoria":3,"imgSrc":"guerra.jpg",
+  "comentarios":[{"idUsuario":1,"comentario":"Ese es un Juego"},{"idUsuario":2,"comentario":"Malditos Nazis"},{"idUsuario":3,"comentario":"Porque no naci en esa epoca?"}],"fecha":"2017-10-30"}]
