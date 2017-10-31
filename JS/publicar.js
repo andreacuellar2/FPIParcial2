@@ -29,5 +29,7 @@ function ValidarSesion() {
   var sessionLog = window.localStorage.getItem("idUserLogged");
   if(sessionLog == "null" || sessionLog == null){
     window.location.replace("login.html");
+  }else {
+    document.getElementById('idUserLogIn').value = sessionLog;    
   }
 }

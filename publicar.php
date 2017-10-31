@@ -6,7 +6,7 @@ if ($_POST) {
     $todasPubliArray = json_decode($todasPubli, true);
     $regPublicacion = array(
       'id' => end($todasPubliArray)['id']+1,
-      'idUsuario' => 2,
+      'idUsuario' => $_POST['idUsuario'],
       'titulo' => $_POST['titulo'],
       'contenido' => $_POST['contenido'],
       'idCategoria' => (int)$_POST['idCategoria'],
@@ -86,6 +86,7 @@ function SubirImagen($file){
         <h1 class="subtema">Escribe tu artículo</h1><br><br>
         <div class="pagPublicar" id="pagPublicar">
           <form id="formPost" method="POST" enctype="multipart/form-data">
+            <input type="text" name="idUsuario" id="idUserLogIn" disabled>
             <label class="loginLe">Título: </label>
             <input name="titulo" class="loginLe" type="text" placeholder="Título del artículo" maxlength="25" required>
             <br><br>
