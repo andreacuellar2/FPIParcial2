@@ -1,4 +1,8 @@
-function generarCategorias(jsonCategorias) {
+function generarCategorias() {
+  jsonCategorias = <?php
+  $allUserContent = file_get_contents('DATA/categorias.json');
+  $allUserArray = json_decode($allUserContent, true);
+  echo $allUserArray?>;
   var categorias = document.getElementById("selectorCategorias");
   var limite = jsonCategorias.length;
   for (var i = 0; i < limite; i++) {
@@ -9,19 +13,3 @@ function generarCategorias(jsonCategorias) {
     categorias.appendChild(node);
   }
 }
-function CargarCategorias(){
-  var userRequest = new XMLHttpRequest();
-  userRequest.open('GET', 'DATA/categorias.json');
-  userRequest.onload = function() {
-    if (userRequest.status >= 200 && userRequest.status < 400) {
-      var userData = JSON.parse(userRequest.responseText);
-      generarCategorias(userData);
-    } else {
-      console.log("Se conectó con el servidor pero ocurrió un error");
-    }
-  };
-    userRequest.onerror = function() {
-      console.log("Error al conectar con el servidor");
-    };
-    userRequest.send();
-  }

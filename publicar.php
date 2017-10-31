@@ -8,7 +8,7 @@
     <link rel=icon href="IMG/favicon.png" type="image/png">
     <title>O W L S P A C E</title>
   </head>
-  <body onload="CargarCategorias()">
+  <body onload="generarCategorias()">
 <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
   <ul class="topnav">
     <li><a id="navInicio" href="index.html">Inicio</a></li>
@@ -30,20 +30,20 @@
         <h1 class="subtema">Escribe tu artículo</h1><br><br>
         <div class="pagPublicar" id="pagPublicar">
           <form id="formPost">
-                <label class="loginLe">Título: </label>
-                <input name="titulo" class="loginLe" type="text" placeholder="Título del artículo" maxlength="25" required>
-                <br><br>
-                <label class="loginLe">Cuerpo: </label>
-                <textarea name="contenido" class="loginLe" name="contenido" placeholder="Ingresa aquí el contenido" cols="50" rows="10" required></textarea>
-                <br><br>
-                <label class="loginLe">Categoría:</label>
-                <select class="loginLe" id="selectorCategorias" name="idCategoria">
-                  <!--Generar las categorias con appendChild-->
-                </select><br><br>
-                <label class="loginLe">Agregar imagen:</label>
-                <input class="loginLe" type="file" name="file" accept="image/jpeg, image/png">
-                <br>
-                <input class="btnLeerMas" type="submit" id="btnPublicar" value="Publicar">
+            <label class="loginLe">Título: </label>
+            <input name="titulo" class="loginLe" type="text" placeholder="Título del artículo" maxlength="25" required>
+            <br><br>
+            <label class="loginLe">Cuerpo: </label>
+            <textarea name="contenido" class="loginLe" name="contenido" placeholder="Ingresa aquí el contenido" cols="50" rows="10" required></textarea>
+            <br><br>
+            <label class="loginLe">Categoría:</label>
+            <select class="loginLe" id="selectorCategorias" name="idCategoria">
+              <!--Generar las categorias con appendChild-->
+            </select><br><br>
+            <label class="loginLe">Agregar imagen:</label>
+            <input class="loginLe" type="file" name="file" accept="image/jpeg, image/png">
+            <br>
+            <input class="btnLeerMas" type="submit" id="btnPublicar" value="Publicar">
         </form>
       </main>
 <!-- ////////////////////////// Menu Derecha //////////////////////////////-->
