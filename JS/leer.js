@@ -59,7 +59,8 @@ function pubRequestJSON(){
 
 function TopNavSesion(){
   var prueba =  window.localStorage.getItem("idUserLogged");
-  if (prueba == "null"){
+  document.getElementById('userComentando').innerHTML = prueba;
+  if (prueba == "null" || prueba == null){
     document.getElementById('areaPerfil').style.display = 'none';
     document.getElementById('navLogin').style.display = 'block';
     document.getElementById('navRegistro').style.display= 'block';
@@ -68,6 +69,7 @@ function TopNavSesion(){
     document.getElementById('navLogout').style.display= 'none';
     document.getElementById('comentando').style.display= 'none';
     document.getElementById('estrellas').style.display= 'none';
+    document.getElementById('userComentando').style.display= 'none';
   }else {
     document.getElementById('areaPerfil').style.display = 'block';
     document.getElementById('navLogin').style.display = 'none';
@@ -75,6 +77,7 @@ function TopNavSesion(){
     document.getElementById('navPerfil').style.display = 'block';
     document.getElementById('navPublicar').style.display= 'block';
     document.getElementById('navLogout').style.display= 'block';
+    document.getElementById('userComentando').style.display= 'none';
   }
 }
 function LogOut() {
