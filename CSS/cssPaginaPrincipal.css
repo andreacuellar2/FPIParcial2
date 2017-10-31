@@ -597,6 +597,11 @@ ul.topnav li a.activo {background-color: #75A8BD;}
 }
 /*////*/
 /*///////////////////////Para el perfil del usuario///////////////////////////*/
+#resumenEntrada{
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+}
 #editarPerfil{
   display: none;
 }

@@ -1,3 +1,4 @@
+var idVisita;
 function pubRequestJSON(){
   var pubWanted = window.localStorage.getItem("idPubWanted");
   var pubRequest = new XMLHttpRequest();
@@ -55,6 +56,14 @@ function pubRequestJSON(){
           }
         }
       }
+      for (var i in pubData) {
+        for (var j in userData) {
+          if (userData[j].id == pubData[i].idUsuario) {
+            document.getElementById("autorArticulo").value = "Autor: "+userData[j].nombreUsuario;
+            idVisita = pubData[i].idUsuario;
+          }
+        }
+      }
   }
 
 function TopNavSesion(){
@@ -84,4 +93,10 @@ function LogOut() {
   alert("Se cerró la sesión");
   localStorage.setItem("idUserLogged", null);
   window.location.replace("index.html");
+}
+
+function haciaPerfil() {
+  localStorage.setItem("idUserVisita", null);
+  localStorage.setItem("idUserVisita", idVisita);
+  window.location.replace("visita.html");
 }
