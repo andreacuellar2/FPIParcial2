@@ -7,4 +7,5 @@
   "comentarios":[{"idUsuario":1,"comentario":"Ese es un Juego"},
                 {"idUsuario":2,"comentario":"Malditos Nazis"},
                 {"idUsuario":3,"comentario":"Porque no naci en esa epoca?"}],
-  "fecha":"2017-10-30"},{"puntuacion":4}]
+  "fecha":"2017-10-30",
+  "puntuacion":4}]
