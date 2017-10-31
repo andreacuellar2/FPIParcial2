@@ -40,7 +40,7 @@ function SubirImagen($file){
 		if ($fileError === 0) {
 			if ($fileSize < 2000000) {
 				$fileNameNew = uniqid('', true).".".$fileActualExt;
-				$fileDestination = 'IMG/uploads/'.$fileNameNew;
+				$fileDestination = 'IMG/publicaciones/'.$fileNameNew;
 				move_uploaded_file($fileTmpName, $fileDestination);
 			} else {
 				echo "Archivo muy grande";
