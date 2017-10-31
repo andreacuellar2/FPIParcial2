@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/cssPaginaPrincipal.css">
+    <link rel=icon href="IMG/favicon.png" type="image/png">
+    <title>O W L S P A C E</title>
+  </head>
+  <body class="bodylogin" onload="visitaRequest();TopNavSesion();">
+<!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
+  <ul class="topnav">
+    <li id="navInicio"><a href="index.html">Inicio</a></li>
+    <li id="navCategorias"><a href="categorias.html">Categorías</a></li>
+    <li id="navPerfil"><a href="perfil.html">Mi Perfil</a></li>
+    <li id="navPublicar"><a href="publicar.html">Publicar</a></li>
+    <li  id="navLogout"><a onclick="LogOut()">Logout</a></li>
+  </ul>
+  <!-- //////////////////////////Header//////////////////////////////////////////////-->
+      <header id="header">
+        <h1 class="tituloBlog"><b>O W L Space</b></h1></hr>
+          <p class="subtema">Bienvenido al espacio para compartir tus ideas</p>
+      </header>
+    <!-- //////////////////////////// Perfil //////////////////////////////-->
+<div class="perfil" id="perfil">
+    <br>
+    <h1 id="username" class="tituloPerfil">Usuario</h1><br>
+    <div id="imagenPerfil">
+      <img src="IMG/uploads/profiledefault.jpg" alt="Imagen Usuario" class="imagenUsuario" id="fotoUsuario"><br>
+    </div><br><br>
+    <p class="tituloPerfil" id="nombreUsuario">Nombre Usuario</p><br>
+    <p class="loginLe" id="descripcion">Informacion usuario</p><br>
+    <p class="loginLe" id="sexoUsuario">Sexo usuario</p><br>
+  </div>
+
+  <div class="perfil" id="editarPerfil" class="articulos">
+    <form>
+    <br><br>
+    <label class="loginLe">Username:</label><input type="text" class="loginLe">
+    <br><br>
+    <div id="imagenPerfil">
+    <label class="loginLe">Imagen:</label><input type="file" name="file" accept="image/jpeg, image/png" class="inputComentario">
+    </div>
+    <br><br>
+    <label class="loginLe">Nombre:</label><input type="text" class="loginLe">
+    <br><br>
+    <label class="loginLe">Acerca de mi:</label><input type="text" class="loginLe">
+    <br><br>
+    <button class="btnLeerMas">Guardar</button>
+  </form>
+  </div>
+
+  <div class="publicaciones">
+    <div class="entrada">
+      <img src="IMG/ardu.png" alt="Imagen de la entrada" class="imagenEntrada">
+        <h1 class="articuloTitulo">Arduino</h1><br>
+        <h3 class="descripcionArt">Jueves 26 de Octubre 2017</h3>
+        <p class="loginPerfil">Arduino es una plataforma de prototipos electrónica de código abierto (open-source) basada en hardware y software flexibles y fáciles de usar. Está pensado para artistas, diseñadores, como hobby y para cualquiera interesado en crear objetos o entornos interactivos.</p>
+        <button class="btnLeerMas"><b>LEER MAS »</b></button>
+        <p class="comentarios"><b>Comentarios 2</b></p>
+        <div class="paginador">
+        <ul class="pagination">
+          <li><a href="#">«</a></li>
+          <li><a href="#">1</a></li>
+          <li><a class="active" href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">»</a></li>
+        </ul>
+        </div>
+      </div>
+    </div>
+<script type="text/javascript" src="JS/visita.js"></script>
+<script type="text/javascript" src="JS/usuario.js"></script>
+  </body>
+</html>
