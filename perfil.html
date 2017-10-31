@@ -8,7 +8,7 @@
     <link rel=icon href="IMG/favicon.png" type="image/png">
     <title>O W L S P A C E</title>
   </head>
-  <body class="bodylogin" onload="UserRequestJSON();TopNavSesion();">
+  <body class="bodylogin" onload="UserRequestJSON();TopNavSesion();GenerarPaginador();">
 <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
   <ul class="topnav">
     <li id="navInicio"><a href="index.html">Inicio</a></li>
@@ -66,18 +66,15 @@
         <p id="comentariosEntrada" class="comentarios"><b>Comentarios de la entrada</b></p>
         <hr>
         <div class="paginador">
-        <ul class="pagination">
-          <li><a href="#">«</a></li>
-          <li><a class="active" href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">»</a></li>
+        <ul class="pagination" id="idPaginador">
+          <!--Generar con appendChild-->
         </ul>
         </div>
       </div>
     </div>
 <script type="text/javascript" src="JS/publicacion.js"></script>
 <script type="text/javascript" src="JS/perfil.js"></script>
+<script type="text/javascript" src="JS/paginadorJS.js"></script>
 <script type="text/javascript" src="JS/usuario.js"></script>
 
   </body>
