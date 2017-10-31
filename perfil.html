@@ -8,7 +8,7 @@
     <link rel=icon href="IMG/favicon.png" type="image/png">
     <title>O W L S P A C E</title>
   </head>
-  <body>
+  <body onload="UserRequestJSON()">
 <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
     <ul class="topnav">
       <li><a id="navInicio" href="inicio.html">Inicio</a></li>
@@ -21,13 +21,13 @@
     <!-- //////////////////////////// Perfil //////////////////////////////-->
   <div class="perfil" id="perfil">
     <br>
-    <h1 id="username" class="tituloPerfil">juanpc13</h1><br>
+    <h1 id="username" class="tituloPerfil">Usuario</h1><br>
     <div id="imagenPerfil">
-      <img src="IMG/yo.jpg" alt="Imagen Usuario" class="imagenUsuario" id="fotoUsuario"><br>
+      <img src="IMG/uploads/profiledefault.jpg" alt="Imagen Usuario" class="imagenUsuario" id="fotoUsuario"><br>
     </div>
-    <p class="tituloPerfil" id="nombreUsuario">Juan Carlos</p><br>
-    <p class="loginLe" id="descripcion">Estudiante de ingieneria de sistemas informaticos.</p><br>
-    <p class="loginLe" id="sexoUsuario">Masculino</p><br>
+    <p class="tituloPerfil" id="nombreUsuario">Nombre Usuario</p><br>
+    <p class="loginLe" id="descripcion">Informacion usuario</p><br>
+    <p class="loginLe" id="sexoUsuario">Sexo usuario</p><br>
     <button class="btnLeerMas" onclick="editarPerfil()">Editar perfil</button>
   </div>
 
@@ -61,5 +61,6 @@
       </div>
     </div>
 <script type="text/javascript" src="JS/perfil.js"></script>
+<script type="text/javascript" src="JS/usuario.js"></script>
   </body>
 </html>
