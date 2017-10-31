@@ -1,11 +1,11 @@
-function visitaRequest(){
-  var visitaUser = window.localStorage.getItem("idvisitaUser");
+function UserRequestJSON(){
+  var userLogged = window.localStorage.getItem("idUserVisita");
   var userRequest = new XMLHttpRequest();
   userRequest.open('GET', 'DATA/usuarios.json');
   userRequest.onload = function() {
     if (userRequest.status >= 200 && userRequest.status < 400) {
       var userData = JSON.parse(userRequest.responseText);
-      userSetHTML(userData, visitaUser);
+      pubRequestJSON(userData, userLogged);
     } else {
       console.log("Se conecto con el servidor pero ocurrio un error");
     }
@@ -16,15 +16,44 @@ function visitaRequest(){
     userRequest.send();
   }
 
-  function userSetHTML(userData, visitaUser) {
-    var user = null;
+  function pubRequestJSON(userData, userLogged){
+    var pubWanted = window.localStorage.getItem("idUserVisita");
+    var pubRequest = new XMLHttpRequest();
+    pubRequest.open('GET', 'DATA/publicaciones.json');
+    pubRequest.onload = function() {
+      if (pubRequest.status >= 200 && pubRequest.status < 400) {
+        var pubData = JSON.parse(pubRequest.responseText);
+        dataSetHTML(userData, userLogged, pubData, pubWanted);
+      } else {
+        console.log("Se conecto con el servidor pero ocurrio un error");
+      }
+    };
+      pubRequest.onerror = function() {
+        console.log("Error al conectar con el servidor");
+      };
+      pubRequest.send();
+  }
 
+  function dataSetHTML(userData, userLogged, pubData, pubWanted){
+    for (var i in pubData) {
+    if (pubData[i].idUsuario == parseInt(pubWanted)) {
+      var entrada = new Publicacion(pubData[i].id, pubData[i].idUsuario, pubData[i].titulo, pubData[i].contenido, pubData[i].idCategoria, pubData[i].imgSrc, pubData[i].comentarios, pubData[i].fecha, pubData[i].puntuacion);
+      document.getElementById('noEntradas').style.display='none';
+      document.getElementById("imgEntrada").src = "IMG/publicaciones/"+entrada.imgSrc;
+      document.getElementById("tituloEntrada").innerHTML = entrada.titulo;
+      document.getElementById("fechaEntrada").innerHTML = "Fecha de publicacion: "+entrada.fecha;
+      document.getElementById("resumenEntrada").innerHTML = entrada.contenido;
+      document.getElementById("comentariosEntrada").innerHTML = "Comentarios: "+(entrada.comentarios).length;
+    }else {
+      document.getElementById('entrada').style.display='none';
+    }
+  }
+  var user = null;
     for (i in userData) {
-         if (userData[i].id == visitaUser) {
+         if (userData[i].id == userLogged) {
            user = new Usuario(userData[i].id, userData[i].nombre, userData[i].nombreUsuario, userData[i].descripcion, userData[i].sexo, userData[i].password, userData[i].imgProfile);
          }
     }
-
     if (user != null) {
       document.getElementById("nombreUsuario").innerHTML = user.nombre;
       document.getElementById("username").innerHTML = user.nombreUsuario;
@@ -32,7 +61,7 @@ function visitaRequest(){
       document.getElementById("fotoUsuario").src = "IMG/uploads/"+user.imgProfile;
       document.getElementById("sexoUsuario").innerHTML = (user.sexo=="H")?"Hombre":"Mujer";
     }else {
-      window.location.replace("index.html");
+      window.location.replace("login.html");
     }
   }
 
@@ -68,4 +97,10 @@ function TopNavSesion(){
     document.getElementById('navPublicar').style.display= 'block';
     document.getElementById('navLogout').style.display= 'block';
   }
+}
+
+function btnLeerMas() {
+  localStorage.setItem("idPubWanted", null);
+  localStorage.setItem("idPubWanted", 1);
+  window.location.replace("leer.html");
 }
