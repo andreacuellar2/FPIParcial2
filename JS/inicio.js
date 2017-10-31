@@ -35,3 +35,8 @@ function LogOut() {
   localStorage.setItem("idUserLogged", null);
   window.location.replace("index.html");
 }
+
+function redireccion() {
+  localStorage.setItem("idPubWanted", 1);
+  window.location.replace("leer.html");
+}

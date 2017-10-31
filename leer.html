@@ -8,7 +8,7 @@
     <link rel=icon href="IMG/favicon.png" type="image/png">
     <title>O W L S P A C E</title>
   </head>
-  <body onload="TopNavSesion()">
+  <body onload="TopNavSesion();pubRequestJSON();">
 <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
   <ul class="topnav">
     <li id="navInicio"><a href="index.html">Inicio</a></li>
@@ -27,30 +27,43 @@
 <!-- //////////////////////////Leer//////////////////////////////////////////////-->
 	<div id="contenedorPrincipal">
     <main id="center" class="column">
+
       <div id="pagArticulo">
-        <h1 class="subtema">ARTICULO 1</h1><br><hr>
+        <h1 id="nombreArticulo" class="subtema">Nombre Articulo</h1><br><hr>
         <div id="entrada1"><br><br>
-          <img src="IMG/blog.jpg" id="imgPrimera" alt="blog">
-          <div class="stars">
-            <h1 class="calificacion">Califica esta publicación:</h1><br>
-            <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
-            <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
-            <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
-            <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
-            <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
-          </div>
+
+          <img src="" id="imgArticulo" alt="Imagen de la publicacion">
+
           <div class="contenedor"><br>
-            <h3 class="descripcionArt">Jueves 26 de Octubre 2017</h3><br>
-            <p class="parrafoArtDe">Si un día llega a tu jardín una jara –porque algún pájaro ha traído una semilla–, estás de enhorabuena. Son muchos los aficionados a la jardinería que tratan de disfrutar de su aroma y color, pero no es nada fácil. Hablamos de una especie silvestre o montana. Actualmente, se usa más en perfumería, donde se emplea como fijador de perfumes, pero la jara ha vuelto a recuperar cierto protagonismo medicinal para tratar las gastritis y las úlceras. Descubre una planta que, además, florece temprano y lo resiste todo, ¡también los incendios!</p><br>
-            <p class="comentarios"><b>Comentarios 2</b></p>
-          </div>
-          <br><div id="comentar">
-            <h3 class="comentarbar">Déjanos tu comentario:</h3>
-            <input type="text" class="inputComentario" id="comentario" placeholder="Escribe tu comentario..."><br>
-            <input type="button" class="btnComentar" value="Comentar">
+            <h3 id="fechaArticulo" class="descripcionArt">Fecha de la publicacion</h3><br>
+            <p id="contenidoArticulo" class="parrafoArtDe">Contenido de la Publicacion</p><br>
+            <p id="numeroComentarios" class="comentarios"><b>Numero de Comentarios</b></p>
+          </div><br>
+
+          <div id="estrellas" class="stars">
+            <label class="descripcionArt">Califica esta publicación:</label>
+            <a data-value="1" title="Votar con 1 estrellas">&#9733;</a>
+            <a data-value="2" title="Votar con 2 estrellas">&#9733;</a>
+            <a data-value="3" title="Votar con 3 estrellas">&#9733;</a>
+            <a data-value="4" title="Votar con 4 estrellas">&#9733;</a>
+            <a data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+          </div><br>
+
+          <div id="comentar">
+            <div id="divParaComentarios">
+              <label class="comentarbar">Comentarios:</label><br><br>
+              <ol id="comentarios">
+              </ol>
+            </div><br>
+            <div id="comentando">
+              <label class="comentarbar">Déjanos tu comentario:</label>
+              <input type="text" class="inputComentario" id="comentario" placeholder="Escribe tu comentario..."><br><br>
+              <input type="button" class="btnComentar" value="Comentar">
+            </div>
           </div><br>
         </div>
       </div>
+
       </main>
 <!-- /////////////////////////// Menu Derecha ///////////////////////////////-->
     <nav id="right" class="column">
@@ -91,5 +104,6 @@
   		<footer id="footer"><h1>Derechos Reservados</h1></footer>
   	</div>
     <script type="text/javascript" src="JS/leer.js"></script>
+    <script type="text/javascript" src="JS/publicacion.js"></script>
   </body>
 </html>
