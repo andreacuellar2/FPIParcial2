@@ -15,6 +15,13 @@ if ($_POST) {
       'fecha' => date("Y-m-d"),
       'puntuacion' => 0
     );
+    $todasPubliArray[] = $regPublicacion;
+    $finalTodadPubli = json_encode($todasPubliArray);
+    file_put_contents('DATA/publicaciones.json', $finalTodadPubli);
+    header( "Location: perfil.html" );
+    die();
+  }else {
+    header("Location: publicar.php?NoExisteArchivo");
   }
 }
 function SubirImagen($file){
