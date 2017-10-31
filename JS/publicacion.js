@@ -1,4 +1,4 @@
-function Publicacion(id, idUsuario, titulo, contenido, idCategoria, imgSrc, comentarios, fecha) {
+function Publicacion(id, idUsuario, titulo, contenido, idCategoria, imgSrc, comentarios, fecha, puntuacion) {
   this.id = id;
   this.idUsuario = idUsuario;
   this.titulo = titulo;
@@ -7,4 +7,5 @@ function Publicacion(id, idUsuario, titulo, contenido, idCategoria, imgSrc, come
   this.imgSrc = imgSrc;
   this.comentarios = comentarios;
   this.fecha = fecha;
+  this.puntuacion = puntuacion;
 }

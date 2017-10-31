@@ -591,7 +591,11 @@ ul.topnav li a.activo {background-color: #75A8BD;}
     ul.topnav li {float: none;}
 }
 /*////////////////////////////////////////////////////////////////////////////*/
-
+/*//PARA PUBLICAR//*/
+#idUserLogIn{
+  display: none;
+}
+/*////*/
 /*///////////////////////Para el perfil del usuario///////////////////////////*/
 #editarPerfil{
   display: none;

@@ -8,13 +8,13 @@
     <link rel=icon href="IMG/favicon.png" type="image/png">
     <title>O W L S P A C E</title>
   </head>
-  <body class="bodylogin" onload="UserRequestJSON();TopNavSesion();">
+  <body class="bodylogin" onload="UserRequestJSON();pubRequestJSON();TopNavSesion();">
 <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
   <ul class="topnav">
     <li id="navInicio"><a href="index.html">Inicio</a></li>
     <li id="navCategorias"><a href="categorias.html">Categorías</a></li>
     <li id="navPerfil"><a href="perfil.html"  class="activo">Mi Perfil</a></li>
-    <li id="navPublicar"><a href="publicar.html">Publicar</a></li>
+    <li id="navPublicar"><a href="publicar.php">Publicar</a></li>
     <li  id="navLogout"><a onclick="LogOut()">Logout</a></li>
   </ul>
   <!-- //////////////////////////Header//////////////////////////////////////////////-->
@@ -54,23 +54,24 @@
 
   <div class="publicaciones">
     <div class="entrada">
-      <img src="IMG/ardu.png" alt="Imagen de la entrada" class="imagenEntrada">
-        <h1 class="articuloTitulo">Arduino</h1><br>
-        <h3 class="descripcionArt">Jueves 26 de Octubre 2017</h3>
-        <p class="loginPerfil">Arduino es una plataforma de prototipos electrónica de código abierto (open-source) basada en hardware y software flexibles y fáciles de usar. Está pensado para artistas, diseñadores, como hobby y para cualquiera interesado en crear objetos o entornos interactivos.</p>
-        <button class="btnLeerMas"><b>LEER MAS »</b></button>
-        <p class="comentarios"><b>Comentarios 2</b></p>
+      <img id="imgEntrada" src="" alt="Imagen de la entrada" class="imagenEntrada">
+        <h1 id="tituloEntrada" class="articuloTitulo">Titulo Articulo</h1><br>
+        <h3 id="fechaEntrada" class="descripcionArt">Fecha del articulo</h3>
+        <p id="resumenEntrada" class="loginPerfil">Resumen del articulo</p>
+        <button class="btnLeerMas" onclick="">LEER MAS »</button>
+        <p id="comentariosEntrada" class="comentarios"><b>Comentarios de la entrada</b></p>
         <div class="paginador">
         <ul class="pagination">
           <li><a href="#">«</a></li>
-          <li><a href="#">1</a></li>
-          <li><a class="active" href="#">2</a></li>
+          <li><a class="active" href="#">1</a></li>
+          <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
           <li><a href="#">»</a></li>
         </ul>
         </div>
       </div>
     </div>
+
 <script type="text/javascript" src="JS/perfil.js"></script>
 <script type="text/javascript" src="JS/usuario.js"></script>
   </body>

@@ -24,4 +24,17 @@ function CargarCategorias(){
       console.log("Error al conectar con el servidor");
     };
     userRequest.send();
+}
+function ValidarSesion() {
+  var sessionLog = window.localStorage.getItem("idUserLogged");
+  if(sessionLog == "null" || sessionLog == null){
+    window.location.replace("login.html");
+  }else {
+    document.getElementById('idUserLogIn').value = sessionLog;
   }
+}
+function LogOut() {
+  alert("Se cerró la sesión");
+  localStorage.setItem("idUserLogged", null);
+  window.location.replace("index.html");
+}
