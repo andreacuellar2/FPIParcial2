@@ -1,3 +1,4 @@
+<?php
 $registro = array();
 if ($_POST) {
   if (file_exists('DATA/usuarios.json')) {
