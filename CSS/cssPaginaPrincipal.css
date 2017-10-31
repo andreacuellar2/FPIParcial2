@@ -523,6 +523,15 @@ font-weight: bold;
 color: #092834;
 border-radius: 0.5vw;
 }
+.warning{
+  background-color: #E4F1F6;
+  font-family: "Raleway", sans-serif;
+  margin: 1vw 1vw 1vw 1vw;
+  font-size: 2.5vw;
+  font-weight: bold;
+  color: red;
+  border-radius: 0.5vw;
+}
 /*////////////////////////////////////////////////////////////////////////////*/
 
 /*/////////////////////Para las estrellas de puntuacion///////////////////////*/
