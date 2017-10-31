@@ -6,7 +6,7 @@ if ($_POST) {
     $todasPubliArray = json_decode($todasPubli, true);
     $regPublicacion = array(
       'id' => end($todasPubliArray)['id']+1,
-      'idUsuario' => $_POST['2'],
+      'idUsuario' => 2,
       'titulo' => $_POST['titulo'],
       'contenido' => $_POST['contenido'],
       'idCategoria' => (int)$_POST['idCategoria'],
