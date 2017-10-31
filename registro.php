@@ -115,7 +115,7 @@ function ExisteUsuario($todos, $suNombre){
         <label class="loginLe" >Contraseña:</label>
         <input type="password" class="loginLe" name="password" placeholder="Contraseña" maxlength="50" value="" required>
         <br><br>
-        <input class="btnLeerMas" type="submit" name="btnRegistrarme" value="Registrarme" onclick="index.html"><br>
+        <input class="btnLeerMas" type="submit" name="btnRegistrarme" value="Registrarme"><br>
       </form>
       <br>
       <p class="divLetra">¿Ya tienes una cuenta? <a class="loginLe" href="login.html">Inicia Sesión</a></p>
