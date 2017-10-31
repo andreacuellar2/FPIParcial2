@@ -9,7 +9,7 @@ if ($_POST) {
       'idUsuario' => 2,
       'titulo' => $_POST['titulo'],
       'contenido' => $_POST['contenido'],
-      'idCategoria' => $_POST['idCategoria'],
+      'idCategoria' => (int)$_POST['idCategoria'],
       'imgSrc' => SubirImagen($_FILES['file']),
       'comentarios' => array(),
       'fecha' => date("Y-m-d"),
