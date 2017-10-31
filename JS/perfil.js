@@ -38,7 +38,7 @@ function UserRequestJSON(){
 
 function LogOut() {
   localStorage.setItem("idUserLogged", null);
-  window.location.replace("inicio.html");
+  window.location.replace("index.html");
 }
 
 function mostrarPerfil() {

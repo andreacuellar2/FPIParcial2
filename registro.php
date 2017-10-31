@@ -68,7 +68,7 @@ function ExisteUsuario($todos, $suNombre){
 ?>
 <!DOCTYPE html>
 <html>
-  <head>
+  <head lang="es">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/reset.css">
@@ -80,7 +80,7 @@ function ExisteUsuario($todos, $suNombre){
 
     <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
       <ul class="topnav">
-        <li><a id="navInicio" href="inicio.html">Inicio</a></li>
+        <li><a id="navInicio" href="index.html">Inicio</a></li>
         <li><a id="navCategorias" href="categorias.html">Categorías</a></li>
         <li><a id="navRegistro" href="login.html" class="right">Login</a></li>
       </ul>
@@ -114,7 +114,7 @@ function ExisteUsuario($todos, $suNombre){
         <label class="loginLe" >Contraseña:</label>
         <input type="password" class="loginLe" name="password" placeholder="Contraseña" maxlength="50" value="" required>
         <br><br>
-        <input class="btnLeerMas" type="submit" name="btnRegistrarme" value="Registrarme" onclick="Inicio.html"><br>
+        <input class="btnLeerMas" type="submit" name="btnRegistrarme" value="Registrarme" onclick="index.html"><br>
       </form>
       <br>
       <p id="parrafoLogin">¿Ya tienes una cuenta? <a class="loginLe" href="login.html">Inicia Sesión</a></p>
