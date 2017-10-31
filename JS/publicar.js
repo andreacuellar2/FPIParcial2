@@ -9,7 +9,7 @@ function generarCategorias(jsonCategorias) {
     categorias.appendChild(node);
   }
 }
-function loginRequestJSON(){
+function CargarCategorias(){
   var userRequest = new XMLHttpRequest();
   userRequest.open('GET', 'DATA/categorias.json');
   userRequest.onload = function() {
