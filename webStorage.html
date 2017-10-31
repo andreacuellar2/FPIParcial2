@@ -8,7 +8,7 @@
 // Check browser support
 if (typeof(Storage) !== "undefined") {
     // Store
-    localStorage.setItem("idUserLogged", 3);
+    localStorage.setItem("idUserLogged", null);
     // Retrieve
     document.getElementById("result").innerHTML = localStorage.getItem("idUserLogged");
 } else {

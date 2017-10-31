@@ -34,9 +34,12 @@ function UserRequestJSON(){
     }else {
       window.location.replace("login.html");
     }
-
   }
 
+function LogOut() {
+  localStorage.setItem("idUserLogged", null);
+  window.location.replace("inicio.html");
+}
 
 function mostrarPerfil() {
   document.getElementById('perfil').style.display='block';
