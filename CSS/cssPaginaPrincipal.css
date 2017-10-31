@@ -200,6 +200,11 @@ header {
   color: #173F4F;
   padding-top: 6vw;
 }
+@media screen and (max-width: 600px){
+#header .subtema{
+    display: none;
+  }
+}
 .subtemaNav{
   font-family: "Raleway", sans-serif;
   font-size: 2vw;
