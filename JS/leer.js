@@ -1,3 +1,4 @@
+var nombreUser = "";
 function pubRequestJSON(){
   var pubWanted = window.localStorage.getItem("idPubWanted");
   var pubRequest = new XMLHttpRequest();
@@ -24,19 +25,17 @@ function pubRequestJSON(){
        }
       document.getElementById("nombreArticulo").innerHTML = publicacion.titulo;
       document.getElementById("imgArticulo").src = "IMG/publicaciones/"+publicacion.imgSrc;
-      document.getElementById("fechaArticulo").innerHTML = publicacion.fecha;
-      document.getElementById("contenidoArticulo").src = publicacion.contenido;
-      document.getElementById("numeroComentarios").innerHTML = "Comentarios:"+publicacion.comentarios.lenght;
+      document.getElementById("fechaArticulo").innerHTML = "Fecha de publicacion: "+publicacion.fecha;
+      document.getElementById("contenidoArticulo").innerHTML = publicacion.contenido;
+      document.getElementById("numeroComentarios").innerHTML = "Comentarios: "+(publicacion.comentarios).length;
       var listaComentarios = document.getElementById("comentarios");
       for (var i in publicacion.comentarios) {
-        var nodo = document.createElement("LI");
-        var textnode = document.createTextNode(publicacion.comentarios[i]);
+        var node = document.createElement("li");
+        var textnode = document.createTextNode(nombreUser+": "+publicacion.comentarios[i].comentario+"\n\n");
           node.appendChild(textnode);
-          document.getElementById("myList").appendChild(node);
+          listaComentarios.appendChild(node);
       }
   }
-
-
 
 function TopNavSesion(){
   var prueba =  window.localStorage.getItem("idUserLogged");
@@ -48,6 +47,7 @@ function TopNavSesion(){
     document.getElementById('navPublicar').style.display= 'none';
     document.getElementById('navLogout').style.display= 'none';
     document.getElementById('comentando').style.display= 'none';
+    document.getElementById('estrellas').style.display= 'none';
   }else {
     document.getElementById('areaPerfil').style.display = 'block';
     document.getElementById('navLogin').style.display = 'none';
