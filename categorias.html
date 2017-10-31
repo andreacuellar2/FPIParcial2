@@ -8,16 +8,17 @@
     <link rel=icon href="IMG/favicon.png" type="image/png">
     <title>O W L S P A C E</title>
   </head>
-  <body onload="OpacityCategorias()">
+  <body onload="OpacityCategorias();TopNavSesion();">
 <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
-    <ul class="topnav">
-      <li><a id="navInicio" href="index.html">Inicio</a></li>
-      <li><a id="navCategorias" href="categorias.html" class="activo">Categorías</a></li>
-      <li><a id="navRegistro" href="login.html">Login</a></li>
-      <li><a id="navRegistro" href="perfil.html">Mi Perfil</a></li>
-      <li><a id="navCategorias" href="publicar.html">Publicar</a></li>
-      <li><a id="navCategorias" href="#">Logout</a></li>
-    </ul>
+  <ul class="topnav">
+    <li id="navInicio"><a href="index.html">Inicio</a></li>
+    <li id="navCategorias"><a href="categorias.html"  class="activo">Categorías</a></li>
+    <li id="navLogin"><a href="login.html">Login</a></li>
+    <li id="navRegistro"><a href="registro.php">Registro</a></li>
+    <li id="navPerfil"><a href="perfil.html">Mi Perfil</a></li>
+    <li id="navPublicar"><a href="publicar.html">Publicar</a></li>
+    <li  id="navLogout"><a onclick="LogOut()">Logout</a></li>
+  </ul>
 <!-- //////////////////////////Header//////////////////////////////////////////////-->
     <header id="header">
       <h1 class="tituloBlog"><b>O W L Space</b></h1></hr>

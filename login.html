@@ -8,15 +8,13 @@
     <link rel=icon href="IMG/favicon.png" type="image/png">
     <title>O W L S P A C E</title>
   </head>
-  <body class="bodylogin">
+  <body class="bodylogin" onload="TopNavSesion()">
     <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
     <ul class="topnav">
-      <li><a id="navInicio" href="index.html" >Inicio</a></li>
-      <li><a id="navCategorias" href="categorias.html">Categorías</a></li>
-      <li><a id="navRegistro" href="login.html" class="activo" >Login</a></li>
-      <li><a id="navRegistro" href="perfil.html">Mi Perfil</a></li>
-      <li><a id="navCategorias" href="publicar.html">Publicar</a></li>
-      <li><a id="navCategorias" href="#">Logout</a></li>
+      <li id="navInicio"><a href="index.html">Inicio</a></li>
+      <li id="navCategorias"><a href="categorias.html">Categorías</a></li>
+      <li id="navLogin"><a href="login.html"  class="activo">Login</a></li>
+      <li id="navRegistro"><a href="registro.php">Registro</a></li>
     </ul>
     <!-- ///////////////////////////////header/////////////////////////////////////////-->
     <header id="header">
@@ -41,7 +39,7 @@
     </div>
     <div id="irRegistro">
         <p class="divLetra">¿No tienes una cuenta?</p>
-        <input type="button" value="¡REGÍSTRATE!" class="btnLogin" onclick="registro.html"/>
+        <input type="button" value="¡REGÍSTRATE!" class="btnLogin" onclick="redireccion()"/>
     </div>
     <!-- ////////////////////////////////////////////////////////////////////////-->
     <script type="text/javascript" src="JS/login.js"></script>
