@@ -1,3 +1,52 @@
+<?php
+$regPublicacion = array();
+if ($_POST) {
+  if (file_exists('DATA/publicaciones.json')) {
+    $todasPubli = file_get_contents('DATA/publicaciones.json');
+    $todasPubliArray = json_decode($todasPubli, true);
+    $regPublicacion = array(
+      'id' => end($todasPubliArray)['id']+1,
+      'idUsuario' => $_POST['2'],
+      'titulo' => $_POST['titulo'],
+      'contenido' => $_POST['contenido'],
+      'idCategoria' => (int)$_POST['idCategoria'],
+      'imgSrc' => SubirImagen($_FILES['file']),
+      'comentarios' => array(),
+      'fecha' => date("Y-m-d"),
+      'puntuacion' => 0
+    );
+  }
+}
+function SubirImagen($file){
+	$fileName = $file['name'];
+	$fileTmpName = $file['tmp_name'];
+	$fileSize = $file['size'];
+	$fileError = $file['error'];
+	$fileType = $file['type'];
+
+	$fileExt = explode('.', $fileName);
+	$fileActualExt = strtolower(end($fileExt));
+
+	$allowed = array('jpg', 'jpeg', 'png');
+
+	if (in_array($fileActualExt, $allowed)) {
+		if ($fileError === 0) {
+			if ($fileSize < 2000000) {
+				$fileNameNew = uniqid('', true).".".$fileActualExt;
+				$fileDestination = 'IMG/uploads/'.$fileNameNew;
+				move_uploaded_file($fileTmpName, $fileDestination);
+			} else {
+				echo "Archivo muy grande";
+			}
+		} else {
+			echo "Ha ocurrido un error";
+		}
+	} else {
+		echo "Extension invalida";
+	}
+  return $fileNameNew;
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -8,7 +57,7 @@
     <link rel=icon href="IMG/favicon.png" type="image/png">
     <title>O W L S P A C E</title>
   </head>
-  <body onload="CargarCategorias()">
+  <body onload="CargarCategorias(); ValidarSesion();">
 <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
   <ul class="topnav">
     <li><a id="navInicio" href="index.html">Inicio</a></li>
@@ -34,7 +83,7 @@
             <input name="titulo" class="loginLe" type="text" placeholder="Título del artículo" maxlength="25" required>
             <br><br>
             <label class="loginLe">Cuerpo: </label>
-            <textarea name="contenido" class="loginLe" name="contenido" placeholder="Ingresa aquí el contenido" cols="50" rows="10" required></textarea>
+            <textarea name="contenido" class="loginLe" name="contenido" placeholder="Ingresa aquí el contenido" cols="50" rows="10" minlength="20" required></textarea>
             <br><br>
             <label class="loginLe">Categoría:</label>
             <select class="loginLe" id="selectorCategorias" name="idCategoria">
