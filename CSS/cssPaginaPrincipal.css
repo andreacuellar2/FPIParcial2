@@ -611,7 +611,17 @@ ul.topnav li a.activo {background-color: #75A8BD;}
 }
 @media screen and (max-width: 600px){
 .perfil{
-    display: none;
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 600px){
+.entrada{
+  width: 50vw;
+  }
+}
+@media screen and (max-width: 600px){
+.publicaciones{
+  top: 90vw;
   }
 }
 .publicaciones{
