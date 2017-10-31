@@ -8,7 +8,7 @@
     <link rel=icon href="IMG/favicon.png" type="image/png">
     <title>O W L S P A C E</title>
   </head>
-  <body onload="OpacityCategorias();TopNavSesion();">
+  <body onload="OpacityCategorias();jsonReadFileVariablesUser();TopNavSesion();">
 <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
   <ul class="topnav">
     <li id="navInicio"><a href="index.html">Inicio</a></li>
@@ -35,10 +35,8 @@
             </div><br>
             <div class="contenedorArtGeografia" id="contenedorArtGeografía">
             <br><br> <h3 class="artCategoriaTituloOsc">Artículos</h3><br>
-            <ul class="categoriaArticulos">
-              <li class="loginLe">Articulo 1</li>
-              <li class="loginLe">Articulo 2</li>
-              <li class="loginLe">Articulo 3</li>
+            <ul class="categoriaArticulos" id="listaArticulos0">
+              <!--Agregando con Appendchild-->
             </ul>
             <div class="paginador">
             <ul class="pagination">
@@ -56,10 +54,7 @@
             </div><br>
             <div class="contenedorArtArte" id="contenedorArtArte">
             <br><br> <h3 class="artCategoriaTituloCla">Artículos</h3><br>
-            <ul class="categoriaArticulos">
-              <li class="loginLe">Articulo 1</li>
-              <li class="loginLe">Articulo 2</li>
-              <li class="loginLe">Articulo 3</li>
+            <ul class="categoriaArticulos" id="listaArticulos1">
             </ul>
             <div class="paginador">
             <ul class="pagination">
@@ -77,10 +72,7 @@
             </div><br>
             <div class="contenedorArtHistoria" id="contenedorArtHistoria">
             <br><br> <h3 class="artCategoriaTituloOsc">Artículos</h3><br>
-            <ul class="categoriaArticulos">
-              <li class="loginLeCla">Articulo 1</li>
-              <li class="loginLeCla">Articulo 2</li>
-              <li class="loginLeCla">Articulo 3</li>
+            <ul class="categoriaArticulos" id="listaArticulos2">
             </ul>
             <div class="paginador">
             <ul class="pagination">
@@ -98,10 +90,7 @@
             </div><br>
             <div class="contenedorArtEntretenimiento" id="contenedorArtEntretenimiento">
             <br><br> <h3 class="artCategoriaTituloOsc">Artículos</h3><br>
-            <ul class="categoriaArticulos">
-              <li class="loginLe">Articulo 1</li>
-              <li class="loginLe">Articulo 2</li>
-              <li class="loginLe">Articulo 3</li>
+            <ul class="categoriaArticulos" id="listaArticulos3">
             </ul>
             <div class="paginador">
             <ul class="pagination">
@@ -119,10 +108,7 @@
             </div><br>
             <div class="contenedorArtCiencia" id="contenedorArtCiencia">
             <br><br> <h3 class="artCategoriaTituloOsc">Artículos</h3><br>
-            <ul class="categoriaArticulos">
-              <li class="loginLeCla">Articulo 1</li>
-              <li class="loginLeCla">Articulo 2</li>
-              <li class="loginLeCla">Articulo 3</li>
+            <ul class="categoriaArticulos" id="listaArticulos4">
             </ul>
             <div class="paginador">
             <ul class="pagination">
@@ -140,10 +126,7 @@
             </div><br>
             <div class="contenedorArtDeportes" id="contenedorArtDeportes">
             <br><br> <h3 class="artCategoriaTituloOsc">Artículos</h3><br>
-            <ul class="categoriaArticulos">
-              <li class="loginLe">Articulo 1</li>
-              <li class="loginLe">Articulo 2</li>
-              <li class="loginLe">Articulo 3</li>
+            <ul class="categoriaArticulos" id="listaArticulos5">
             </ul>
             <div class="paginador">
             <ul class="pagination">
@@ -161,10 +144,7 @@
             </div><br>
             <div class="contenedorArtOtros" id="contenedorArtOtros">
             <br><br> <h3 class="artCategoriaTituloOsc">Artículos</h3><br>
-            <ul class="categoriaArticulos">
-              <li class="loginLe">Articulo 1</li>
-              <li class="loginLe">Articulo 2</li>
-              <li class="loginLe">Articulo 3</li>
+            <ul class="categoriaArticulos" id="listaArticulos6">
             </ul>
             <div class="paginador">
             <ul class="pagination">
@@ -210,8 +190,9 @@
                 </li>
               </ul>
                 </div>
+              </nav>
             </div>
-        		</nav>
+
   <!-- ////////////////////////////////////////////////////////////////////////-->
     	<div id="footer">
     		<footer id="footer"><h1>Derechos Reservados</h1></footer>

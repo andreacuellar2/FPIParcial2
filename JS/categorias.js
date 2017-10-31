@@ -184,15 +184,15 @@ function jsonReadFileCategorias(allUsersData, allPublicaciones) {//Codigo para u
     userRequest.send();
 }
 function ConsumiendoTodo(todosUsuarios, todasPublicaciones, todasCategorias) {//Hacer esto nuestro main
-  var idUsuarioLogeado = parseInt(window.localStorage.getItem("idUserLogged"));
-
-
-
-
-
-
-
-
-
-
-}
+  for (var i in todasCategorias) {
+        for (var a in todasPublicaciones) {
+          if (todasCategorias[i].id==todasPublicaciones[a].idCategoria) {
+            var lista = document.getElementById("listaArticulos"+i);
+            var node = document.createElement("LI");
+            var textnode = document.createTextNode(todasPublicaciones[a].titulo);
+            node.appendChild(textnode);
+            lista.appendChild(node);
+          }
+        }
+    }
+  }
