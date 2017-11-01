@@ -10,7 +10,8 @@ if ($_POST) {
           'id' => (int)$_POST['id'],
           'comentario' => $_POST['comentario']
         );
-        $todasPubliArray['comentarios'] = $registroComentario;
+        $varID = (int)$_POST['id'];
+        $todasPubliArray[$varID]['comentarios'] = $registroComentario;
         $finalTodasPubli = json_encode($todasPubliArray);
         file_put_contents('DATA/publicaciones.json', $finalTodasPubli);
         header("Location: leer.php?HaComentado");
