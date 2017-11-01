@@ -92,7 +92,8 @@ function TopNavSesion(){
 }
 
 function btnLeerMas() {
+  var pub = parseInt(document.getElementById('idOculto').innerHTML);
   localStorage.setItem("idPubWanted", null);
-  localStorage.setItem("idPubWanted", 1);
+  localStorage.setItem("idPubWanted", pub);
   window.location.replace("leer.html");
 }
