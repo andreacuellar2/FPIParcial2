@@ -124,7 +124,9 @@ function Posicion($todos, $suID){
             <br>
             <p id="numeroComentarios" class="comentarios"><b>Numero de Comentarios</b></p>
           </div><br>
-
+          <div id="puntuacionTotal">
+            <label class="descripcionArt" id="puntos">Puntuacion de la publicacion</label>
+          </div>
           <div id="estrellas" class="stars">
             <label class="descripcionArt" id="califica">Califica esta publicación:</label><br><br>
             <form action="#" method="POST" enctype="multipart/form-data" id="formStar">
