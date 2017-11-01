@@ -745,15 +745,6 @@ border-radius: 0.5vw;
 .stars > a:hover ~ a {
 	color: #888;
 }
-#formStar{
-  padding-top: 2vw;
-  padding-bottom: 2vw;
-}
-@media screen and (max-width: 600px){
-    #formStar{
-      margin-bottom: 2vw;
-      padding: 2vw;
-    }
 
 @media screen and (max-width: 600px){
     #estrellas{
