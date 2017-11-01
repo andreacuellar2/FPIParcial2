@@ -28,8 +28,34 @@ if ($_POST['comentar']) {
   }
 
 }
-if ($_POST['puntuar']) {
-  header("Location: leer.php?SePuntuo");
+$registroCalificacion = array();
+if ($_POST['btnSubmitValor']) {
+  if (file_exists('DATA/publicaciones.json')) {
+    $todasPubli = file_get_contents('DATA/publicaciones.json');
+    $todasPubliArray = json_decode($todasPubli, true);
+    if (ExisteID($todasPubliArray,$_POST['id'])) {
+      if (ExisteIdUsuario($todasPubliArray,$_POST['idUsuario'])) {
+        $varPosicion = Posicion($todasPubliArray,$_POST['id']);
+        $registroCalificacion = array(
+          'idUsuario' => (int)$_POST['idUsuario'],
+          'puntuacion' => (int)$_POST['valueStar']
+        );
+        $todasPubliArray[$varPosicion]['puntuaciones'][] = $registroCalificacion;
+
+        $finalTodasPubli = json_encode($todasPubliArray);
+        file_put_contents('DATA/publicaciones.json', $finalTodasPubli);
+        header("Location: leer.php?HaPuntuado".$_POST['idUsuario']);
+
+      } else {
+        header("Location: leer.php?NoExisteElIDUsuario");
+      }
+    }else {
+      header("Location: leer.php?NoExisteElIDPublicacion");
+    }
+  }else {
+    header("Location: leer.php?NoExisteArchivo");
+  }
+
 }
 
 function ExisteID($todos, $suID){
@@ -104,12 +130,11 @@ function Posicion($todos, $suID){
             <form action="#" method="POST" enctype="multipart/form-data" id="formStar">
               <input type="text" name="valueStar" id="idvalueStar" value="5">
               <input type="text" name="idUsuario" id="idUserLogIn2">
-              <input type="submit" onclick="cambiarValueStar(1)" name="btnSubmitValor" value="1">
-              <input type="submit" onclick="cambiarValueStar(2)" name="btnSubmitValor" value="2">
-              <input type="submit" onclick="cambiarValueStar(3)" name="btnSubmitValor" value="3">
-              <input type="submit" onclick="cambiarValueStar(4)" name="btnSubmitValor" value="4">
-              <input type="submit" onclick="cambiarValueStar(5)" name="btnSubmitValor" value="5">
-            </form>
+              <input type="image" onclick="cambiarValueStar(1)" name="btnSubmitValor" value="1" src="IMG/estrella.png">
+              <input type="image" onclick="cambiarValueStar(2)" name="btnSubmitValor" value="2" src="IMG/estrella.png">
+              <input type="image" onclick="cambiarValueStar(3)" name="btnSubmitValor" value="3" src="IMG/estrella.png">
+              <input type="image" onclick="cambiarValueStar(4)" name="btnSubmitValor" value="4" src="IMG/estrella.png">
+              <input type="image" onclick="cambiarValueStar(5)" name="btnSubmitValor" value="5" src="IMG/estrella.png">
           </div><br>
 
           <div id="comentar">
