@@ -6,8 +6,14 @@ if ($_POST) {
     $todasPubliArray = json_decode($todasPubli, true);
     if (ExisteID($todasPubliArray,$_POST['id'])) {
       if (ExisteIdUsuario($todasPubliArray,$_POST['idUsuario'])) {
-
-        header("Location: leer.php?OKOKOKOKOKOKOK");
+        $registroComentario = array(
+          'id' => (int)$_POST['id'],
+          'comentario' => $_POST['comentario']
+        );
+        $todasPubliArray['comentarios'] = $registroComentario;
+        $finalTodasPubli = json_encode($todasPubliArray);
+        file_put_contents('DATA/publicaciones.json', $finalTodasPubli);
+        header("Location: leer.php?HaComentado".$todasPubliArray['comentarios'][0]);
 
       } else {
         header("Location: leer.php?NoExisteElIDUsuario");
