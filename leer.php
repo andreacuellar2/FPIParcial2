@@ -89,7 +89,7 @@ function Posicion($todos, $suID){
 
       <div id="pagArticulo">
         <h1 id="nombreArticulo" class="subtema">Nombre Articulo</h1><br><hr>
-        <input type="button" id="autorArticulo" class="descripcionArt" onclick="haciaPerfil()" value="Autor del articulo"><hr>
+        <input type="button" id="autorArticulo" class="btnLeerMas" onclick="haciaPerfil()" value="Autor del articulo"><hr>
         <div id="entrada1">
           <img src="" id="imgArticulo" class="imgPrimera" alt="Imagen de la publicacion">
           <div class="contenedor">
@@ -115,7 +115,7 @@ function Posicion($todos, $suID){
 
           <div id="comentar">
             <div id="divParaComentarios">
-              <label class="comentarbar">Comentarios:</label><br><br>
+              <label class="comentarbar" id="tituloComentario">Comentarios:</label><br><br>
               <ol id="comentarios">
               </ol>
             </div><br>
