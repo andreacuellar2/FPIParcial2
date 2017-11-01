@@ -18,11 +18,30 @@ function pubRequestJSON(){
     pubRequest.send();
   }
 function PubSetHTML(pubData) {
+  ///////////////////Mas comentados//////////////////////////
   var numComentarios = [];
   for (var i in pubData) {
-    numComentarios.push(pubData[i].comentarios.length);
+    numComentarios.push({"coments":pubData[i].comentarios.length, "idPubComents":pubData[i].id});
   }
-  numComentarios.sort(function(a, b){return a-b});
+  numComentarios.sort(function(a, b){return b.coments-a.coments});
+    for (var i in pubData) {
+      ///////////////////////Mas comentada 1/////////////////////////////////////
+      if (numComentarios[0].idPubComents == pubData[i].id) {
+        document.getElementById("masComentado1").innerHTML = pubData[i].id;
+        document.getElementById("imgMasComentado1").src = "IMG/publicaciones/"+ pubData[i].imgSrc;
+        document.getElementById("tituloMasComentado1").innerHTML = pubData[i].titulo;
+        document.getElementById("resumenMasComentado1").innerHTML = pubData[i].contenido;
+      }
+      ///////////////////////Mas comentada 2/////////////////////////////////////
+      if (numComentarios[1].idPubComents == pubData[i].id) {
+        document.getElementById("masComentado2").innerHTML = pubData[i].id;
+        document.getElementById("imgMasComentado2").src = "IMG/publicaciones/"+ pubData[i].imgSrc;
+        document.getElementById("tituloMasComentado2").innerHTML = pubData[i].titulo;
+        document.getElementById("resumenMasComentado2").innerHTML = pubData[i].contenido;
+      }
+    }
+
+  ///////////////////Recientes/////////////////////////////////
   idUno = pubData.length;
   idDos = idUno-1;
     for (var i in pubData) {
@@ -56,6 +75,20 @@ function redireccionDos() {
   localStorage.setItem("idPubWanted", idDos);
   window.location.replace("leer.php");
 }
+////////////////////////////Redirecciones mas comentados///////////////////////
+function redireccionTres() {
+  id = parseInt(document.getElementById('masComentado1').innerHTML);
+  localStorage.setItem("idPubWanted", null);
+  localStorage.setItem("idPubWanted", id);
+  window.location.replace("leer.php");
+}
+function redireccionCuatro() {
+  id = parseInt(document.getElementById('masComentado2').innerHTML);
+  localStorage.setItem("idPubWanted", null);
+  localStorage.setItem("idPubWanted", id);
+  window.location.replace("leer.php");
+}
+///////////////////////////////////////////////////////////////////////////////
 function OpacityArticuloOsc(){
   document.getElementById('articulos').style.opacity = '1';
 }
@@ -71,6 +104,8 @@ function OpacityArticuloCla2(){
 function TopNavSesion(){
   var prueba =  window.localStorage.getItem("idUserLogged");
   if (prueba == "null" || prueba == null){
+    document.getElementById('masComentado1').style.display = 'none';
+    document.getElementById('masComentado2').style.display = 'none';
     document.getElementById('areaPerfil').style.display = 'none';
     document.getElementById('navLogin').style.display = 'block';
     document.getElementById('navRegistro').style.display= 'block';
@@ -78,6 +113,8 @@ function TopNavSesion(){
     document.getElementById('navPublicar').style.display= 'none';
     document.getElementById('navLogout').style.display= 'none';
   }else {
+    document.getElementById('masComentado1').style.display = 'none';
+    document.getElementById('masComentado2').style.display = 'none';
     document.getElementById('areaPerfil').style.display = 'block';
     document.getElementById('navLogin').style.display = 'none';
     document.getElementById('navRegistro').style.display= 'none';
