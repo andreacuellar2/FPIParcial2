@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/cssPaginaPrincipal.css">
+    <link rel=icon href="IMG/favicon.png" type="image/png">
+    <title>O W L S P A C E</title>
+  </head>
+  <body class="bodylogin">
+    <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
+    <ul class="topnav">
+      <li id="navInicio"><a href="index.html">Inicio</a></li>
+      <li id="navCategorias"><a href="categorias.html">Categorías</a></li>
+      <li id="navLogin"><a href="login.html"  class="activo">Login</a></li>
+      <li id="navRegistro"><a href="registro.php">Registro</a></li>
+    </ul>
+    <!-- ///////////////////////////////header/////////////////////////////////////////-->
+    <header id="header">
+      <h1 class="tituloBlog"><b>O W L Space</b></h1>
+      <p class="subtema">Bienvenido al espacio para compartir tus ideas</p>
+    </header>
+    <!-- /////////////////////////////// Login //////////////////////////////////-->
+    <div id="containerLogin">
+      <br>
+      <p class="divLetra">Inicia Sesión</p><br>
+      <p class="letrasLogin">
+        <label class="letrasLogin">Usuario</label><br><br>
+      <input class="letrasLogin" type="text" id="user_login" value="" size="20" placeholder="Nombre de usuario"/><br><br>
+      </p>
+      <p class="letrasLogin">
+        <label class="letrasLogin">Contraseña</label><br><br>
+        <input type="password" name="pwd" id="user_pass" class="letrasLogin" value="" size="20" placeholder="password" /><br>
+      </p><br>
+      <p id="advertencia" class="warning"></p>
+        <input type="button" class="btnLogin" value="Entrar" onclick="loginRequestJSON()"/>
+    </div>
+    <div id="irRegistro">
+        <p class="divLetra">¿No tienes una cuenta?</p>
+        <input type="button" value="¡REGÍSTRATE!" class="btnLogin" onclick="redireccion()"/>
+    </div>
+    <!-- ////////////////////////////////////////////////////////////////////////-->
+    <script type="text/javascript" src="JS/login.js"></script>
+  </body>
+</html>

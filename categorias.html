@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/cssPaginaPrincipal.css">
+    <link rel=icon href="IMG/favicon.png" type="image/png">
+    <title>O W L S P A C E</title>
+  </head>
+  <body onload="OpacityCategorias();jsonReadFileVariablesUser();TopNavSesion();">
+<!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
+  <ul class="topnav">
+    <li id="navInicio"><a href="index.html">Inicio</a></li>
+    <li id="navCategorias"><a href="categorias.html"  class="activo">Categorías</a></li>
+    <li id="navLogin"><a href="login.html">Login</a></li>
+    <li id="navRegistro"><a href="registro.php">Registro</a></li>
+    <li id="navPerfil"><a href="perfil.html">Mi Perfil</a></li>
+    <li id="navPublicar"><a href="publicar.php">Publicar</a></li>
+    <li  id="navLogout"><a onclick="LogOut()">Logout</a></li>
+  </ul>
+<!-- //////////////////////////Header//////////////////////////////////////////////-->
+    <header id="header">
+      <h1 class="tituloBlog"><b>O W L Space</b></h1>
+        <p class="subtema">Bienvenido al espacio para compartir tus ideas</p>
+    </header>
+<!-- //////////////////////////// Categorias //////////////////////////////-->
+      <div id="contenedorPrincipal">
+      <main id="center" class="column">
+        <div id="pagCategorias">
+            <h1 class="divLetra">CATEGORÍAS</h1><hr>
+
+            <div class="contenedorGeografia" id="contenedorGeografia" onmouseover="OpacityActGeo()" onmouseout="OpacityDesGeo()">
+            <br><br> <h3 class="categoriaGeografia" onclick="MostrarArtGeografia()">GEOGRAFÍA</h3><br><br>
+            </div><br>
+            <div class="contenedorArtGeografia" id="contenedorArtGeografía">
+            <br><br> <h3 class="artCategoriaTituloOsc">Artículos</h3><br>
+            <ul class="categoriaArticulosOsc" id="listaArticulos0">
+              <!--Agregando con Appendchild-->
+            </ul>
+            </div><br>
+
+            <div class="contenedorarte" id="contenedorarte" onmouseover="OpacityActArt()" onmouseout="OpacityDesArt()">
+            <br><br> <h3 class="categoriaArte" onclick="MostrarArtArte()">ARTE Y LITERATURA</h3><br><br>
+            </div><br>
+            <div class="contenedorArtArte" id="contenedorArtArte">
+            <br><br> <h3 class="artCategoriaTituloCla">Artículos</h3><br>
+            <ul class="categoriaArticulosOsc" id="listaArticulos1">
+            </ul>
+            </div><br>
+
+            <div class="contenedorhistoria" id="contenedorhistoria" onmouseover="OpacityActHis()" onmouseout="OpacityDesHis()">
+            <br><br> <h3 class="categoriaGeografia" onclick="MostrarArtHistoria()">HISTORIA</h3><br><br>
+            </div><br>
+            <div class="contenedorArtHistoria" id="contenedorArtHistoria">
+            <br><br> <h3 class="artCategoriaTituloOsc">Artículos</h3><br>
+            <ul class="categoriaArticulosOsc" id="listaArticulos2">
+            </ul>
+            </div><br>
+
+            <div class="contenedorentretenimiento" id="contenedorentretenimiento" onmouseover="OpacityActEnt()" onmouseout="OpacityDesEnt()">
+            <br><br> <h3 class="categoriaArte" onclick="MostrarArtEntretenimiento()">ENTRETENIMIENTO</h3><br><br>
+            </div><br>
+            <div class="contenedorArtEntretenimiento" id="contenedorArtEntretenimiento">
+            <br><br> <h3 class="artCategoriaTituloOsc">Artículos</h3><br>
+            <ul class="categoriaArticulosOsc" id="listaArticulos3">
+            </ul>
+            </div><br>
+
+            <div class="contenedorciencia" id="contenedorciencia" onmouseover="OpacityActCie()" onmouseout="OpacityDesCie()">
+            <br><br> <h3 class="categoriaCiencia" onclick="MostrarArtCiencia()">CIENCIA Y NATURALEZA</h3><br><br>
+            </div><br>
+            <div class="contenedorArtCiencia" id="contenedorArtCiencia">
+            <br><br> <h3 class="artCategoriaTituloOsc">Artículos</h3><br>
+            <ul class="categoriaArticulosCla" id="listaArticulos4">
+            </ul>
+            </div><br>
+
+            <div class="contenedordeportes" id="contenedordeportes" onmouseover="OpacityActDep()" onmouseout="OpacityDesDep()">
+            <br><br> <h3 class="categoriaDeportes" onclick="MostrarArtDeportes()">DEPORTES</h3><br><br>
+            </div><br>
+            <div class="contenedorArtDeportes" id="contenedorArtDeportes">
+            <br><br> <h3 class="artCategoriaTituloOsc">Artículos</h3><br>
+            <ul class="categoriaArticulosOsc" id="listaArticulos5">
+            </ul>
+            </div><br>
+
+            <div class="contenedorOtros" id="contenedorOtros" onmouseover="OpacityActOtro()" onmouseout="OpacityDesOtro()">
+            <br><br> <h3 class="categoriaGeografia" onclick="MostrarArtOtros()">OTROS</h3><br><br>
+            </div><br>
+            <div class="contenedorArtOtros" id="contenedorArtOtros">
+            <br><br> <h3 class="artCategoriaTituloOsc">Artículos</h3><br>
+            <ul class="categoriaArticulosOsc" id="listaArticulos6">
+            </ul>
+            </div><br>
+      </div>
+      </main>
+<!-- ////////////////////////// Menu Derecha //////////////////////////////-->
+  		<nav id="right" class="column">
+        <img id="headerimg" src="IMG/owl.png" alt="buho"><hr>
+        <div id="areaPerfil" class="areaPerfil">
+          <input class="btnLeerMas" type="button" value="Mi perfil" onclick="irAPerfil()">
+          <input class="btnLeerMas" type="button" value="Publicar" onclick="irAPublicar()"><hr>
+        </div>
+        <div id="masleidos">
+        <br><h3 class="subtemaNav">Más Comentados:</h3><br>
+        <div id="listaArticulos">
+
+          <div class="primerArt">
+            <label id="masComentado1"></label>
+            <img id="imgMasComentado1" src="" class="imgpop" alt="Imagen articulo mas comentado 1">
+            <div class="textoPop">
+              <h3 id="tituloMasComentado1" class="descripcionPop">Titulo</h3>
+              <h4 id="resumenMasComentado1" class="parrafoArtDe">Resumen</h4><br>
+              <button class="btnNav" onclick="redireccionTres()">LEER MAS »</button>
+            </div>
+          </div><br><br>
+
+          <div class="primerArt">
+            <label id="masComentado2"></label>
+            <img id="imgMasComentado2" src="" class="imgpop" alt="Imagen articulo mas comentado 2">
+            <div class="textoPop">
+              <h3 id="tituloMasComentado2" class="descripcionPop">Titulo</h3>
+              <h4 id="resumenMasComentado2" class="parrafoArtDe">Resumen</h4><br>
+              <button class="btnNav" onclick="redireccionCuatro()">LEER MAS »</button>
+            </div>
+          </div>
+        </div>
+        </div>
+  		</nav>
+
+    </div>
+
+  <!-- ////////////////////////////////////////////////////////////////////////-->
+    	<div class="footer">
+    		<footer class="footer"><h1>Derechos Reservados</h1></footer>
+    	</div>
+  <script type="text/javascript" src="JS/categorias.js"></script>
+  </body>
+</html>

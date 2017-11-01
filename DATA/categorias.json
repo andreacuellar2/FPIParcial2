@@ -1,0 +1,8 @@
+[{"id":1,"nombre":"Geografia","imgStyle":"Geografia.jpg","imgArt":"GeografiaArt.jpg"},
+{"id":2,"nombre":"Arte y Literatura","imgStyle":"arte.jpg","imgArt":"arteArt.jpg"},
+{"id":3,"nombre":"Historia","imgStyle":"historia.jpg","imgArt":"historiaArt.jpg"},
+{"id":4,"nombre":"Entretenimiento","imgStyle":"entretenimiento.jpg","imgArt":"entretenimientoArt.jpg"},
+{"id":5,"nombre":"Ciencias y Naturaleza","imgStyle":"ciencia.png","imgArt":"cienciaArt.png"},
+{"id":6,"nombre":"Deportes","imgStyle":"deportes.jpg","imgArt":"deportesArt.jpg"},
+{"id":7,"nombre":"Otros","imgStyle":"otros.jpg","imgArt":"otrosArt.jpg"}
+]
