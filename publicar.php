@@ -18,7 +18,6 @@ if ($_POST) {
     $todasPubliArray[] = $regPublicacion;
     $finalTodadPubli = json_encode($todasPubliArray);
     file_put_contents('DATA/publicaciones.json', $finalTodadPubli);
-    echo '<script type="text/javascript">alert("Se ha registrado con Exito");</script>';
     header( "Location: index.html" );
     die();
   }else {
