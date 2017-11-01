@@ -10,10 +10,10 @@ if ($_POST) {
           'id' => (int)$_POST['id'],
           'comentario' => $_POST['comentario']
         );
-        $todasPubliArray['comentarios'] = $registroComentario;
+        $todasPubliArray[(int)$_POST['id']]['comentarios'] = $registroComentario;
         $finalTodasPubli = json_encode($todasPubliArray);
         file_put_contents('DATA/publicaciones.json', $finalTodasPubli);
-        header("Location: leer.php?HaComentado");
+        header("Location: leer.php?HaComentado".$todasPubliArray[(int)$_POST['id']][0]);
 
       } else {
         header("Location: leer.php?NoExisteElIDUsuario");
