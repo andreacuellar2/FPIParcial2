@@ -728,24 +728,28 @@ border-radius: 0.5vw;
 /*////////////////////////////////////////////////////////////////////////////*/
 
 /*/////////////////////Para las estrellas de puntuacion///////////////////////*/
+#idvalueStar{
+  display: none;
+}
+#idUserLogIn2{
+  display: none;
+}
 .stars {
 	font-size: 0;
 	display: inline-block;
+  padding-bottom: 2vw;
+  padding-top: 2vw;
 }
-.stars a {
-	text-decoration: none;
-	display: inline-block;
-	font-size: 1.5vw;
-	font-size: 2rem;
-	color: #888;
+#formStars{
+  padding-top: 4vw;
+  padding-bottom: 4vw;
 }
-.stars:hover a {
-	color: rgb(39, 130, 228);
+@media screen and (max-width: 600px){
+    #formStars{
+      padding-top: 2vw;
+      padding-bottom: 2vw;
+    }
 }
-.stars > a:hover ~ a {
-	color: #888;
-}
-
 @media screen and (max-width: 600px){
     #estrellas{
       margin-bottom: 2vw;
@@ -756,7 +760,7 @@ border-radius: 0.5vw;
     #califica{
       font-weight: normal;
       font-size: 4vw;
-      padding-bottom: 1vw;
+      padding-bottom: 3vw;
       padding-top: 1vw;
     }
 }

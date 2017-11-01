@@ -126,7 +126,7 @@ function Posicion($todos, $suID){
           </div><br>
 
           <div id="estrellas" class="stars">
-            <label class="descripcionArt" id="califica">Califica esta publicación:</label>
+            <label class="descripcionArt" id="califica">Califica esta publicación:</label><br><br>
             <form action="#" method="POST" enctype="multipart/form-data" id="formStar">
               <input type="text" name="valueStar" id="idvalueStar" value="5">
               <input type="text" name="idUsuario" id="idUserLogIn2">
