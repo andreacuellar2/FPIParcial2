@@ -70,7 +70,7 @@ function OpacityArticuloCla2(){
 }
 function TopNavSesion(){
   var prueba =  window.localStorage.getItem("idUserLogged");
-  if (prueba == "null"){
+  if (prueba == "null" || prueba == null){
     document.getElementById('areaPerfil').style.display = 'none';
     document.getElementById('navLogin').style.display = 'block';
     document.getElementById('navRegistro').style.display= 'block';
