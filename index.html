@@ -8,7 +8,7 @@
     <link rel=icon href="IMG/favicon.png" type="image/png">
     <title>O W L S P A C E</title>
   </head>
-  <body onload="TopNavSesion()">
+  <body onload="pubRequestJSON();TopNavSesion();">
 <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
     <ul class="topnav">
       <li id="navInicio"><a href="index.html" class="activo">Inicio</a></li>
@@ -25,42 +25,46 @@
         <p class="subtema">Bienvenido al espacio para compartir tus ideas</p>
     </header>
 <!-- //////////////////////////// Pagina Inicio //////////////////////////////-->
+
 <div id="contenedorPrincipal">
   <main id="center" class="column">
         <div id="pagInicio">
-      	   <h1 class="divLetra">ARTÍCULOS RECIENTES</h1><hr>
-            <div id="articulos" class="articulos" onmouseover="OpacityArticuloOsc()" onmouseout="OpacityArticuloCla()"><br><br>
-              <img src="IMG/blog.jpg" id="imgPrimera" alt="blog">
+      	   <h1 class="divLetra">ARTÍCULOS RECIENTES</h1><hr/>
+
+            <div id="articulos" class="articulos" onmouseover="OpacityArticuloCla()" onmouseout="OpacityArticuloOsc()"><br><br>
+              <img src="" id="imgPrimera" alt="Imagen articulo reciente 1">
               <div class="contenedor">
-                <h2 class="articuloTitulo"><b>ARTÍCULO 1</b></h2><br>
-                <h3 class="descripcionArt">Jueves 26 de Octubre 2017</h3><br>
-                <p class="parrafoArt">Esta es una prueba de lo que estará escrito en el artículo 1</p><br>
+                <h2 id="tituloPrimero" class="articuloTitulo"><b>ARTÍCULO 1</b></h2><br>
+                <h3 id="fechaPrimero" class="descripcionArt">Fecha articulo uno</h3><br>
+                <p id="resumenPrimero" class="parrafoArt">Resumen artículo 1</p><br>
                 <div class="botonesArt">
-                  <input type="button" class="btnLeerMas" value="LEER MAS" onclick="redireccion()">
+                  <input type="button" class="btnLeerMas" value="LEER MAS >>" onclick="redireccionUno()">
                 </div>
-                <p class="comentarios"><b>Comentarios 2</b></p>
+                <p id="comentariosPrimero" class="comentarios"><b>Comentarios</b></p>
               </div>
             </div>
-            <div id="articulos2" class="articulos2" onmouseover="OpacityArticuloOsc2()" onmouseout="OpacityArticuloCla2()"><br><br>
-              <img src="IMG/blog2.jpg" id="imgSegunda" alt="blog">
+
+            <div id="articulos2" class="articulos2" onmouseover="OpacityArticuloCla2()" onmouseout="OpacityArticuloOsc2()"><br><br>
+              <img src="" id="imgSegunda" alt="Imagen articulo reciente 2">
               <div class="contenedor">
-                <h2 class="articuloTitulo"><b>ARTÍCULO 2</b></h2><br>
-                <h3 class="descripcionArt">Jueves 26 de Octubre 2017</h3><br>
-                <p class="parrafoArt">Esta es una prueba de lo que estará escrito en el artículo 2</p><br>
+                <h2 id="tituloSegundo" class="articuloTitulo"><b>ARTÍCULO 2</b></h2><br>
+                <h3 id="fechaSegundo" class="descripcionArt">Fecha articulo dos</h3><br>
+                <p id="resumenSegundo" class="parrafoArt">Resumen artículo 2</p><br>
                 <div class="botonesArt">
-                  <a href="leer.html"><input type="button" class="btnLeerMas" value="LEER MAS"></a>
+                  <input type="button" class="btnLeerMas" value="LEER MAS >>" onclick="redireccionDos()">
                 </div>
-                <p class="comentarios"><b>Comentarios 0</b></p>
+                <p id="comentariosSegundo" class="comentarios"><b>Comentarios</b></p>
               </div>
             </div>
+
         </div>
 </main>
 <!-- ////////////////////////// Menu Derecha //////////////////////////////-->
   		<nav id="right" class="column">
         <img id="headerimg" src="IMG/owl.png" alt="buho"><hr></hr>
         <div id="areaPerfil" class="areaPerfil">
-          <a href="perfil.html"><input class="btnLeerMas" type="button" value="Mi perfil"></a>
-          <a href="publicar.html"><input class="btnLeerMas" type="button" value="Publicar"></a><hr></hr>
+          <input class="btnLeerMas" type="button" value="Mi perfil">
+          <input class="btnLeerMas" type="button" value="Publicar"><hr></hr>
         </div>
         <div id="masleidos">
         <br><h3 class="subtemaNav">Más leídos:</h3><br>
@@ -71,7 +75,7 @@
               <h3 class="descripcionPop">Flores</h3>
               <h4 class="parrafoArtDe">Flores más bonitas de América</h4><br>
               <div class="botonesArt">
-              <p><button class="btnNav"><b>LEER MAS »</b></button></p>
+              <button class="btnNav">LEER MAS »</button>
               </div>
             </div>
           </li><br><br>
@@ -81,7 +85,7 @@
             <h3 class="descripcionPop">Animales</h3>
             <h4 class="parrafoArtDe">Animales más bonitos de América</h4><br>
             <div class="botonesArt">
-            <p><button class="btnNav"><b>LEER MAS »</b></button></p>
+            <button class="btnNav">LEER MAS »</button>
             </div>
             </div>
           </li>
@@ -93,6 +97,7 @@
   	<div id="footer">
   		<footer id="footer"><h1>Derechos Reservados</h1></footer>
   	</div>
+    <script type="text/javascript" src="JS/publicacion.js"></script>
     <script type="text/javascript" src="JS/inicio.js"></script>
   </body>
 </html>

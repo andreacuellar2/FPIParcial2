@@ -227,6 +227,16 @@ header {
   border-radius: 1vw;
   text-align: center;
 }
+#resumenPrimero{
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+}
+#resumenSegundo{
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+}
 .articulos{
   opacity: 0.5;
 }
