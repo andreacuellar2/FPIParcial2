@@ -107,8 +107,8 @@ function SubirImagen($file){
   		<nav id="right" class="column">
         <img id="headerimg" src="IMG/owl.png" alt="buho"><hr>
         <div id="areaPerfil" class="areaPerfil">
-          <input class="btnLeerMas" type="button" value="Mi perfil">
-          <input class="btnLeerMas" type="button" value="Publicar"><hr>
+          <input class="btnLeerMas" type="button" value="Mi perfil" onclick="irAPerfil()">
+          <input class="btnLeerMas" type="button" value="Publicar" onclick="irAPublicar()"><hr>
         </div>
         <div id="masleidos">
         <br><h3 class="subtemaNav">Más Comentados:</h3><br>
