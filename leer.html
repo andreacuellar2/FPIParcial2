@@ -8,7 +8,7 @@
     <link rel=icon href="IMG/favicon.png" type="image/png">
     <title>O W L S P A C E</title>
   </head>
-  <body onload="TopNavSesion();pubRequestJSON();">
+  <body onload="pubRequestJSON();TopNavSesion();">
 <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
   <ul class="topnav">
     <li id="navInicio"><a href="index.html">Inicio</a></li>
@@ -35,7 +35,8 @@
           <img src="" id="imgArticulo" alt="Imagen de la publicacion">
           <div class="contenedor">
             <h3 id="fechaArticulo" class="descripcionArt">Fecha de la publicacion</h3><br>
-            <p id="contenidoArticulo" class="parrafoArtDe">Contenido de la Publicacion</p><br>
+            <textarea id="contenidoArticulo" class="parrafoArtDe" cols="155" rows="60" disabled>Contenido de la Publicacion</textarea><br>
+            <br>
             <p id="numeroComentarios" class="comentarios"><b>Numero de Comentarios</b></p>
           </div><br>
 

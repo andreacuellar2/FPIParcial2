@@ -18,6 +18,7 @@ function pubRequestJSON(){
     pubRequest.send();
   }
 function PubSetHTML(pubData) {
+
   idUno = pubData.length;
   idDos = idUno-1;
     for (var i in pubData) {

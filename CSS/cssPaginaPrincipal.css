@@ -1,4 +1,5 @@
 /*///////////////////////////////Categorias///////////////////////////////////*/
+li { cursor: pointer; }
 .paginador{
   text-align: center;
 }
@@ -184,6 +185,11 @@ header {
   padding-top: 1vw;
   padding-left: 0.5vw;
 }
+textarea {
+    border: 0 none white;
+    resize: none;
+    overflow: auto;
+}
 .tituloBlog{
   font-family: "Raleway", sans-serif;
   font-size: 10vw;
@@ -233,6 +239,17 @@ header {
   text-overflow: ellipsis;
 }
 #resumenSegundo{
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+}
+#resumenMasComentado1{
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+}
+
+#resumenMasComentado2{
   overflow:hidden;
   white-space:nowrap;
   text-overflow: ellipsis;
@@ -326,7 +343,6 @@ header {
 .parrafoArtDe{
   font-family: "Raleway", sans-serif;
   font-size: 1vw;
-  text-align: justify;
   color: black;
   padding-left: 2vw;
   padding-right: 2vw;
