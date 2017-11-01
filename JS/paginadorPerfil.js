@@ -118,6 +118,7 @@ function showPageUsuariosPublicaciones(userData,userPost,posicion) {
 function DoShowPage(userData,userPost,allCategorias,posicion) {
   for (var i = 0; i < userPost.length; i++) {
     if (userPost[i].id == posicion) {
+      document.getElementById("idOculto").innerHTML = posicion;
       document.getElementById('imgEntrada').src = "IMG/publicaciones/"+userPost[i].imgSrc;
       document.getElementById('tituloEntrada').innerHTML = userPost[i].titulo;
       document.getElementById("fechaEntrada").innerHTML = "Fecha de publicacion: "+userPost[i].fecha;

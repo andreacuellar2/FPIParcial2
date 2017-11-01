@@ -56,14 +56,13 @@ function pubRequestJSON(){
           }
         }
       }
-      for (var i in pubData) {
         for (var j in userData) {
-          if (userData[j].id == pubData[i].idUsuario) {
+          if (userData[j].id == publicacion.idUsuario) {
             document.getElementById("autorArticulo").value = "Autor: "+userData[j].nombreUsuario;
-            idVisita = pubData[i].idUsuario;
+            idVisita = publicacion.idUsuario;
           }
         }
-      }
+
   }
 
 function TopNavSesion(){

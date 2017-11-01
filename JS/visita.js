@@ -39,6 +39,7 @@ function UserRequestJSON(){
     if (pubData[i].idUsuario == parseInt(pubWanted)) {
       var entrada = new Publicacion(pubData[i].id, pubData[i].idUsuario, pubData[i].titulo, pubData[i].contenido, pubData[i].idCategoria, pubData[i].imgSrc, pubData[i].comentarios, pubData[i].fecha, pubData[i].puntuacion);
       document.getElementById('noEntradas').style.display='none';
+      document.getElementById("idOculto").innerHTML = entrada.id;
       document.getElementById("imgEntrada").src = "IMG/publicaciones/"+entrada.imgSrc;
       document.getElementById("tituloEntrada").innerHTML = entrada.titulo;
       document.getElementById("fechaEntrada").innerHTML = "Fecha de publicacion: "+entrada.fecha;
@@ -71,24 +72,17 @@ function LogOut() {
   window.location.replace("index.html");
 }
 
-function mostrarPerfil() {
-  document.getElementById('perfil').style.display='block';
-  document.getElementById('editarPerfil').style.display='none';
-}
-function editarPerfil() {
-  document.getElementById('perfil').style.display='none';
-  document.getElementById('editarPerfil').style.display='block';
-}
-
 function TopNavSesion(){
   var prueba =  window.localStorage.getItem("idUserLogged");
   if (prueba == "null"){
+    document.getElementById('idOculto').style.display = 'none';
     document.getElementById('navLogin').style.display = 'block';
     document.getElementById('navRegistro').style.display= 'block';
     document.getElementById('navPerfil').style.display = 'none';
     document.getElementById('navPublicar').style.display= 'none';
     document.getElementById('navLogout').style.display= 'none';
   }else {
+    document.getElementById('idOculto').style.display = 'none';
     document.getElementById('navLogin').style.display = 'none';
     document.getElementById('navRegistro').style.display= 'none';
     document.getElementById('navPerfil').style.display = 'block';
