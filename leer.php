@@ -89,7 +89,7 @@ function Posicion($todos, $suID){
 
       <div id="pagArticulo">
         <h1 id="nombreArticulo" class="subtema">Nombre Articulo</h1><br><hr>
-        <input type="button" id="autorArticulo" class="btnLeerMas" onclick="haciaPerfil()" value="Autor del articulo"><hr>
+        <input type="button" id="autorArticulo" class="descripcionArt" onclick="haciaPerfil()" value="Autor del articulo"><hr>
         <div id="entrada1">
           <img src="" id="imgArticulo" class="imgPrimera" alt="Imagen de la publicacion">
           <div class="contenedor">
@@ -101,14 +101,14 @@ function Posicion($todos, $suID){
 
           <div id="estrellas" class="stars">
             <label class="descripcionArt" id="califica">Califica esta publicación:</label>
-            <form method="POST" enctype="multipart/form-data" id="formStar">
+            <form action="#" method="POST" enctype="multipart/form-data" id="formStar">
               <input type="text" name="valueStar" id="idvalueStar" value="5">
-              <a data-value="1" title="Votar con 1 estrellas" onclick="cambiarValueStar(1)">&#9733;</a>
-              <a data-value="2" title="Votar con 2 estrellas" onclick="cambiarValueStar(2)">&#9733;</a>
-              <a data-value="3" title="Votar con 3 estrellas" onclick="cambiarValueStar(3)">&#9733;</a>
-              <a data-value="4" title="Votar con 4 estrellas" onclick="cambiarValueStar(4)">&#9733;</a>
-              <a data-value="5" title="Votar con 5 estrellas" onclick="cambiarValueStar(5)">&#9733;</a>
-              <input type="submit" name="puntuar" id="btnPuntuar" value="Puntuar">
+              <input type="text" name="idUsuario" id="idUserLogIn2">
+              <input type="submit" onclick="cambiarValueStar(1)" name="btnSubmitValor" value="1">
+              <input type="submit" onclick="cambiarValueStar(2)" name="btnSubmitValor" value="2">
+              <input type="submit" onclick="cambiarValueStar(3)" name="btnSubmitValor" value="3">
+              <input type="submit" onclick="cambiarValueStar(4)" name="btnSubmitValor" value="4">
+              <input type="submit" onclick="cambiarValueStar(5)" name="btnSubmitValor" value="5">
             </form>
 
           </div><br>
