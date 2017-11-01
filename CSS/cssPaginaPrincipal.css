@@ -50,9 +50,17 @@ ul.pagination li a.active {
   padding-top: 1vw;
   padding-bottom: 1vw;
 }
-.categoriaArticulos{
+.categoriaArticulosOsc{
   padding-left: 1vw;
   padding-bottom: 1vw;
+  font-weight: bold;
+  color: black;
+}
+.categoriaArticulosCla{
+  padding-left: 1vw;
+  padding-bottom: 1vw;
+  font-weight: bold;
+  color: white;
 }
 .contenedorGeografia{
   background-image: url(../IMG/Geografia.jpg);
@@ -64,6 +72,8 @@ ul.pagination li a.active {
   background-image: url(../IMG/GeografiaArt.jpg);
   border-radius: 0.5vw;
   display: none;
+  padding-top: 1.5vw;
+  padding-bottom: 1.5vw;
 }
 .categoriaGeografia{
   font-family: "Raleway", sans-serif;
@@ -82,6 +92,8 @@ ul.pagination li a.active {
   background-image: url(../IMG/arteArt.jpg);
   border-radius: 0.5vw;
   display: none;
+  padding-top: 1.5vw;
+  padding-bottom: 1.5vw;
 }
 .categoriaArte{
   font-family: "Raleway", sans-serif;
@@ -100,6 +112,8 @@ ul.pagination li a.active {
   display: none;
   background-image: url(../IMG/historiaArt.jpg);
   border-radius: 0.5vw;
+  padding-top: 1.5vw;
+  padding-bottom: 1.5vw;
 }
 .contenedorentretenimiento{
   background-image: url(../IMG/entretenimiento.jpg);
@@ -111,6 +125,8 @@ ul.pagination li a.active {
   background-image: url(../IMG/entretenimientoArt.jpg);
   border-radius: 0.5vw;
   display: none;
+  padding-top: 1.5vw;
+  padding-bottom: 1.5vw;
 }
 .contenedorciencia{
   background-image: url(../IMG/ciencia.png);
@@ -122,6 +138,8 @@ ul.pagination li a.active {
   background-image: url(../IMG/cienciaArt.png);
   border-radius: 0.5vw;
   display: none;
+  padding-top: 1.5vw;
+  padding-bottom: 1.5vw;
 }
 .categoriaCiencia{
   font-family: "Raleway", sans-serif;
@@ -147,6 +165,8 @@ ul.pagination li a.active {
   background-image: url(../IMG/deportesArt.jpg);
   border-radius: 0.5vw;
   display: none;
+  padding-top: 1.5vw;
+  padding-bottom: 1.5vw;
 }
 .contenedorOtros{
   background-image: url(../IMG/Otros.jpg);
@@ -159,6 +179,8 @@ ul.pagination li a.active {
   background-image: url(../IMG/OtrosArt.jpg);
   border-radius: 0.5vw;
   display: none;
+  padding-top: 1.5vw;
+  padding-bottom: 1.5vw;
 }
 /*////////////////////////////////////////////////////////////////////////////*/
 
