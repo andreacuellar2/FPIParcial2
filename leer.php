@@ -1,6 +1,6 @@
 <?php
 $registroComentario = array();
-if ($_POST) {
+if ($_POST['comentar']) {
   if (file_exists('DATA/publicaciones.json')) {
     $todasPubli = file_get_contents('DATA/publicaciones.json');
     $todasPubliArray = json_decode($todasPubli, true);
@@ -116,7 +116,7 @@ function Posicion($todos, $suID){
                 <input type="text" name="id" id="idPostChoused">
                 <input type="text" name="idUsuario" id="idUserLogIn">
                 <input type="text" class="inputComentario" name="comentario" id="comentario" placeholder="Escribe tu comentario..."><br><br>
-                <input type="submit" class="btnComentar" value="Comentar" id="hacerComentario">
+                <input type="submit" class="btnComentar" name="comentar" value="Comentar" id="hacerComentario">
               </form>
             </div>
           </div><br>
