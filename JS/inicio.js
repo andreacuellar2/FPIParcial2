@@ -18,7 +18,11 @@ function pubRequestJSON(){
     pubRequest.send();
   }
 function PubSetHTML(pubData) {
-
+  var numComentarios = [];
+  for (var i in pubData) {
+    numComentarios.push(pubData[i].comentarios.length);
+  }
+  numComentarios.sort(function(a, b){return a-b});
   idUno = pubData.length;
   idDos = idUno-1;
     for (var i in pubData) {

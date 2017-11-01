@@ -1,5 +1,9 @@
 /*///////////////////////////////Categorias///////////////////////////////////*/
-li { cursor: pointer; }
+li {
+  cursor: pointer; }
+a {
+  cursor: pointer;
+}
 .paginador{
   text-align: center;
 }
@@ -685,6 +689,8 @@ ul.topnav li a.activo {background-color: #75A8BD;}
   left: 30vw;
   margin-top: 2vw;
   position: absolute;
+  padding-top: 1.5vw;
+  padding-bottom: 1.5vw;
 }
 @media screen and (max-width: 600px){
   .publicaciones{
@@ -738,8 +744,22 @@ ul.topnav li a.activo {background-color: #75A8BD;}
 }
 @media screen and (max-width: 600px){
   .tituloPerfil{
-    font-size: 8vw;
+    font-size: 6vw;
     color: white;
+    font-weight: bold;
+  }
+}
+@media screen and (max-width: 600px){
+  .loginLeCla{
+    font-size: 6vw;
+    color: white;
+    font-weight: bold;
+  }
+}
+@media screen and (max-width: 600px){
+  .loginLe{
+    font-size: 2vw;
+    color: black;
     font-weight: bold;
   }
 }
