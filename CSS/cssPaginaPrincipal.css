@@ -736,7 +736,7 @@ ul.topnav li a.activo {background-color: #75A8BD;}
   .imagenUsuario{
     width: 75%;
     height: auto;
-    border: 5px solid #B0C4DE;
+    border: 2px solid #B0C4DE;
     border-radius: 1vw;
   }
 }
