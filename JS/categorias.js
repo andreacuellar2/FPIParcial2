@@ -135,6 +135,15 @@ function LogOut() {
   localStorage.setItem("idUserLogged", null);
   window.location.replace("index.html");
 }
+
+function irAPerfil(){
+  window.location.replace("perfil.html");
+}
+
+function irAPublicar(){
+  window.location.replace("publicar.php");
+}
+
 function jsonReadFileVariablesUser() {
   var userRequest = new XMLHttpRequest();
   userRequest.open('GET', 'DATA/usuarios.json');

@@ -21,7 +21,7 @@
     </ul>
 <!-- //////////////////////////Header//////////////////////////////////////////////-->
     <header id="header">
-      <h1 class="tituloBlog"><b>O W L Space</b></h1></hr>
+      <h1 class="tituloBlog"><b>O W L Space</b></h1>
         <p class="subtema">Bienvenido al espacio para compartir tus ideas</p>
     </header>
 <!-- //////////////////////////// Pagina Inicio //////////////////////////////-->
@@ -31,8 +31,8 @@
         <div id="pagInicio">
       	   <h1 class="divLetra">ARTÍCULOS RECIENTES</h1><hr/>
 
-            <div id="articulos" class="articulos" onmouseover="OpacityArticuloCla()" onmouseout="OpacityArticuloOsc()"><br><br>
-              <img src="" id="imgPrimera" alt="Imagen articulo reciente 1">
+            <div id="articulos" class="articulos" onmouseover="OpacityArticuloOsc()" onmouseout="OpacityArticuloCla()"><br><br>
+              <img src="" class="imgPrimera" alt="Imagen articulo reciente 1">
               <div class="contenedor">
                 <h2 id="tituloPrimero" class="articuloTitulo"><b>ARTÍCULO 1</b></h2><br>
                 <h3 id="fechaPrimero" class="descripcionArt">Fecha articulo uno</h3><br>
@@ -44,7 +44,7 @@
               </div>
             </div>
 
-            <div id="articulos2" class="articulos2" onmouseover="OpacityArticuloCla2()" onmouseout="OpacityArticuloOsc2()"><br><br>
+            <div id="articulos2" class="articulos2" onmouseover="OpacityArticuloOsc2()" onmouseout="OpacityArticuloCla2()"><br><br>
               <img src="" id="imgSegunda" alt="Imagen articulo reciente 2">
               <div class="contenedor">
                 <h2 id="tituloSegundo" class="articuloTitulo"><b>ARTÍCULO 2</b></h2><br>
@@ -61,10 +61,10 @@
 </main>
 <!-- ////////////////////////// Menu Derecha //////////////////////////////-->
   		<nav id="right" class="column">
-        <img id="headerimg" src="IMG/owl.png" alt="buho"><hr></hr>
+        <img id="headerimg" src="IMG/owl.png" alt="buho"><hr>
         <div id="areaPerfil" class="areaPerfil">
           <input class="btnLeerMas" type="button" value="Mi perfil">
-          <input class="btnLeerMas" type="button" value="Publicar"><hr></hr>
+          <input class="btnLeerMas" type="button" value="Publicar"><hr>
         </div>
         <div id="masleidos">
         <br><h3 class="subtemaNav">Más Comentados:</h3><br>
@@ -89,9 +89,10 @@
         </div>
         </div>
   		</nav>
+    </div>
 <!-- ///////////////////////////////footer/////////////////////////////////////////-->
-  	<div id="footer">
-  		<footer id="footer"><h1>Derechos Reservados</h1></footer>
+  	<div class="footer">
+  		<footer class="footer"><h1>Derechos Reservados</h1></footer>
   	</div>
     <script type="text/javascript" src="JS/publicacion.js"></script>
     <script type="text/javascript" src="JS/inicio.js"></script>

@@ -100,3 +100,9 @@ function formImplicito() {
   document.getElementById('idPostChoused').value = window.localStorage.getItem("idPubWanted");;
   document.getElementById('idUserLogIn').value = window.localStorage.getItem("idUserLogged");;
 }
+function irAPerfil(){
+  window.location.replace("perfil.html");
+}
+function irAPublicar(){
+  window.location.replace("publicar.php");
+}

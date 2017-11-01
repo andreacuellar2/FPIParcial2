@@ -38,3 +38,10 @@ function LogOut() {
   localStorage.setItem("idUserLogged", null);
   window.location.replace("index.html");
 }
+function irAPerfil(){
+  window.location.replace("perfil.html");
+}
+
+function irAPublicar(){
+  window.location.replace("publicar.php");
+}

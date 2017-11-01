@@ -66,7 +66,7 @@ function ExisteIdUsuario($todos, $suID){
   </ul>
 <!-- //////////////////////////Header//////////////////////////////////////////////-->
   <header id="header">
-    <h1 class="tituloBlog"><b>O W L Space</b></h1></hr>
+    <h1 class="tituloBlog"><b>O W L Space</b></h1>
       <p class="subtema">Bienvenido al espacio para compartir tus ideas</p>
   </header>
 <!-- //////////////////////////Leer//////////////////////////////////////////////-->
@@ -77,7 +77,7 @@ function ExisteIdUsuario($todos, $suID){
         <h1 id="nombreArticulo" class="subtema">Nombre Articulo</h1><br><hr>
         <input type="button" id="autorArticulo" class="descripcionArt" onclick="haciaPerfil()" value="Autor del articulo"><hr>
         <div id="entrada1">
-          <img src="" id="imgArticulo" alt="Imagen de la publicacion">
+          <img src="" id="imgArticulo" class="imgPrimera" alt="Imagen de la publicacion">
           <div class="contenedor">
             <h3 id="fechaArticulo" class="descripcionArt">Fecha de la publicacion</h3><br>
             <textarea id="contenidoArticulo" class="parrafoArtDe" cols="155" rows="40" disabled>Contenido de la Publicacion</textarea><br>
@@ -116,10 +116,10 @@ function ExisteIdUsuario($todos, $suID){
       </main>
 <!-- /////////////////////////// Menu Derecha ///////////////////////////////-->
     <nav id="right" class="column">
-      <img id="headerimg" src="IMG/owl.png" alt="buho"><hr></hr>
+      <img id="headerimg" src="IMG/owl.png" alt="buho"><hr>
       <div id="areaPerfil" class="areaPerfil">
-        <a href="perfil.html"><input class="btnLeerMas" type="button" value="Mi perfil"></a>
-        <a href="publicar.html"><input class="btnLeerMas" type="button" value="Publicar"></a><hr></hr>
+        <input class="btnLeerMas" type="button" value="Mi perfil" onclick="irAPerfil()">
+        <input class="btnLeerMas" type="button" value="Publicar" onclick="irAPublicar()"><hr>
       </div>
       <div id="masleidos">
       <br><h3 class="subtemaNav">Más leídos:</h3><br>
@@ -133,7 +133,7 @@ function ExisteIdUsuario($todos, $suID){
             <p><button class="btnNav"><b>LEER MAS »</b></button></p>
             </div>
           </div>
-        </li><br><br>
+        </li>
         <li class="segundoArt">
           <img src="IMG/animales.jpg" class="imgpop" alt="animales">
           <div class="textoPop">
@@ -146,11 +146,12 @@ function ExisteIdUsuario($todos, $suID){
         </li>
       </ul>
         </div>
+        </nav>
     </div>
-    </nav>
+
 <!-- /////////////////////////////////footer///////////////////////////////////////-->
-  	<div id="footer">
-  		<footer id="footer"><h1>Derechos Reservados</h1></footer>
+  	<div class="footer">
+  		<footer class="footer"><h1>Derechos Reservados</h1></footer>
   	</div>
     <script type="text/javascript" src="JS/leer.js"></script>
     <script type="text/javascript" src="JS/publicacion.js"></script>

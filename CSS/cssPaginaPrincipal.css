@@ -457,7 +457,7 @@ box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
   color: #092834;
   padding-right: 2vw;
 }
-  #imgPrimera{
+  .imgPrimera{
   width:100%;
   border-radius: 1vw;
   }
@@ -518,14 +518,14 @@ box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
 /*////////////////////////////////////////////////////////////////////////////*/
 
 /*////////////////////////////////Footer//////////////////////////////////////*/
-#footer {
+.footer {
   clear: both;
   text-align: center;
   font-size: large;
   padding: 0.3em;
   background: #173F4F;
 }
-* html #footer-wrapper {
+* html .footer-wrapper {
   float: left;
   position: relative;
   width: 100%;

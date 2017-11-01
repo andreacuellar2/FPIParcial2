@@ -75,7 +75,7 @@ function SubirImagen($file){
   </ul>
 <!-- //////////////////////////Header//////////////////////////////////////////////-->
     <header id="header">
-      <h1 class="tituloBlog"><b>O W L Space</b></h1></hr>
+      <h1 class="tituloBlog"><b>O W L Space</b></h1>
         <p class="subtema">Bienvenido al espacio para compartir tus ideas</p>
     </header>
 
@@ -91,7 +91,7 @@ function SubirImagen($file){
             <input name="titulo" class="loginLe" type="text" placeholder="Título del artículo" maxlength="25" required>
             <br><br>
             <label class="loginLe">Cuerpo: </label>
-            <textarea name="contenido" class="loginLe" name="contenido" placeholder="Ingresa aquí el contenido" cols="50" rows="10" minlength="20" required></textarea>
+            <textarea name="contenido" class="loginLe" placeholder="Ingresa aquí el contenido" cols="50" rows="10" minlength="20" required></textarea>
             <br><br>
             <label class="loginLe">Categoría:</label>
             <select class="loginLe" id="selectorCategorias" name="idCategoria">
@@ -102,13 +102,14 @@ function SubirImagen($file){
             <br>
             <input class="btnLeerMas" type="submit" id="btnPublicar" value="Publicar">
         </form>
+      </div>
       </main>
 <!-- ////////////////////////// Menu Derecha //////////////////////////////-->
 <nav id="right" class="column">
-  <img id="headerimg" src="IMG/owl.png" alt="buho"><hr></hr>
+  <img id="headerimg" src="IMG/owl.png" alt="buho"><hr>
   <div id="areaPerfil" class="areaPerfil">
-    <a href="perfil.html"><input class="btnLeerMas" type="button" value="Mi perfil"></a>
-    <a href="publicar.html"><input class="btnLeerMas" type="button" value="Publicar"></a><hr></hr>
+    <input class="btnLeerMas" type="button" value="Mi perfil" onclick="irAPerfil()">
+    <input class="btnLeerMas" type="button" value="Publicar" onclick="irAPublicar()"><hr>
   </div>
   <div id="masleidos">
   <br><h3 class="subtemaNav">Más leídos:</h3><br>
@@ -122,7 +123,7 @@ function SubirImagen($file){
         <p><button class="btnNav"><b>LEER MAS »</b></button></p>
         </div>
       </div>
-    </li><br><br>
+    </li>
     <li class="segundoArt">
       <img src="IMG/animales.jpg" class="imgpop" alt="animales">
       <div class="textoPop">
@@ -137,11 +138,9 @@ function SubirImagen($file){
     </div>
     </nav>
 </div>
-</div>
-
 <!-- /////////////////////////////////footer///////////////////////////////////////-->
-  <div id="footer">
-  <footer id="footer"><h1>Derechos Reservados</h1></footer>
+  <div class="footer">
+  <footer class="footer"><h1>Derechos Reservados</h1></footer>
   </div>
 <!--<span class="has-popup">Ver el contenido<span class="popup">Éste es el contenido</span></span>-->
 <script type="text/javascript" src="JS/publicar.js"></script>

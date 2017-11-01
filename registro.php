@@ -87,7 +87,7 @@ function ExisteUsuario($todos, $suNombre){
       </ul>
     <!-- ////////////////////////////////////////////////////////////////////////-->
     <header id="header">
-      <h1 class="tituloBlog"><b>O W L Space</b></h1></hr>
+      <h1 class="tituloBlog"><b>O W L Space</b></h1>
       <p class="subtema">Bienvenido al espacio para compartir tus ideas</p>
     </header>
     <!-- ////////////////////////////// Registro ////////////////////////////////-->
@@ -121,9 +121,8 @@ function ExisteUsuario($todos, $suNombre){
       <p class="divLetra">¿Ya tienes una cuenta? <a class="loginLe" href="login.html">Inicia Sesión</a></p>
     </div>
     <!-- ////////////////////////////////////////////////////////////////////////-->
-    <div id="footer">
-  		<footer id="footer"><h1>Derechos Reservados</h1></footer>
+    <div class="footer">
+  		<footer class="footer"><h1>Derechos Reservados</h1></footer>
   	</div>
-
   </body>
 </html>
