@@ -74,7 +74,6 @@ ul.pagination li a.active {
   border-radius: 0.5vw;
   padding-top: 1.5vw;
   padding-bottom: 1.5vw;
-  cursor: pointer;
 }
 .contenedorArtGeografia{
   background-image: url(../IMG/GeografiaArt.jpg);
