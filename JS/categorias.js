@@ -192,7 +192,14 @@ function ConsumiendoTodo(todosUsuarios, todasPublicaciones, todasCategorias) {//
             var textnode = document.createTextNode(todasPublicaciones[a].titulo);
             node.appendChild(textnode);
             lista.appendChild(node);
+            node.setAttribute("value",todasPublicaciones[a].id+"");
+            node.setAttribute("onclick", "CreandoPubWanted("+todasPublicaciones[a].id+")");
           }
         }
     }
   }
+  function CreandoPubWanted(idPub) {
+          localStorage.setItem("idPubWanted", null);
+          localStorage.setItem("idPubWanted", idPub);
+          window.location.replace("leer.html");
+      }
