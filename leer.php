@@ -28,7 +28,7 @@ if ($_POST['comentar']) {
   }
 
 }
-if ($_POST['puntuar']) {
+if ($_POST['btnSubmitValor']) {
   header("Location: leer.php?SePuntuo");
 }
 
