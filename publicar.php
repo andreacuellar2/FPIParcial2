@@ -13,7 +13,7 @@ if ($_POST) {
       'imgSrc' => SubirImagen($_FILES['file']),
       'comentarios' => array(),
       'fecha' => date("Y-m-d"),
-      'puntuacion' => 0
+      'puntuacion' => array()
     );
     $todasPubliArray[] = $regPublicacion;
     $finalTodadPubli = json_encode($todasPubliArray);
@@ -29,7 +29,6 @@ function SubirImagen($file){
 	$fileTmpName = $file['tmp_name'];
 	$fileSize = $file['size'];
 	$fileError = $file['error'];
-	$fileType = $file['type'];
 
 	$fileExt = explode('.', $fileName);
 	$fileActualExt = strtolower(end($fileExt));
@@ -39,7 +38,7 @@ function SubirImagen($file){
 	if (in_array($fileActualExt, $allowed)) {
 		if ($fileError === 0) {
 			if ($fileSize < 2000000) {
-				$fileNameNew = uniqid('', true).".".$fileActualExt;
+				$fileNameNew = uniqid().".".$fileActualExt;
 				$fileDestination = 'IMG/publicaciones/'.$fileNameNew;
 				move_uploaded_file($fileTmpName, $fileDestination);
 			} else {
