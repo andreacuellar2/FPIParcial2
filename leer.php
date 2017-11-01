@@ -123,7 +123,7 @@ function Posicion($todos, $suID){
                 <label class="comentarbar">Déjanos tu comentario:</label>
                 <input type="text" name="id" id="idPostChoused">
                 <input type="text" name="idUsuario" id="idUserLogIn">
-                <input type="text" class="inputComentario" name="comentario" id="comentario" placeholder="Escribe tu comentario..."><br><br>
+                <input type="text" class="inputComentario" name="comentario" id="comentario" placeholder="Escribe tu comentario...">
                 <input type="submit" class="btnComentar" name="comentar" value="Comentar" id="hacerComentario">
               </form>
             </div>
