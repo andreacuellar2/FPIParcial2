@@ -6,12 +6,15 @@ if ($_POST) {
     $todasPubliArray = json_decode($todasPubli, true);
     if (ExisteID($todasPubliArray,$_POST['id'])) {
       if (ExisteIdUsuario($todasPubliArray,$_POST['idUsuario'])) {
+        $varPosicion = Posicion($todasPubliArray,$_POST['id']);
+        $todosComentarios = $todasPubliArray[$varPosicion];
         $registroComentario = array(
           'id' => (int)$_POST['id'],
           'comentario' => $_POST['comentario']
         );
-        $varID = (int)$_POST['id'];
-        $todasPubliArray[$varID]['comentarios'] = $registroComentario;
+        $todosComentarios[] = $registroComentario;
+        $todasPubliArray[$varPosicion] = $todosComentarios;
+
         $finalTodasPubli = json_encode($todasPubliArray);
         file_put_contents('DATA/publicaciones.json', $finalTodasPubli);
         header("Location: leer.php?HaComentado");
@@ -43,8 +46,15 @@ function ExisteIdUsuario($todos, $suID){
   }
   return false;
 }
-?>
-<!DOCTYPE html>
+function Posicion($todos, $suID){
+  for ($i=0; $i < count($todos); $i++) {
+    if ($todos[$i]['idUsuario'] == $suID) {
+      return $i;
+    }
+  }
+  return 0;
+}
+?><!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="utf-8">
