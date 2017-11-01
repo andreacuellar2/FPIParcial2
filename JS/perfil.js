@@ -44,8 +44,9 @@ function UserRequestJSON(){
       document.getElementById("fechaEntrada").innerHTML = "Fecha de publicacion: "+entrada.fecha;
       document.getElementById("resumenEntrada").innerHTML = entrada.contenido;
       document.getElementById("comentariosEntrada").innerHTML = "Comentarios: "+(entrada.comentarios).length;
+      break;
     }else {
-      document.getElementById('entrada').style.display='none';
+      document.getElementById('entrada').style.display='block';
     }
   }
   var user = null;
@@ -86,7 +87,7 @@ function TopNavSesion(){
     document.getElementById('navPerfil').style.display = 'none';
     document.getElementById('navPublicar').style.display= 'none';
     document.getElementById('navLogout').style.display= 'none';
-  }else {    
+  }else {
     document.getElementById('navPerfil').style.display = 'block';
     document.getElementById('navPublicar').style.display= 'block';
     document.getElementById('navLogout').style.display= 'block';

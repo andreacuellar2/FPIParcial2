@@ -45,7 +45,7 @@ function UserRequestJSON(){
       document.getElementById("resumenEntrada").innerHTML = entrada.contenido;
       document.getElementById("comentariosEntrada").innerHTML = "Comentarios: "+(entrada.comentarios).length;
     }else {
-      document.getElementById('entrada').style.display='none';
+      document.getElementById('entrada').style.display='block';
     }
   }
   var user = null;
@@ -83,14 +83,12 @@ function editarPerfil() {
 function TopNavSesion(){
   var prueba =  window.localStorage.getItem("idUserLogged");
   if (prueba == "null"){
-    document.getElementById('areaPerfil').style.display = 'none';
     document.getElementById('navLogin').style.display = 'block';
     document.getElementById('navRegistro').style.display= 'block';
     document.getElementById('navPerfil').style.display = 'none';
     document.getElementById('navPublicar').style.display= 'none';
     document.getElementById('navLogout').style.display= 'none';
   }else {
-    document.getElementById('areaPerfil').style.display = 'block';
     document.getElementById('navLogin').style.display = 'none';
     document.getElementById('navRegistro').style.display= 'none';
     document.getElementById('navPerfil').style.display = 'block';
