@@ -655,7 +655,7 @@ ul.topnav li a.activo {background-color: #75A8BD;}
 }
 .perfil{
   position: absolute;
-  height: 48vw;
+  height: auto;
   width: 27vw;
   float: left;
   background-color: #347B98;
@@ -667,27 +667,32 @@ ul.topnav li a.activo {background-color: #75A8BD;}
   margin-bottom: 1.5vw;
 }
 @media screen and (max-width: 600px){
-.perfil{
-    width: 100vw;
+  .perfil{
+  height: auto;
+  width: 100%;
   }
 }
 @media screen and (max-width: 600px){
-.entrada{
-  width: 50vw;
+  .entrada{
+  width: 50%;
   }
 }
-@media screen and (max-width: 600px){
+
 .publicaciones{
-  top: 90vw;
-  }
-}
-.publicaciones{
-  height: 45vw;
+  height: auto;
   width: 68vw;
   float: right;
   left: 30vw;
   margin-top: 2vw;
   position: absolute;
+}
+@media screen and (max-width: 600px){
+  .publicaciones{
+    height: auto;
+    width: 125%;
+    left: 0;
+    top: 200vw;
+  }
 }
 .entrada{
   text-align: center;
@@ -697,8 +702,18 @@ ul.topnav li a.activo {background-color: #75A8BD;}
   padding-bottom: 1vw;
   padding-bottom: 1vw;
 }
+@media screen and (max-width: 600px){
+  .entrada{
+    height: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 7vw;
+    background-color: #B0C4DE;
+    border-radius: 5px;
+  }
+}
 .imagenEntrada{
-  width: 20vw;
+  width: 60%;
   height: auto;
   margin-top: 1.5vw;
 }
@@ -708,10 +723,25 @@ ul.topnav li a.activo {background-color: #75A8BD;}
   border: 1vw solid #B0C4DE;
   border-radius: 1vw;
 }
+@media screen and (max-width: 600px){
+  .imagenUsuario{
+    width: 75%;
+    height: auto;
+    border: 5px solid #B0C4DE;
+    border-radius: 1vw;
+  }
+}
 .tituloPerfil{
   font-size: 1.5vw;
   color: white;
   font-weight: bold;
+}
+@media screen and (max-width: 600px){
+  .tituloPerfil{
+    font-size: 8vw;
+    color: white;
+    font-weight: bold;
+  }
 }
 /*////////////////////////////////////////////////////////////////////////////*/
 
