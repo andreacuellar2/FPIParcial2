@@ -180,7 +180,7 @@ ul.pagination li a.active {
   opacity: 0.5;
 }
 .contenedorArtOtros{
-  background-image: url(../IMG/OtrosArt.jpg);
+  background-image: url(../IMG/otrosArt.jpg);
   border-radius: 0.5vw;
   display: none;
   padding-top: 1.5vw;
