@@ -10,6 +10,7 @@ function generarCategorias(jsonCategorias) {
   }
 }
 function CargarCategorias(){
+  document.getElementById('idUserLogIn').style.display = 'none'
   var userRequest = new XMLHttpRequest();
   userRequest.open('GET', 'DATA/categorias.json');
   userRequest.onload = function() {

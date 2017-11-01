@@ -101,7 +101,7 @@ function ExisteUsuario($todos, $suNombre){
         <input type="text" class="loginLe" name="nombreUsuario" maxlength="10" placeholder="Username" pattern="[a-zA-Z0-9-_.]*" value="" required>
         <br><br>
         <label class="loginLe">Acerca de ti:</label>
-        <textarea  class="loginLe" name="descripcion" placeholder="Pon una descripción sobre ti" cols="20" rows="6"></textarea>
+        <textarea  class="loginLe" name="descripcion" placeholder="Pon una descripción sobre ti" cols="20" rows="6" minlength="10" maxlength="200"></textarea>
         <br><br>
         <label class="loginLe">Imagen:</label>
         <input class="loginLe" type="file" name="file" accept="image/jpeg, image/png">
@@ -113,7 +113,7 @@ function ExisteUsuario($todos, $suNombre){
         </select>
         <br><br>
         <label class="loginLe" >Contraseña:</label>
-        <input type="password" class="loginLe" name="password" placeholder="Contraseña" maxlength="50" value="" required>
+        <input type="password" class="loginLe" name="password" placeholder="Contraseña"  pattern=".{5,10}" value="" required>
         <br><br>
         <input class="btnLeerMas" type="submit" name="btnRegistrarme" value="Registrarme"><br>
       </form>

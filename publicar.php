@@ -87,10 +87,10 @@ function SubirImagen($file){
             <input type="text" name="idUsuario" id="idUserLogIn">
             <br>
             <label class="loginLe">Título: </label>
-            <input name="titulo" class="loginLe" type="text" placeholder="Título del artículo" maxlength="25" required>
+            <input name="titulo" class="loginLe" type="text" placeholder="Título del artículo" pattern=".{0}|.{5,30}" required>
             <br><br>
             <label class="loginLe">Cuerpo: </label>
-            <textarea name="contenido" class="loginLe" placeholder="Ingresa aquí el contenido" cols="50" rows="10" minlength="20" required></textarea>
+            <textarea name="contenido" class="loginLe" placeholder="Ingresa aquí el contenido" cols="50" rows="10" minlength="150" required></textarea>
             <br><br>
             <label class="loginLe">Categoría:</label>
             <select class="loginLe" id="selectorCategorias" name="idCategoria">
