@@ -110,7 +110,6 @@ function Posicion($todos, $suID){
               <input type="submit" onclick="cambiarValueStar(4)" name="btnSubmitValor" value="4">
               <input type="submit" onclick="cambiarValueStar(5)" name="btnSubmitValor" value="5">
             </form>
-
           </div><br>
 
           <div id="comentar">
