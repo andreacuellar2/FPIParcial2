@@ -64,9 +64,9 @@ function ConsumiendoTodo(todosUsuarios, todasPublicaciones, todasCategorias) {//
     if (todasPublicaciones[i].idUsuario == parseInt(idUserIn)) {
       var node = document.createElement("LI");
       var text = document.createTextNode(item+"");
-
+      if (item==1) {
         node.setAttribute("class","active");
-      
+      }
       node.setAttribute("onclick", "showPage("+item+")");
       node.appendChild(text);
       listaPaginador.appendChild(node);
