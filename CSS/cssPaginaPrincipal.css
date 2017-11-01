@@ -53,24 +53,28 @@ ul.pagination li a.active {
   background-color: #173F4F;
   padding-top: 1vw;
   padding-bottom: 1vw;
+  cursor: pointer;
 }
 .categoriaArticulosOsc{
   padding-left: 1vw;
   padding-bottom: 1vw;
   font-weight: bold;
   color: black;
+  cursor: pointer;
 }
 .categoriaArticulosCla{
   padding-left: 1vw;
   padding-bottom: 1vw;
   font-weight: bold;
   color: white;
+  cursor: pointer;
 }
 .contenedorGeografia{
   background-image: url(../IMG/Geografia.jpg);
   border-radius: 0.5vw;
   padding-top: 1.5vw;
   padding-bottom: 1.5vw;
+  cursor: pointer;
 }
 .contenedorArtGeografia{
   background-image: url(../IMG/GeografiaArt.jpg);
@@ -85,6 +89,7 @@ ul.pagination li a.active {
   text-align: center;
   font-weight: bold;
   color: white;
+  cursor: pointer;
 }
 .contenedorarte{
   background-image: url(../IMG/arte.jpg);
@@ -105,6 +110,7 @@ ul.pagination li a.active {
   text-align: center;
   font-weight: bold;
   color: #67AFCB;
+  cursor: pointer;
 }
 .contenedorhistoria{
   background-image: url(../IMG/historia.jpg);
@@ -151,6 +157,7 @@ ul.pagination li a.active {
   text-align: center;
   font-weight: bold;
   color: black;
+  cursor: pointer;
 }
 .contenedordeportes{
   background-image: url(../IMG/deportes.jpg);
@@ -164,6 +171,7 @@ ul.pagination li a.active {
   text-align: center;
   font-weight: bold;
   color: black;
+  cursor: pointer;
 }
 .contenedorArtDeportes{
   background-image: url(../IMG/deportesArt.jpg);
