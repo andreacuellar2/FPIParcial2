@@ -28,6 +28,8 @@ if ($_POST['comentar']) {
   }
 
 }
+//if ($_POST['puntuar']) {}
+
 function ExisteID($todos, $suID){
   for ($i=0; $i < count($todos); $i++) {
     if ($todos[$i]['id'] == $suID) {
@@ -163,6 +165,7 @@ function Posicion($todos, $suID){
   	<div class="footer">
   		<footer class="footer"><h1>Derechos Reservados</h1></footer>
   	</div>
+    <script type="text/javascript" src="JS/leer.js"></script>
     <script type="text/javascript" src="JS/leer.js"></script>
     <script type="text/javascript" src="JS/publicacion.js"></script>
   </body>
