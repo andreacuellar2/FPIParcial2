@@ -29,7 +29,7 @@ if ($_POST['comentar']) {
 
 }
 if ($_POST['btnSubmitValor']) {
-  header("Location: leer.php?SePuntuo");
+  header("Location: leer.php?SePuntuo".$_POST['valueStar']);
 }
 
 function ExisteID($todos, $suID){
