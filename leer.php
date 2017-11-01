@@ -93,7 +93,7 @@ function Posicion($todos, $suID){
     <link rel=icon href="IMG/favicon.png" type="image/png">
     <title>O W L S P A C E</title>
   </head>
-  <body onload="pubRequestJSON();TopNavSesion();formImplicito();">
+  <body onload="pubRequestJSON();TopNavSesion();formImplicito();OcultarCalificacion();">
 <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
   <ul class="topnav">
     <li id="navInicio"><a href="index.html">Inicio</a></li>

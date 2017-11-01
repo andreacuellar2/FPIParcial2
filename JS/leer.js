@@ -124,6 +124,7 @@ function formImplicito() {
   document.getElementById('idPostChoused').value = window.localStorage.getItem("idPubWanted");
   document.getElementById('idUserLogIn').value = window.localStorage.getItem("idUserLogged");
   document.getElementById('idUserLogIn2').value = window.localStorage.getItem("idUserLogged");
+  
 }
 function irAPerfil(){
   window.location.replace("perfil.html");
