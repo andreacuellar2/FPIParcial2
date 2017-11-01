@@ -641,7 +641,10 @@ ul.topnav li a.activo {background-color: #75A8BD;}
 /*////////////////////////////////////////////////////////////////////////////*/
 /*//PARA PUBLICAR//*/
 #idUserLogIn{
-  display: none;
+  display: block;
+}
+#idPostChoused{
+  display: block;
 }
 /*////*/
 /*///////////////////////Para el perfil del usuario///////////////////////////*/

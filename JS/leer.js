@@ -67,7 +67,6 @@ function pubRequestJSON(){
 
 function TopNavSesion(){
   var prueba =  window.localStorage.getItem("idUserLogged");
-  document.getElementById('userComentando').innerHTML = prueba;
   if (prueba == "null" || prueba == null){
     document.getElementById('areaPerfil').style.display = 'none';
     document.getElementById('navLogin').style.display = 'block';
@@ -77,7 +76,6 @@ function TopNavSesion(){
     document.getElementById('navLogout').style.display= 'none';
     document.getElementById('comentando').style.display= 'none';
     document.getElementById('estrellas').style.display= 'none';
-    document.getElementById('userComentando').style.display= 'none';
   }else {
     document.getElementById('areaPerfil').style.display = 'block';
     document.getElementById('navLogin').style.display = 'none';
@@ -85,7 +83,6 @@ function TopNavSesion(){
     document.getElementById('navPerfil').style.display = 'block';
     document.getElementById('navPublicar').style.display= 'block';
     document.getElementById('navLogout').style.display= 'block';
-    document.getElementById('userComentando').style.display= 'none';
   }
 }
 function LogOut() {
@@ -98,4 +95,8 @@ function haciaPerfil() {
   localStorage.setItem("idUserVisita", null);
   localStorage.setItem("idUserVisita", idVisita);
   window.location.replace("visita.html");
+}
+function formImplicito() {
+  document.getElementById('idPostChoused').value = window.localStorage.getItem("idPubWanted");;
+  document.getElementById('idUserLogIn').value = window.localStorage.getItem("idUserLogged");;
 }

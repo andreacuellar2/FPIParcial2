@@ -1,3 +1,42 @@
+<?php
+$registroComentario = array();
+if ($_POST) {
+  if (file_exists('DATA/publicaciones.json')) {
+    $todasPubli = file_get_contents('DATA/publicaciones.json');
+    $todasPubliArray = json_decode($todasPubli, true);
+    if (ExisteID($todasPubliArray,$_POST['id'])) {
+      if (ExisteIdUsuario($todasPubliArray,$_POST['idUsuario'])) {
+
+        header("Location: leer.php?OKOKOKOKOKOKOK");
+
+      } else {
+        header("Location: leer.php?NoExisteElIDUsuario");
+      }
+    }else {
+      header("Location: leer.php?NoExisteElIDPublicacion");
+    }
+  }else {
+    header("Location: leer.php?NoExisteArchivo");
+  }
+
+}
+function ExisteID($todos, $suID){
+  for ($i=0; $i < count($todos); $i++) {
+    if ($todos[$i]['id'] == $suID) {
+      return true;
+    }
+  }
+  return false;
+}
+function ExisteIdUsuario($todos, $suID){
+  for ($i=0; $i < count($todos); $i++) {
+    if ($todos[$i]['idUsuario'] == $suID) {
+      return true;
+    }
+  }
+  return false;
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -8,7 +47,7 @@
     <link rel=icon href="IMG/favicon.png" type="image/png">
     <title>O W L S P A C E</title>
   </head>
-  <body onload="pubRequestJSON();TopNavSesion();">
+  <body onload="pubRequestJSON();TopNavSesion();formImplicito();">
 <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
   <ul class="topnav">
     <li id="navInicio"><a href="index.html">Inicio</a></li>
@@ -56,12 +95,13 @@
               </ol>
             </div><br>
             <div id="comentando">
-              <form>
-              <label class="comentarbar">Déjanos tu comentario:</label>
-              <label id="userComentando"></label>
-              <input type="text" class="inputComentario" id="comentario" placeholder="Escribe tu comentario..."><br><br>
-              <input type="button" class="btnComentar" value="Comentar">
-            </form>
+              <form method="POST" enctype="multipart/form-data">
+                <label class="comentarbar">Déjanos tu comentario:</label>
+                <input type="text" name="id" id="idPostChoused">
+                <input type="text" name="idUsuario" id="idUserLogIn">
+                <input type="text" class="inputComentario" name="comentario" id="comentario" placeholder="Escribe tu comentario..."><br><br>
+                <input type="submit" class="btnComentar" value="Comentar">
+              </form>
             </div>
           </div><br>
         </div>
