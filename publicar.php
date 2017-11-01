@@ -63,7 +63,7 @@ function SubirImagen($file){
     <link rel=icon href="IMG/favicon.png" type="image/png">
     <title>O W L S P A C E</title>
   </head>
-  <body onload="CargarCategorias(); ValidarSesion();">
+  <body onload="CargarCategorias(); ValidarSesion();pubRequestJSON();">
 <!-- ////////////////////////// Menu Horizontal /////////////////////////////-->
   <ul class="topnav">
     <li><a id="navInicio" href="index.html">Inicio</a></li>
@@ -104,39 +104,39 @@ function SubirImagen($file){
       </div>
       </main>
 <!-- ////////////////////////// Menu Derecha //////////////////////////////-->
-<nav id="right" class="column">
-  <img id="headerimg" src="IMG/owl.png" alt="buho"><hr>
-  <div id="areaPerfil" class="areaPerfil">
-    <input class="btnLeerMas" type="button" value="Mi perfil" onclick="irAPerfil()">
-    <input class="btnLeerMas" type="button" value="Publicar" onclick="irAPublicar()"><hr>
-  </div>
-  <div id="masleidos">
-  <br><h3 class="subtemaNav">Más leídos:</h3><br>
-  <ul id="listaArticulos">
-    <li class="primerArt">
-      <img src="IMG/pop1.jpg" class="imgpop" alt="flor">
-      <div class="textoPop">
-        <h3 class="descripcionPop">Flores</h3>
-        <h4 class="parrafoArtDe">Flores más bonitas de América</h4><br>
-        <div class="botonesArt">
-        <p><button class="btnNav"><b>LEER MAS »</b></button></p>
+  		<nav id="right" class="column">
+        <img id="headerimg" src="IMG/owl.png" alt="buho"><hr>
+        <div id="areaPerfil" class="areaPerfil">
+          <input class="btnLeerMas" type="button" value="Mi perfil" onclick="irAPerfil()">
+          <input class="btnLeerMas" type="button" value="Publicar" onclick="irAPublicar()"><hr>
         </div>
-      </div>
-    </li>
-    <li class="segundoArt">
-      <img src="IMG/animales.jpg" class="imgpop" alt="animales">
-      <div class="textoPop">
-      <h3 class="descripcionPop">Animales</h3>
-      <h4 class="parrafoArtDe">Animales más bonitos de América</h4><br>
-      <div class="botonesArt">
-      <p><button class="btnNav"><b>LEER MAS »</b></button></p>
-      </div>
-      </div>
-    </li>
-  </ul>
-    </div>
-    </nav>
-</div>
+        <div id="masleidos">
+        <br><h3 class="subtemaNav">Más Comentados:</h3><br>
+        <div id="listaArticulos">
+
+          <div class="primerArt">
+            <label id="masComentado1"></label>
+            <img id="imgMasComentado1" src="" class="imgpop" alt="Imagen articulo mas comentado 1">
+            <div class="textoPop">
+              <h3 id="tituloMasComentado1" class="descripcionPop">Titulo</h3>
+              <h4 id="resumenMasComentado1" class="parrafoArtDe">Resumen</h4><br>
+              <button class="btnNav" onclick="redireccionTres()">LEER MAS »</button>
+            </div>
+          </div><br><br>
+
+          <div class="primerArt">
+            <label id="masComentado2"></label>
+            <img id="imgMasComentado2" src="" class="imgpop" alt="Imagen articulo mas comentado 2">
+            <div class="textoPop">
+              <h3 id="tituloMasComentado2" class="descripcionPop">Titulo</h3>
+              <h4 id="resumenMasComentado2" class="parrafoArtDe">Resumen</h4><br>
+              <button class="btnNav" onclick="redireccionCuatro()">LEER MAS »</button>
+            </div>
+          </div>
+        </div>
+        </div>
+  		</nav>
+  </div>
 <!-- /////////////////////////////////footer///////////////////////////////////////-->
   <div class="footer">
   <footer class="footer"><h1>Derechos Reservados</h1></footer>

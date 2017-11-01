@@ -57,7 +57,7 @@ function ConsumiendoTodo(todosUsuarios, todasPublicaciones, todasCategorias) {//
       var text = document.createTextNode(item+"");
       hrefText.appendChild(text);
       if (item==1) {
-        node.setAttribute("class","active");
+        node.setAttribute("class","activo");
       }
       //node.setAttribute("value",todasPublicaciones[i].id+"");
       node.setAttribute("onclick", "showPage("+todasPublicaciones[i].id+")");

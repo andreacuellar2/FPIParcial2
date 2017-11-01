@@ -35,6 +35,29 @@ function pubRequestJSON(){
     }
 
   function pubSetHTML(pubData, pubWanted, userData) {
+    ///////////////////Mas comentados//////////////////////////
+    var numComentarios = [];
+    for (var i in pubData) {
+      numComentarios.push({"coments":pubData[i].comentarios.length, "idPubComents":pubData[i].id});
+    }
+    numComentarios.sort(function(a, b){return b.coments-a.coments});
+      for (var i in pubData) {
+        ///////////////////////Mas comentada 1/////////////////////////////////////
+        if (numComentarios[0].idPubComents == pubData[i].id) {
+          document.getElementById("masComentado1").innerHTML = pubData[i].id;
+          document.getElementById("imgMasComentado1").src = "IMG/publicaciones/"+ pubData[i].imgSrc;
+          document.getElementById("tituloMasComentado1").innerHTML = pubData[i].titulo;
+          document.getElementById("resumenMasComentado1").innerHTML = pubData[i].contenido;
+        }
+        ///////////////////////Mas comentada 2/////////////////////////////////////
+        if (numComentarios[1].idPubComents == pubData[i].id) {
+          document.getElementById("masComentado2").innerHTML = pubData[i].id;
+          document.getElementById("imgMasComentado2").src = "IMG/publicaciones/"+ pubData[i].imgSrc;
+          document.getElementById("tituloMasComentado2").innerHTML = pubData[i].titulo;
+          document.getElementById("resumenMasComentado2").innerHTML = pubData[i].contenido;
+        }
+      }
+    //////////////////////////////////Leer////////////////////////////////////
     for (i in pubData) {
          if (pubData[i].id == pubWanted) {
            var publicacion = new Publicacion(pubData[i].id, pubData[i].idUsuario, pubData[i].titulo, pubData[i].contenido, pubData[i].idCategoria, pubData[i].imgSrc, pubData[i].comentarios, pubData[i].fecha);
@@ -62,12 +85,12 @@ function pubRequestJSON(){
             idVisita = publicacion.idUsuario;
           }
         }
-
   }
-
 function TopNavSesion(){
   var prueba =  window.localStorage.getItem("idUserLogged");
   if (prueba == "null" || prueba == null){
+    document.getElementById('masComentado1').style.display = 'none';
+    document.getElementById('masComentado2').style.display = 'none';
     document.getElementById('areaPerfil').style.display = 'none';
     document.getElementById('navLogin').style.display = 'block';
     document.getElementById('navRegistro').style.display= 'block';
@@ -77,6 +100,8 @@ function TopNavSesion(){
     document.getElementById('comentando').style.display= 'none';
     document.getElementById('estrellas').style.display= 'none';
   }else {
+    document.getElementById('masComentado1').style.display = 'none';
+    document.getElementById('masComentado2').style.display = 'none';
     document.getElementById('areaPerfil').style.display = 'block';
     document.getElementById('navLogin').style.display = 'none';
     document.getElementById('navRegistro').style.display= 'none';
@@ -90,7 +115,6 @@ function LogOut() {
   localStorage.setItem("idUserLogged", null);
   window.location.replace("index.html");
 }
-
 function haciaPerfil() {
   localStorage.setItem("idUserVisita", null);
   localStorage.setItem("idUserVisita", idVisita);
@@ -105,4 +129,17 @@ function irAPerfil(){
 }
 function irAPublicar(){
   window.location.replace("publicar.php");
+}
+////////////////////////////Redirecciones mas comentados///////////////////////
+function redireccionTres() {
+  id = parseInt(document.getElementById('masComentado1').innerHTML);
+  localStorage.setItem("idPubWanted", null);
+  localStorage.setItem("idPubWanted", id);
+  window.location.replace("leer.php");
+}
+function redireccionCuatro() {
+  id = parseInt(document.getElementById('masComentado2').innerHTML);
+  localStorage.setItem("idPubWanted", null);
+  localStorage.setItem("idPubWanted", id);
+  window.location.replace("leer.php");
 }

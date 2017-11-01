@@ -115,6 +115,8 @@ function OpacityDesDep(){
 function TopNavSesion(){
   var prueba =  window.localStorage.getItem("idUserLogged");
   if (prueba == "null" || prueba == null){
+    document.getElementById('masComentado1').style.display = 'none';
+    document.getElementById('masComentado2').style.display = 'none';
     document.getElementById('areaPerfil').style.display = 'none';
     document.getElementById('navLogin').style.display = 'block';
     document.getElementById('navRegistro').style.display= 'block';
@@ -122,6 +124,8 @@ function TopNavSesion(){
     document.getElementById('navPublicar').style.display= 'none';
     document.getElementById('navLogout').style.display= 'none';
   }else {
+    document.getElementById('masComentado1').style.display = 'none';
+    document.getElementById('masComentado2').style.display = 'none';
     document.getElementById('areaPerfil').style.display = 'block';
     document.getElementById('navLogin').style.display = 'none';
     document.getElementById('navRegistro').style.display= 'none';
@@ -193,6 +197,28 @@ function jsonReadFileCategorias(allUsersData, allPublicaciones) {//Codigo para u
     userRequest.send();
 }
 function ConsumiendoTodo(todosUsuarios, todasPublicaciones, todasCategorias) {//Hacer esto nuestro main
+  ///////////////////Mas comentados//////////////////////////
+  var numComentarios = [];
+  for (var i in todasPublicaciones) {
+    numComentarios.push({"coments":todasPublicaciones[i].comentarios.length, "idPubComents":todasPublicaciones[i].id});
+  }
+  numComentarios.sort(function(a, b){return b.coments-a.coments});
+    for (var i in todasPublicaciones) {
+      ///////////////////////Mas comentada 1/////////////////////////////////////
+      if (numComentarios[0].idPubComents == todasPublicaciones[i].id) {
+        document.getElementById("masComentado1").innerHTML = todasPublicaciones[i].id;
+        document.getElementById("imgMasComentado1").src = "IMG/publicaciones/"+ todasPublicaciones[i].imgSrc;
+        document.getElementById("tituloMasComentado1").innerHTML = todasPublicaciones[i].titulo;
+        document.getElementById("resumenMasComentado1").innerHTML = todasPublicaciones[i].contenido;
+      }
+      ///////////////////////Mas comentada 2/////////////////////////////////////
+      if (numComentarios[1].idPubComents == todasPublicaciones[i].id) {
+        document.getElementById("masComentado2").innerHTML = todasPublicaciones[i].id;
+        document.getElementById("imgMasComentado2").src = "IMG/publicaciones/"+ todasPublicaciones[i].imgSrc;
+        document.getElementById("tituloMasComentado2").innerHTML = todasPublicaciones[i].titulo;
+        document.getElementById("resumenMasComentado2").innerHTML = todasPublicaciones[i].contenido;
+      }
+    }
   for (var i in todasCategorias) {
         for (var a in todasPublicaciones) {
           if (todasCategorias[i].id==todasPublicaciones[a].idCategoria) {
@@ -212,3 +238,16 @@ function ConsumiendoTodo(todosUsuarios, todasPublicaciones, todasCategorias) {//
           localStorage.setItem("idPubWanted", idPub);
           window.location.replace("leer.php");
       }
+////////////////////////////Redirecciones mas comentados///////////////////////
+function redireccionTres() {
+  id = parseInt(document.getElementById('masComentado1').innerHTML);
+  localStorage.setItem("idPubWanted", null);
+  localStorage.setItem("idPubWanted", id);
+  window.location.replace("leer.php");
+}
+function redireccionCuatro() {
+  id = parseInt(document.getElementById('masComentado2').innerHTML);
+  localStorage.setItem("idPubWanted", null);
+  localStorage.setItem("idPubWanted", id);
+  window.location.replace("leer.php");
+}

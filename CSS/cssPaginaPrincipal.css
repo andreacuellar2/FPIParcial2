@@ -270,11 +270,31 @@ textarea {
   overflow:hidden;
   white-space:nowrap;
   text-overflow: ellipsis;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
 }
 #resumenSegundo{
   overflow:hidden;
   white-space:nowrap;
   text-overflow: ellipsis;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+@media screen and (max-width: 600px){
+  #fechaPrimero{
+    font-weight: normal;
+    font-size: 2vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+  }
+}
+@media screen and (max-width: 600px){
+  #fechaSegundo{
+    font-weight: normal;
+    font-size: 2vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+  }
 }
 #resumenMasComentado1{
   overflow:hidden;
@@ -912,59 +932,6 @@ padding-right: 0vw;
   #descripcion{
     font-weight: normal;
   }
-}
-
-/*////////////////////////////////////////////////////////////////////////////*/
-
-/*//////////////////////Para informacion del texto/ REPARAR///////////////////////////*/
-.popup {
-	display: block;
-	position: absolute;
-	clip: rect(1px 1px 1px 1px);
-	clip: rect(1px, 1px, 1px, 1px);
-	max-width: 100%;
-	z-index: 1;
-	left: 0;
-	bottom: 300%;
-	opacity: 0;
-	-webkit-transition: all .7s;
-	-moz-transition: all .7s;
-	-o-transition: all .7s;
-	transition: all .7s;
-	background: white;
-	padding: 10px 1em;
-	border: 1px solid #ccc;
-	-webkit-box-shadow: 0 0 4px #ccc;
-	-moz-box-shadow: 0 0 4px #ccc;
-	box-shadow: 0 0 4px #ccc;
-}
-.popup:before, .popup:after {
-	content: "";
-	width: 0;
-	height: 0;
-	border: 6px solid transparent;
-	position: absolute;
-	top: 100%;
-	left: 20px;
-	margin-left: -6px;
-	border-top-color: white;
-	z-index: 2;
-}
-.popup:before {
-	border-top-color: #ccc;
-	margin-left: -7px;
-	border-width: 7px;
-	z-index: 0;
-}
-.has-popup {
-	position: relative;
-}
-.has-popup:hover .popup {
-	clip: rect(auto auto auto auto);
-	clip: auto;
-	clip: inherit;
-	opacity: 1;
-	bottom: 100%;
 }
 /*////////////////////////////Fuentes de google///////////////////////////////*/
 /* latin-ext */
