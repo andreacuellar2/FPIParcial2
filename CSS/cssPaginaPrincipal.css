@@ -634,6 +634,19 @@ margin-top: 2vw;
 padding-top: 2vw;
 padding-bottom: 2vw;
 }
+@media screen and (max-width: 600px){
+  #containerRegistro{
+    width: 60%;
+    margin-left: 20%;
+  }
+}
+@media screen and (max-width: 600px){
+  #containerRegistro .loginLe{
+    font-weight: normal;
+    font-size: 2vw;
+  }
+}
+
 #irRegistro{
   float:right;
   text-align: center;
