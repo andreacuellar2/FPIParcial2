@@ -49,12 +49,12 @@ function PubSetHTML(pubData) {
 function redireccionUno() {
   localStorage.setItem("idPubWanted", null);
   localStorage.setItem("idPubWanted", idUno);
-  window.location.replace("leer.html");
+  window.location.replace("leer.php");
 }
 function redireccionDos() {
   localStorage.setItem("idPubWanted", null);
   localStorage.setItem("idPubWanted", idDos);
-  window.location.replace("leer.html");
+  window.location.replace("leer.php");
 }
 function OpacityArticuloOsc(){
   document.getElementById('articulos').style.opacity = '1';

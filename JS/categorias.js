@@ -201,5 +201,5 @@ function ConsumiendoTodo(todosUsuarios, todasPublicaciones, todasCategorias) {//
   function CreandoPubWanted(idPub) {
           localStorage.setItem("idPubWanted", null);
           localStorage.setItem("idPubWanted", idPub);
-          window.location.replace("leer.html");
+          window.location.replace("leer.php");
       }
