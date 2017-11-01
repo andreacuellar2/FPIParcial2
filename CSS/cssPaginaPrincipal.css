@@ -796,6 +796,12 @@ ul.topnav li a.activo {background-color: #75A8BD;}
 #idPostChoused{
   display: none;
 }
+#idvalueStar{
+  display: none;
+}
+#idUserLogIn2{
+  display: none;
+}
 /*////*/
 /*///////////////////////Para el perfil del usuario///////////////////////////*/
 #resumenEntrada{
