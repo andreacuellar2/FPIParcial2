@@ -46,7 +46,7 @@ function ExisteIdUsuario($todos, $suID){
 }
 function Posicion($todos, $suID){
   for ($i=0; $i < count($todos); $i++) {
-    if ($todos[$i]['idUsuario'] == $suID) {
+    if ($todos[$i]['id'] == $suID) {
       return $i;
     }
   }
