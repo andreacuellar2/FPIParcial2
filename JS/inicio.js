@@ -134,3 +134,41 @@ function irAPerfil(){
 function irAPublicar(){
   window.location.replace("publicar.php");
 }
+//estrellas
+function OpacityStar1O(){
+  document.getElementById('estrella1').style.opacity = '1';
+}
+function OpacityStar1C(){
+  document.getElementById('estrella1').style.opacity = '0.5';
+}
+function OpacityStar2O(){
+  document.getElementById('estrella2').style.opacity = '1';
+}
+function OpacityStar2C(){
+  document.getElementById('estrella2').style.opacity = '0.5';
+}
+function OpacityStar3O(){
+  document.getElementById('estrella3').style.opacity = '1';
+}
+function OpacityStar3C(){
+  document.getElementById('estrella3').style.opacity = '0.5';
+}
+function OpacityStar4O(){
+  document.getElementById('estrella4').style.opacity = '1';
+}
+function OpacityStar4C(){
+  document.getElementById('estrella4').style.opacity = '0.5';
+}
+function OpacityStar5O(){
+  document.getElementById('estrella5').style.opacity = '1';
+}
+function OpacityStar5C(){
+  document.getElementById('estrella5').style.opacity = '0.5';
+}
+function OpacityEstrellas(){
+  document.getElementById('estrella1').style.opacity = '0.5';
+document.getElementById('estrella2').style.opacity = '0.5';
+document.getElementById('estrella3').style.opacity = '0.5';
+  document.getElementById('estrella4').style.opacity = '0.5';
+document.getElementById('estrella5').style.opacity = '0.5';
+}
