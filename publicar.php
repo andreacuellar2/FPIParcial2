@@ -13,7 +13,7 @@ if ($_POST) {
       'imgSrc' => SubirImagen($_FILES['file']),
       'comentarios' => array(),
       'fecha' => date("Y-m-d"),
-      'puntuacion' => array()
+      'puntuaciones' => array()
     );
     $todasPubliArray[] = $regPublicacion;
     $finalTodadPubli = json_encode($todasPubliArray);
