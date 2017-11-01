@@ -116,7 +116,7 @@ function Posicion($todos, $suID){
           <div id="comentar">
             <div id="divParaComentarios">
               <label class="comentarbar" id="tituloComentario">Comentarios:</label><br><br>
-              <ol id="comentarios">
+              <ol id="comentarios" class="comentariosHechos">
               </ol>
             </div><br>
             <div id="comentando">
