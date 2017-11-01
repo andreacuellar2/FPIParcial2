@@ -36,13 +36,30 @@
     <p class="loginLe" id="sexoUsuario">Sexo usuario</p><br>
   </div>
 
+  <div class="perfil" id="editarPerfil" class="articulos">
+    <form>
+    <br><br>
+    <label class="loginLe">Username:</label><input type="text" class="loginLe">
+    <br><br>
+    <div id="imagenPerfil">
+    <label class="loginLe">Imagen:</label><input type="file" name="file" accept="image/jpeg, image/png" class="inputComentario">
+    </div>
+    <br><br>
+    <label class="loginLe">Nombre:</label><input type="text" class="loginLe">
+    <br><br>
+    <label class="loginLe">Acerca de mi:</label><input type="text" class="loginLe">
+    <br><br>
+    <button class="btnLeerMas">Guardar</button>
+  </form>
+  </div>
+
   <div class="publicaciones">
     <div id="noEntradas" class="entrada">
       <h3 class="descripcionArt">No hay artículos publicados de este usuario</h3>
     </div>
     <div id="entrada" class="entrada">
       <h1 class="loginLe">Artículos del autor</h1><hr>
-      <label id="idOculto"></label>
+      <input type="text" id="idOculto"></input>
       <img id="imgEntrada" src="" alt="Imagen de la entrada" class="imagenEntrada">
         <h1 id="tituloEntrada" class="articuloTitulo">Titulo Articulo</h1><br>
         <h3 id="fechaEntrada" class="descripcionArt">Fecha del articulo</h3><br>
