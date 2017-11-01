@@ -8,7 +8,7 @@ if ($_POST) {
       if (ExisteIdUsuario($todasPubliArray,$_POST['idUsuario'])) {
         $varPosicion = Posicion($todasPubliArray,$_POST['id']);
         $registroComentario = array(
-          'id' => (int)$_POST['id'],
+          'idUsuario' => (int)$_POST['id'],
           'comentario' => $_POST['comentario']
         );
         $todasPubliArray[$varPosicion]['comentarios'][] = $registroComentario;
