@@ -13,7 +13,7 @@ if ($_POST) {
         $todasPubliArray['comentarios'] = $registroComentario;
         $finalTodasPubli = json_encode($todasPubliArray);
         file_put_contents('DATA/publicaciones.json', $finalTodasPubli);
-        header("Location: leer.php?HaComentado".$todasPubliArray['comentarios'][0]);
+        header("Location: leer.php?HaComentado");
 
       } else {
         header("Location: leer.php?NoExisteElIDUsuario");
