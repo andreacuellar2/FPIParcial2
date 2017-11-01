@@ -52,7 +52,8 @@ function Posicion($todos, $suID){
   }
   return 0;
 }
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="utf-8">
@@ -95,7 +96,7 @@ function Posicion($todos, $suID){
           </div><br>
 
           <div id="estrellas" class="stars">
-            <label class="descripcionArt">Califica esta publicación:</label>
+            <label class="descripcionArt" id="califica">Califica esta publicación:</label>
             <a data-value="1" title="Votar con 1 estrellas">&#9733;</a>
             <a data-value="2" title="Votar con 2 estrellas">&#9733;</a>
             <a data-value="3" title="Votar con 3 estrellas">&#9733;</a>
@@ -115,7 +116,7 @@ function Posicion($todos, $suID){
                 <input type="text" name="id" id="idPostChoused">
                 <input type="text" name="idUsuario" id="idUserLogIn">
                 <input type="text" class="inputComentario" name="comentario" id="comentario" placeholder="Escribe tu comentario..."><br><br>
-                <input type="submit" class="btnComentar" value="Comentar">
+                <input type="submit" class="btnComentar" value="Comentar" id="hacerComentario">
               </form>
             </div>
           </div><br>
