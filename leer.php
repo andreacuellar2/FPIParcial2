@@ -7,13 +7,11 @@ if ($_POST) {
     if (ExisteID($todasPubliArray,$_POST['id'])) {
       if (ExisteIdUsuario($todasPubliArray,$_POST['idUsuario'])) {
         $varPosicion = Posicion($todasPubliArray,$_POST['id']);
-        $todosComentarios = $todasPubliArray[$varPosicion];
         $registroComentario = array(
           'id' => (int)$_POST['id'],
           'comentario' => $_POST['comentario']
         );
-        $todosComentarios[] = $registroComentario;
-        $todasPubliArray[$varPosicion] = $todosComentarios;
+        $todasPubliArray[$varPosicion]['comentarios'][] = $registroComentario;
 
         $finalTodasPubli = json_encode($todasPubliArray);
         file_put_contents('DATA/publicaciones.json', $finalTodasPubli);
