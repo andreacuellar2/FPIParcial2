@@ -28,7 +28,9 @@ if ($_POST['comentar']) {
   }
 
 }
-//if ($_POST['puntuar']) {}
+if ($_POST['puntuar']) {
+  header("Location: leer.php?SePuntuo");
+}
 
 function ExisteID($todos, $suID){
   for ($i=0; $i < count($todos); $i++) {
@@ -99,11 +101,16 @@ function Posicion($todos, $suID){
 
           <div id="estrellas" class="stars">
             <label class="descripcionArt" id="califica">Califica esta publicación:</label>
-            <a data-value="1" title="Votar con 1 estrellas">&#9733;</a>
-            <a data-value="2" title="Votar con 2 estrellas">&#9733;</a>
-            <a data-value="3" title="Votar con 3 estrellas">&#9733;</a>
-            <a data-value="4" title="Votar con 4 estrellas">&#9733;</a>
-            <a data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+            <form method="POST" enctype="multipart/form-data" id="formStar">
+              <input type="text" name="valueStar" id="idvalueStar" value="5">
+              <a data-value="1" title="Votar con 1 estrellas" onclick="cambiarValueStar(1)">&#9733;</a>
+              <a data-value="2" title="Votar con 2 estrellas" onclick="cambiarValueStar(2)">&#9733;</a>
+              <a data-value="3" title="Votar con 3 estrellas" onclick="cambiarValueStar(3)">&#9733;</a>
+              <a data-value="4" title="Votar con 4 estrellas" onclick="cambiarValueStar(4)">&#9733;</a>
+              <a data-value="5" title="Votar con 5 estrellas" onclick="cambiarValueStar(5)">&#9733;</a>
+              <input type="submit" name="puntuar" id="btnPuntuar" value="Puntuar">
+            </form>
+
           </div><br>
 
           <div id="comentar">
@@ -166,7 +173,7 @@ function Posicion($todos, $suID){
   		<footer class="footer"><h1>Derechos Reservados</h1></footer>
   	</div>
     <script type="text/javascript" src="JS/leer.js"></script>
-    <script type="text/javascript" src="JS/leer.js"></script>
+    <script type="text/javascript" src="JS/puntuarLeer.js"></script>
     <script type="text/javascript" src="JS/publicacion.js"></script>
   </body>
 </html>
